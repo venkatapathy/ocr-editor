@@ -32,7 +32,7 @@ function App() {
 							width="16"
 							height="16"
 							fill="currentColor"
-							class="bi bi-layout-sidebar"
+							className="bi bi-layout-sidebar"
 							viewBox="0 0 16 16"
 						>
 							<path
@@ -45,7 +45,7 @@ function App() {
 
 					<button
 						type="button"
-						class="btn btn-light toolbar-btn px-2"
+						className="btn btn-light toolbar-btn px-2"
 						title="Previous Page"
 					>
 						<svg
@@ -53,24 +53,24 @@ function App() {
 							width="16"
 							height="16"
 							fill="currentColor"
-							class="bi bi-arrow-down"
+							className="bi bi-arrow-down"
 							viewBox="0 0 16 16"
 						>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
 							></path>
 						</svg>
 					</button>
 
 					<span
-						class="border-start border-2 h-100 rounded-pill"
+						className="border-start border-2 h-100 rounded-pill"
 					>
 					</span>
 
 					<button
 						type="button"
-						class="btn btn-light toolbar-btn px-2"
+						className="btn btn-light toolbar-btn px-2"
 						title="Next Page"
 					>
 						<svg
@@ -78,30 +78,30 @@ function App() {
 							width="16"
 							height="16"
 							fill="currentColor"
-							class="bi bi-arrow-up"
+							className="bi bi-arrow-up"
 							viewBox="0 0 16 16"
 						>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
 							/>
 						</svg>
 					</button>
-					<span class="page-num">
+					<span className="page-num">
 						<input
 							type="text"
 							value="7"
-							class="well-shadow"
+							className="well-shadow"
 						/>
-						<span class="border-0"
+						<span className="border-0"
 							>of 217</span
 						>
 					</span>
 				</div>
-				<div class="col">
+				<div className="col">
 					<button
 						type="button"
-						class="btn btn-light toolbar-btn px-2"
+						className="btn btn-light toolbar-btn px-2"
 						title="Zoom-in"
 					>
 						<svg
@@ -109,31 +109,31 @@ function App() {
 							width="16"
 							height="16"
 							fill="currentColor"
-							class="bi bi-zoom-in"
+							className="bi bi-zoom-in"
 							viewBox="0 0 16 16"
 						>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
 							/>
 							<path
 								d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
 							/>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
 							/>
 						</svg>
 					</button>
 
 					<span
-						class="border-start border-2 h-100 rounded-pill"
+						className="border-start border-2 h-100 rounded-pill"
 					>
 					</span>
 
 					<button
 						type="button"
-						class="btn btn-light toolbar-btn px-2"
+						className="btn btn-light toolbar-btn px-2"
 						title="Zoom-out"
 					>
 						<svg
@@ -141,23 +141,23 @@ function App() {
 							width="16"
 							height="16"
 							fill="currentColor"
-							class="bi bi-zoom-out"
+							className="bi bi-zoom-out"
 							viewBox="0 0 16 16"
 						>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
 							/>
 							<path
 								d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
 							/>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"
 							/>
 						</svg>
 					</button>
-					<span class="zoom">
+					<span className="zoom">
 						<select>
 							<option value="100"
 								>100%</option
@@ -167,15 +167,15 @@ function App() {
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid pv-container pt-2 pb-4 px-2">
-			<div class="row vh-100 gx-2">
-				<div class="col-md-6">
-					<div class="p-3 border pv-pane">
+		<div className="container-fluid pv-container pt-2 pb-4 px-2">
+			<div className="row vh-100 gx-2">
+				<div className="col-md-6">
+					<div className="p-3 border pv-pane">
 						Custom column padding
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="p-3 border pv-pane">
+				<div className="col-md-6">
+					<div className="p-3 border pv-pane">
 						Custom column padding
 					</div>
 				</div>
