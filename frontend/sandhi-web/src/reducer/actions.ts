@@ -2,7 +2,6 @@ import {ActionType, LoadImagePayload, LoadHocrPayload} from "./types";
 import { createAction } from "@reduxjs/toolkit";
 import {PageImageInfo, HocrPage} from "../types";
 
-
 export const setHoverId = createAction<
 	(hoverId: string) => {payload: SetHoverIdPayload},
 	ActionType.SetHoverId
