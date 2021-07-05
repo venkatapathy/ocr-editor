@@ -1,4 +1,43 @@
 function BooksCatalog() {
+	const booksList = [
+		{
+			_id: { $oid: "60e296f72d76503e10205133" },
+			title: "Sukra Neeti Sara",
+			author: "A Author",
+			fullpath: "/path/to/book/pdf",
+		},
+		{
+			_id: { $oid: "60e2cd9237ca51041bc241de" },
+			title: "Sukra Neeti Sara",
+			author: "A Author",
+			fullpath: "/path/to/book/pdf",
+		},
+		{
+			_id: { $oid: "60e2cf76b7873293bb9ba1ed" },
+			title: "Vara 68",
+			author: "A Author",
+			fullpath: "/path/to/pdf",
+		},
+		{
+			_id: { $oid: "60e2d0b5b7873293bb9ba1ee" },
+			title: "Vara 68 and 86",
+			author: "A Author",
+			fullpath: "/path/to/pdf",
+		},
+	];
+
+	const trItem = booksList.map((bookItem,index) => 
+		<tr key={bookItem._id.$oid}>
+			<th>{index}</th>
+			<td>{bookItem.title}</td>
+			<td>{bookItem.author}</td>
+			<td>
+				<a href={"/pageview?b="+bookItem._id.$oid}>
+					View Book
+				</a>
+			</td>
+		</tr>
+	);
 	return (
 		<div className="container">
 			<div className="row">
@@ -10,26 +49,18 @@ function BooksCatalog() {
 									#
 								</th>
 								<th scope="col">
-									First
+									Title
 								</th>
 								<th scope="col">
-									Last
+									Author
 								</th>
 								<th scope="col">
-									Handle
+									Link to
+									the Book
 								</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">
-									1
-								</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-						</tbody>
+						<tbody>{trItem}</tbody>
 					</table>
 				</div>
 			</div>
