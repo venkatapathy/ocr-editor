@@ -19,7 +19,7 @@ initialize_db(app)
 initialize_routes(api)
 
 
-@app.route("/", defaults={'path': ''})
-@app.route("/cl/b/<int:tbid>/p/<int:tpid>")
-def serve(tbid, tpid):
+@app.route("/", strict_slashes=False)
+@app.route("/pageview/", strict_slashes=False)
+def serve():
     return send_from_directory(app.static_folder, 'index.html')

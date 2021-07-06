@@ -6,6 +6,8 @@ from flask_restful import Resource
 class BooksApi(Resource):
     def get(self):
         books = Book.objects().to_json()
+        #replace Books _id with id and return only its value
+
         return Response(books, mimetype="application/json", status=200)
 
     def post(self):
