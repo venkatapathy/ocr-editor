@@ -8,13 +8,17 @@ import { setHoverId } from "../../../reducer/actions";
 export interface Props {
 	page: HocrPage | null;
 	pageImage: PageImageInfo | null;
+	width: int;
+	height: int;
 	dispatch: Dispatch<AppReducerAction>;
 	hoverId: string;
 }
 
 export default function HocrLayer({
 	page,
- 	pageImage,	
+	pageImage,
+	width,
+	height,
 	dispatch,
 	hoverId,
 }: Props) {
@@ -23,7 +27,13 @@ export default function HocrLayer({
 	const handleHover = (thoverId) => {
 		dispatch(setHoverId(thoverId));
 	};
-	const RenderWrdFunction = (wordarray, pageImage, hoverId) => {
+	const RenderWrdFunction = (
+		wordarray,
+		pageImage,
+		width,
+		height,
+		hoverId
+	) => {
 		if (!wordarray) {
 			return;
 		}
@@ -58,35 +68,33 @@ export default function HocrLayer({
 				key={lineChild.id}
 				x={parseInt(
 					(lineChild.bbox?.x0 *
-						pageImage?.curWidth) /
+						width) /
 						pageImage?.orgWidth
 				)}
 				y={parseInt(
 					(lineChild.bbox?.y0 *
-						pageImage?.curHeight) /
+						height) /
 						pageImage?.orgHeight
 				)}
 				width={
 					((lineChild.bbox.x1 -
 						lineChild.bbox.x0) *
-						pageImage?.curWidth) /
+						width) /
 					pageImage?.orgWidth
 				}
 				height={
 					((lineChild.bbox.y1 -
 						lineChild.bbox.y0) *
-						pageImage?.curHeight) /
+						height) /
 					pageImage?.orgHeight
 				}
 				stroke="red"
 				//strokeEnabled={true}
 				strokeEnabled={(function () {
-
 					if (hoverId === lineChild.id) {
-
 						return true;
 					} else {
-				//		console.log(hoverId);
+						//		console.log(hoverId);
 
 						return false;
 					}
@@ -135,30 +143,32 @@ export default function HocrLayer({
 				key={lineChild.id}
 				x={parseInt(
 					(lineChild.bbox?.x0 *
-						pageImage?.curWidth) /
+						width) /
 						pageImage?.orgWidth
 				)}
 				y={parseInt(
 					(lineChild.bbox.y0 *
-						pageImage?.curHeight) /
+						height) /
 						pageImage?.orgHeight
 				)}
 				width={
 					((lineChild.bbox.x1 -
 						lineChild.bbox.x0) *
-						pageImage?.curWidth) /
+						width) /
 					pageImage?.orgWidth
 				}
 				height={
 					((lineChild.bbox.y1 -
 						lineChild.bbox.y0) *
-						pageImage?.curHeight) /
-					pageImage?.curHeight
+						height) /
+					pageImage?.orgHeight
 				}
 			/>
 			{RenderWrdFunction(
 				lineChild.children,
 				pageImage,
+				width,
+				height,
 				hoverId
 			)}
 		</React.Fragment>
@@ -166,4 +176,3 @@ export default function HocrLayer({
 
 	return <Layer>{linesEl}</Layer>;
 }
-

@@ -6,7 +6,12 @@ import ImageView from "./ImageView";
 import { useAppReducer } from "../../reducerContext";
 import queryString from "query-string";
 import { loadImageUtil } from "../../utils";
-import { loadImage, loadHocr } from "../../reducer/actions";
+import {
+	loadImage,
+	loadHocr,
+	logInfo,
+	changeCurPage,
+} from "../../reducer/actions";
 import doOcr from "../../lib/doOcr";
 import HocrLayer from "./components/HocrLayer";
 import HocrView from "./HocrView";
@@ -42,6 +47,8 @@ function PageViewer() {
 		if (!parsed?.p) {
 			parsed.p = "1";
 		}
+
+		dispatch(changeCurPage(parseInt(parsed.p)));
 		//uu10.129.6.78:5000/h/b/1/p/2
 		/* const imageurl =
 			process.env.REACT_APP_SERVER_URL +
@@ -51,50 +58,42 @@ function PageViewer() {
 			parsed?.p; */
 
 		//	if (!state.pageImage) {
-		fetch("http://10.129.6.78:5000/i/b/1/p/2")
-			.then((r) => r.blob())
-			.then(async (blob) => {
-				if (!blob.type.includes("image")) return;
-
-				const pageImage = await loadImageUtil(blob);
-
-				if (!pageImage) {
-					return;
-				}
-
-				//defaulting to 100% of div
-
-				//pageImage.curWidth = width;
-				//pageImage.curHeight = height;
-				console.log(width);
-				dispatch(loadImage(pageImage));
-
-				const page: HocrPage = await doOcr(hocrurl);
-				dispatch(loadHocr(page));
-			});
 		//	}
 	}, []);
 
 	return (
 		<>
-			<ToolBar />
+			<ToolBar
+				curPageno={state.curPageno}
+				dispatch={dispatch}
+			/>
 			<div className="container-fluid pv-container pt-2 pb-4 px-2">
 				<div className="row wh-90 vh-100 border shadow">
-					<div className="col-md-6 shadow">
-						<div
-							className="p-3 border pv-pane"
-							ref={imgMeasureRef}
-						>a
+					<div
+						className="col-md-6 shadow"
+						ref={imgMeasureRef}
+					>
+						<div className="p-3 border pv-pane">
 							<Stage
 								width={
 									state
 										.pageImage
-										?.curWidth
+										?.curWidth !==
+									0
+										? state
+												.pageImage
+												?.curWidth
+										: width
 								}
 								height={
 									state
 										.pageImage
-										?.curHeight
+										?.curHeight !==
+									0
+										? state
+												.pageImage
+												?.curHeight
+										: height
 								}
 							>
 								{!state.pageImage && (
@@ -113,6 +112,26 @@ function PageViewer() {
 										pageImage={
 											state.pageImage
 										}
+										width={
+											state
+												.pageImage
+												?.curWidth !==
+											0
+												? state
+														.pageImage
+														?.curWidth
+												: width
+										}
+										height={
+											state
+												.pageImage
+												?.curHeight !==
+											0
+												? state
+														.pageImage
+														?.curHeight
+												: height
+										}
 									/>
 								</Layer>
 								<HocrLayer
@@ -124,6 +143,26 @@ function PageViewer() {
 									}
 									pageImage={
 										state.pageImage
+									}
+									width={
+										state
+											.pageImage
+											?.curWidth !==
+										0
+											? state
+													.pageImage
+													?.curWidth
+											: width
+									}
+									height={
+										state
+											.pageImage
+											?.curHeight !==
+										0
+											? state
+													.pageImage
+													?.curHeight
+											: height
 									}
 									hoverId={
 										state.hoverId
@@ -149,7 +188,9 @@ function PageViewer() {
 					</div>
 				</div>
 				<div className="row fixed-bottom">
-					<div className="col-md-6 offset-md-4 px-3"></div>
+					<div className="col-md-6 offset-md-4 px-3">
+						{state.logInfo}
+					</div>
 				</div>
 			</div>
 		</>

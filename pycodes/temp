@@ -1,0 +1,159 @@
+try:
+ from PIL import Image
+except ImportError:
+ import Image
+import cv2
+import pytesseract
+import os
+from pdf2image import convert_from_path
+import cv2
+import sys
+from pdfreader import SimplePDFViewer
+
+"""Now detect pdf files in a particular folder, in this case in books_pdf folder"""
+
+relevant_path = "/content/drive/MyDrive/data/books_input_pdf"
+included_extensions = ['pdf']
+file_names = [fn for fn in os.listdir(relevant_path) if any(fn.endswith(ext) for ext in included_extensions)]
+print("Select a file from the given list.\nInput the corresponding number")
+
+counttmp=0
+for f in file_names:
+  counttmp+=1
+  print(str(counttmp)+". "+f)
+
+chosenFileNameWithExt=""
+try:
+  chosenFileNum=int(input("\nSelect a number from above based on the File you wanted to OCR:\n"))-1
+  chosenFileNameWithExt=file_names[chosenFileNum]
+  if(chosenFileNameWithExt.find(" ")!=-1):
+    raise NameError("File name contains spaces")
+except Exception as err:
+  print("Error: {0}".format(err))
+  sys.exit(1)
+
+"""Now that we have the pdf which need to be ocred. do the following:
+1. Create appropriate output directories
+2. convert pdf to images
+3. ocr images
+"""
+
+try:
+  if chosenFileNameWithExt == "" or relevant_path=="":
+    print("Chosen file empty! Exiting Program")
+    sys.exit(1)
+except Exception as err:
+  print("Error: {0}".format(err))
+  sys.exit(1)
+
+chosenFileNameWithNoExt=chosenFileNameWithExt.replace(".pdf","")
+
+outputDirectory="/content/drive/MyDrive/data/books_output/"+chosenFileNameWithNoExt
+
+#create images,text folder
+if not os.path.exists(outputDirectory):
+  os.mkdir(outputDirectory)
+
+if not os.path.exists(outputDirectory+"/page_images"):
+  os.mkdir(outputDirectory+"/page_images")
+
+imagesFolder=outputDirectory+"/page_images"
+
+if not os.path.exists(outputDirectory+"/text_files"):
+  os.mkdir(outputDirectory+"/text_files")
+
+
+convert_from_path(relevant_path+'/'+chosenFileNameWithExt,output_folder=imagesFolder, fmt='jpg',output_file=chosenFileNameWithNoExt+"_")
+
+"""Once converted, print the list of image files to a file, also print the text_files if it is there"""
+
+os.environ['IMAGESFOLDER']=imagesFolder
+os.environ['OUTPUTDIRECTORY']=outputDirectory
+os.environ['CHOSENFILENAMEWITHNOEXT']=chosenFileNameWithNoExt
+
+!find $IMAGESFOLDER -maxdepth 1 -type f > $OUTPUTDIRECTORY/$CHOSENFILENAMEWITHNOEXT.list
+
+#/usr/share/tesseract-ocr/4.00/tessdata
+#!cp -av '/usr/share/tesseract-ocr/4.00/tessdata' '/content/drive/MyDrive/data/ocr/tessdata'
+
+tessdata_dir_config = r'--tessdata-dir "/content/drive/MyDrive/data/ocr/tessdata/"'
+languages=pytesseract.get_languages(config=tessdata_dir_config)
+lcount=0
+tesslanglist={}
+for l in languages:
+  if not (l== 'osd'):
+    tesslanglist[lcount]=l
+    lcount+=1
+    print(str(lcount)+'. '+l)
+
+linput=input("Choose the lang model for OCR from the above list: ")
+
+if not (int(linput)-1) in tesslanglist:
+  print("Not a correct option! Exiting program")
+  sys.exit(1)
+
+print("Selected language model "+tesslanglist[int(linput)-1])
+
+os.environ['CHOSENMODEL']=tesslanglist[int(linput)-1]
+
+os.chdir(outputDirectory+"/text_files")
+!tesseract $OUTPUTDIRECTORY/$CHOSENFILENAMEWITHNOEXT.list outputex -l $CHOSENMODEL --oem 1 --psm 1 --tessdata-dir /content/drive/MyDrive/data/ocr/tessdata/ hocr
+
+
+print('Done')
+
+"""Split whole ocred text into individual files"""
+
+ocrdtxt=open('outputex.hocr').read().split('\f')
+
+ocrdtxtcnt=0
+for imfile in os.listdir(imagesFolder):
+  pre_fix=imfile[:-4]
+  with open(outputDirectory+"/text_files/conceptofphysics1.hocr",'a') as f:
+    f.write(str(ocrdtxt[ocrdtxtcnt])+"\n")
+    ocrdtxtcnt+=1
+
+"""This is to OCR individual files"""
+
+#/usr/share/tesseract-ocr/4.00/tessdata
+#!cp -av '/usr/share/tesseract-ocr/4.00/tessdata' '/content/drive/MyDrive/data/ocr/tessdata'
+
+chosenFileNameWithNoExt=chosenFileNameWithExt.replace(".pdf","")
+outputDirectory="/content/drive/MyDrive/data/books_output/"+chosenFileNameWithNoExt
+imagesFolder=outputDirectory+"/page_images"
+tessdata_dir_config = r'--tessdata-dir "/content/drive/MyDrive/data/ocr/tessdata/"'
+languages=pytesseract.get_languages(config=tessdata_dir_config)
+lcount=0
+tesslanglist={}
+for l in languages:
+  if not (l== 'osd'):
+    tesslanglist[lcount]=l
+    lcount+=1
+    print(str(lcount)+'. '+l)
+
+linput=input("Choose the lang model for OCR from the above list: ")
+
+if not (int(linput)-1) in tesslanglist:
+  print("Not a correct option! Exiting program")
+  sys.exit(1)
+
+print("Selected language model "+tesslanglist[int(linput)-1])
+
+
+if not os.path.exists(outputDirectory+"/output_files"):
+  os.mkdir(outputDirectory+"/output_files")
+
+individualOutputDir=outputDirectory+"/output_files"
+
+for imfile in os.listdir(imagesFolder):
+  print(imagesFolder+"/"+imfile)
+  hocr = pytesseract.image_to_pdf_or_hocr(imagesFolder+"/"+imfile, lang=tesslanglist[int(linput)-1], extension='hocr')
+  txt = pytesseract.image_to_string(imagesFolder+"/"+imfile, lang=tesslanglist[int(linput)-1])
+
+  with open(individualOutputDir+'/'+imfile[:-3]+'txt', 'w') as f:
+    f.write(txt)
+
+  with open(individualOutputDir+'/'+imfile[:-3]+'hocr', 'w+b') as f:
+    f.write(hocr)
+
+print('Done')

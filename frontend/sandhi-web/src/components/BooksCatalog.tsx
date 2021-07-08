@@ -1,7 +1,16 @@
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import React, { useState } from "react";
+
 function BooksCatalog() {
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+
 	const booksList = [
 		{
-			_id: { $oid: "60e296f72d76503e10205133" },
+			_id: { $oid: "60e72548f67de168a975542a" },
 			title: "Sukra Neeti Sara",
 			author: "A Author",
 			fullpath: "/path/to/book/pdf",
@@ -26,45 +35,95 @@ function BooksCatalog() {
 		},
 	];
 
-	const trItem = booksList.map((bookItem,index) => 
+	const trItem = booksList.map((bookItem, index) => (
 		<tr key={bookItem._id.$oid}>
 			<th>{index}</th>
 			<td>{bookItem.title}</td>
 			<td>{bookItem.author}</td>
 			<td>
-				<a href={"/cli/pageview?b="+bookItem._id.$oid}>
+				<a
+					href={
+						"/cli/pageview?b=" +
+						bookItem._id.$oid
+					}
+				>
 					View Book
 				</a>
 			</td>
 		</tr>
-	);
+	));
 	return (
-		<div className="container">
-			<div className="row">
-				<div className="col">
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th scope="col">
-									#
-								</th>
-								<th scope="col">
-									Title
-								</th>
-								<th scope="col">
-									Author
-								</th>
-								<th scope="col">
-									Link to
-									the Book
-								</th>
-							</tr>
-						</thead>
-						<tbody>{trItem}</tbody>
-					</table>
+		<>
+			<Modal show={show} onHide={handleClose}>
+				<Modal.Header closeButton>
+					<Modal.Title>Modal heading</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					Woohoo, you're reading this text in a
+					modal!
+				</Modal.Body>
+				<Modal.Footer>
+					<Button
+						variant="secondary"
+						onClick={handleClose}
+					>
+						Close
+					</Button>
+					<Button
+						variant="primary"
+						onClick={handleClose}
+					>
+						Save Changes
+					</Button>
+				</Modal.Footer>
+			</Modal>
+			<div className="container">
+				<div className="row">
+					<div className="col">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">
+										#
+									</th>
+									<th scope="col">
+										Title
+									</th>
+									<th scope="col">
+										Author
+									</th>
+									<th scope="col">
+										Link
+										to
+										the
+										Book
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{trItem}
+								<tr>
+									<td
+										colspan={
+											4
+										}
+									>
+										<Button variant="link" onClick={handleShow}>
+											Add
+											a
+											book
+											to
+											the
+											Catalog
+										</Button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 export default BooksCatalog;

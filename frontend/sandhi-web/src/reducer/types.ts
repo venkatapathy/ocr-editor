@@ -7,25 +7,36 @@ export interface State {
 	model: string;
 	hocrPage: HocrPage;
 	hoverId: string;
-	curZoom: string
+	curZoom: string;
+	logInfo: string;
+	curPageno: int;
 }
 
-export enum ActionType{
-	LoadImage= "LoadImage",
-	LoadHocr= "LoadHocr",
-	SetHoverId= "SetHoverId",
-
+export enum ActionType {
+	LoadImage = "LoadImage",
+	LoadHocr = "LoadHocr",
+	SetHoverId = "SetHoverId",
+	LogInfo = "LogInfo",
+	ChangeCurPage = "ChangeCurPage",
 }
 
-export interface SetHoverIdPayload{
-	hoverId: string
+export interface ChangeCurPagePayload {
+	curPageno: int;
 }
 
-export interface LoadImagePayload{
+export interface LogInfoPayload {
+	logInfo: string;
+}
+
+export interface SetHoverIdPayload {
+	hoverId: string;
+}
+
+export interface LoadImagePayload {
 	pageImage: PageImageInfo;
 }
 
-export interface LoadHocrPayload{
+export interface LoadHocrPayload {
 	hocrPage: HocrPage;
 }
 

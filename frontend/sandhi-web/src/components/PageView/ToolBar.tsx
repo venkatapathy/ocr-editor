@@ -1,4 +1,64 @@
-function ToolBar() {
+import React, { Dispatch, useEffect } from "react";
+import queryString from "query-string";
+import { loadImageUtil } from "../../utils";
+import {
+	loadImage,
+	loadHocr,
+	logInfo,
+	changeCurPage,
+} from "../../reducer/actions";
+import doOcr from "../../lib/doOcr";
+
+export interface Props {
+	curPageNo: int;
+
+	dispatch: Dispatch<AppReducerAction>;
+}
+
+function ToolBar({ curPageno, dispatch }: Props) {
+	const parsed = queryString.parse(window.location.search);
+	const imageurl =
+		process.env.REACT_APP_SERVER_URL +
+		"/i/b/" +
+		parsed?.b +
+		"/p/" +
+		curPageno;
+
+	const hocrurl =
+		process.env.REACT_APP_SERVER_URL +
+		"/h/b/" +
+		parsed?.b +
+		"/p/" +
+		curPageno;
+
+	const handleChange = (e) => {
+		console.log("handling page change +" + imageurl);
+		fetch(imageurl)
+			.then((r) => r.blob())
+			.then(async (blob) => {
+				if (!blob.type.includes("image")) return;
+
+				const pageImage = await loadImageUtil(blob);
+
+				if (!pageImage) {
+					return;
+				}
+
+				//defaulting to 100% of div
+
+				//pageImage.curWidth = 0;
+				//pageImage.curHeight = 0;
+				dispatch(loadImage(pageImage));
+
+				const page: HocrPage = await doOcr(hocrurl);
+				dispatch(loadHocr(page));
+			});
+	};
+
+	useEffect(() => {
+		handleChange();
+	}, [curPageno]);
+
 	return (
 		<div className="container-fluid pv-toolbar border">
 			<div className="row align-items-center shadow">
@@ -26,6 +86,18 @@ function ToolBar() {
 						type="button"
 						className="btn btn-light toolbar-btn px-2"
 						title="Previous Page"
+						onClick={(e) => {
+							if (curPageno - 1 > 0) {
+								dispatch(
+									changeCurPage(
+										parseInt(
+											curPageno -
+												1
+										)
+									)
+								);
+							}
+						}}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -48,6 +120,18 @@ function ToolBar() {
 						type="button"
 						className="btn btn-light toolbar-btn px-2"
 						title="Next Page"
+						onClick={(e) => {
+							if (curPageno + 1 > 0) {
+								dispatch(
+									changeCurPage(
+										parseInt(
+											curPageno +
+												1
+										)
+									)
+								);
+							}
+						}}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -66,8 +150,9 @@ function ToolBar() {
 					<span className="page-num">
 						<input
 							type="text"
-							value="7"
+							value={curPageno}
 							className="well-shadow"
+							onChange={handleChange}
 						/>
 						<span className="border-0">
 							of 217

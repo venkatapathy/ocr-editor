@@ -64,8 +64,8 @@ class ImageView extends React.Component<Props, State> {
 				ref={(node) => {
 					this.imageNode = node;
 				}}
-				width={this.props.pageImage?.curWidth}
-				height={this.props.pageImage?.curHeight}
+				width={this.props.width}
+				height={this.props.height}
 			/>
 		);
 	}
