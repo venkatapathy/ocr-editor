@@ -1,7 +1,7 @@
 function ToolBar() {
 	return (
-		<div className="container-fluid pv-toolbar">
-			<div className="row align-items-center">
+		<div className="container-fluid pv-toolbar border">
+			<div className="row align-items-center shadow">
 				<div className="col pl-3">
 					<span className="pe-md-5">
 						<button

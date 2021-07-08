@@ -12,11 +12,11 @@ export const setHoverId = createAction<
 }));
 
 export const loadImage = createAction<
-	(pageImageInfo: PageImageInfo) => { payload: LoadImagePayload },
+	(pageImage: PageImageInfo) => { payload: LoadImagePayload },
 	ActionType.LoadImage
->(ActionType.LoadImage, (pageImageInfo) => ({
+>(ActionType.LoadImage, (pageImage) => ({
 	payload: {
-		pageImageInfo,
+		pageImage,
 	},
 }));
 

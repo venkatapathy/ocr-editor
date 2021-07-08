@@ -32,7 +32,7 @@ function BooksCatalog() {
 			<td>{bookItem.title}</td>
 			<td>{bookItem.author}</td>
 			<td>
-				<a href={"/pageview?b="+bookItem._id.$oid}>
+				<a href={"/cli/pageview?b="+bookItem._id.$oid}>
 					View Book
 				</a>
 			</td>

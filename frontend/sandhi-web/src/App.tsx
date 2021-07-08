@@ -4,7 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useAppReducer } from "./reducerContext";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import PageViewer from "./components/PageView";
+import PageViewer from "./components/PageView/PageView";
 import BooksCatalog from "./components/BooksCatalog";
 
 function App() {
@@ -22,10 +22,10 @@ function App() {
 	useEffect(() => {
 		let title = window.location.pathname;
 		console.log(title);
-		if (title.localeCompare("/") == 0) {
+		if (title.localeCompare("/cli") == 0) {
 			setDocTitle("Books Catalog List");
 			setSubBrand("");
-		} else if (title.localeCompare("/pageview") == 0) {
+		} else if (title.localeCompare("/cli/pageview") == 0) {
 			setDocTitle("Sukra Neeti Sara");
 			setSubBrand("Page Viewer");
 		}
@@ -35,7 +35,7 @@ function App() {
 		<Router>
 			<nav className="navbar navbar-expand-md shadow-sm rounded p-0 m-0">
 				<div className="container-fluid py-0">
-					<a className="navbar-brand" href="/">
+					<a className="navbar-brand" href="/cli">
 						{subBrand !== "" && (
 							<span className="px-2">
 								<svg
@@ -64,10 +64,10 @@ function App() {
 				</div>
 			</nav>
 			<Switch>
-				<Route exact path="/">
+				<Route exact path="/cli">
 					<BooksCatalog />
 				</Route>
-				<Route exact path="/pageview">
+				<Route exact path="/cli/pageview">
 					<PageViewer />
 				</Route>
 			</Switch>

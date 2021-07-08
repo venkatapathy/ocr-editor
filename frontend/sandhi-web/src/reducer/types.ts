@@ -22,7 +22,7 @@ export interface SetHoverIdPayload{
 }
 
 export interface LoadImagePayload{
-	pageImageInfo: PageImageInfo;
+	pageImage: PageImageInfo;
 }
 
 export interface LoadHocrPayload{

@@ -19,7 +19,6 @@ initialize_db(app)
 initialize_routes(api)
 
 
-@app.route("/", strict_slashes=False)
-@app.route("/pageview/", strict_slashes=False)
+@app.route("/cli", strict_slashes=False)
 def serve():
     return send_from_directory(app.static_folder, 'index.html')

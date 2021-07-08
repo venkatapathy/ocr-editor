@@ -2,11 +2,10 @@ import { ActionType, AppReducerAction, State } from "./types";
 import { produce } from "immer";
 import type { Draft } from "immer/dist/types/types-external";
 
-export const initialState: State={
+export const initialState : State = {
 	pageImage: null,
 	model: "",
 	hocrPage: null,
-
 };
 
 export function reducer(state: State, action: AppReducerAction): State{

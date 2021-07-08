@@ -1,69 +1,71 @@
-body{
-	font-family: 'Open Sans', 'Roboto', sans-serif !important;
+body {
+	font-family: "Open Sans", "Roboto", sans-serif !important;
 }
 
-.navbar-brand{
+.navbar-brand {
 	font-size: 1.1rem;
 }
 
-.navbar-text{
+.navbar-text {
 	font-size: 1.3rem;
 	color: #666666;
 }
 
-.navbar-subbrand{
+.navbar-subbrand {
 	display: inline;
-	font-size: .75rem;
+	font-size: 0.75rem;
 }
 
-.pv-toolbar{
-	height: 38px;
-        background-color: rgba(249, 249, 250, 1);
-	
+.pv-toolbar {
+	height: 42px;
+	background-color: rgba(249, 249, 250, 1);
 }
 
-.pv-container{
+.pv-container {
 	background-color: rgb(238, 238, 240);
 }
 
-.pv-pane{
+.pv-pane {
 	background-color: #ffffff;
-	height: 100%;
+	height: 100vh;
 	width: 100%;
+	overflow: scroll;
+	overflow-y: scroll;
 }
 
-.toolbar-btn:hover{
+.toolbar-btn:hover {
 	background-color: #a8a8a8;
 }
 
-.page-num input{
- min-width: 48px;
- width: 48px;
- font-size: 0.75rem;
+.page-num input {
+	min-width: 48px;
+	width: 48px;
+	font-size: 0.75rem;
 }
 
-.zoom select{
- min-width: 64px;
- width: 64px;
- font-size: 0.75rem;
+.zoom select {
+	min-width: 64px;
+	width: 64px;
+	font-size: 0.75rem;
 }
-
-
 
 /* .page-num input{
 	min-width: 16px!important;
 } */
 
-.page-num span{
-        background-color: rgba(249, 249, 250, 1);
+.page-num span {
+	background-color: rgba(249, 249, 250, 1);
 	font-size: 0.75rem;
-
 }
 
 .well-shadow {
-   -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:         inset 0 0 10px #000000;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+.fixed-bottom {
+	background-color: #ededed;
 }
 
 /* .App {
