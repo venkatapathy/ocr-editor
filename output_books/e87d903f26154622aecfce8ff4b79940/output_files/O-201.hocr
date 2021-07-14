@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name='ocr-system' content='tesseract 4.0.0-beta.1' />
+  <meta name='ocr-capabilities' content='ocr_page ocr_carea ocr_par ocr_line ocrx_word'/>
+</head>
+<body>
+  <div class='ocr_page' id='page_1' title='image "/home/server/Documents/ocr/sandhi/output_books/ABBv1a/page_images/ABBv1a_0001-201.jpg"; bbox 0 0 1700 2200; ppageno 0'>
+   <div class='ocr_carea' id='block_1_1' title="bbox 791 54 1333 85">
+    <p class='ocr_par' id='par_1_1' lang='san_iitb_train' title="bbox 791 54 1333 85">
+     <span class='ocr_line' id='line_1_1' title="bbox 791 54 1333 85; baseline -0.002 -3; x_size 34; x_descenders 6; x_ascenders 8"><span class='ocrx_word' id='word_1_1' title='bbox 791 54 908 85; x_wconf 83'>गणितपादः</span> <span class='ocrx_word' id='word_1_2' title='bbox 928 61 931 82; x_wconf 83'>।</span> <span class='ocrx_word' id='word_1_3' title='bbox 1282 60 1333 82; x_wconf 85'>१७७</span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_2' title="bbox 644 159 1336 161">
+    <p class='ocr_par' id='par_1_2' lang='san_iitb_train' title="bbox 644 159 1336 161">
+     <span class='ocr_line' id='line_1_2' title="bbox 644 159 1336 161; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_4' title='bbox 644 159 1336 161; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_3' title="bbox 404 149 1336 1282">
+    <p class='ocr_par' id='par_1_3' lang='san_iitb_train' title="bbox 404 149 1336 977">
+     <span class='ocr_line' id='line_1_3' title="bbox 404 149 1330 189; baseline 0 -9; x_size 40; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_5' title='bbox 404 149 525 189; x_wconf 55'>गुणिते५पि</span> <span class='ocrx_word' id='word_1_6' title='bbox 550 156 553 180; x_wconf 89'>।</span> <span class='ocrx_word' id='word_1_7' title='bbox 575 159 624 180; x_wconf 89'>यतः</span> <span class='ocrx_word' id='word_1_8' title='bbox 664 149 845 183; x_wconf 86'>शेषादितरभागस्य</span> <span class='ocrx_word' id='word_1_9' title='bbox 869 149 1008 185; x_wconf 24'>निःशैषहरणं</span> <span class='ocrx_word' id='word_1_10' title='bbox 1030 151 1079 189; x_wconf 87'>कृतं</span> <span class='ocrx_word' id='word_1_11' title='bbox 1099 161 1225 180; x_wconf 88'>ततस्तावतो</span> <span class='ocrx_word' id='word_1_12' title='bbox 1249 158 1330 180; x_wconf 91'>भागस्य</span> 
+     </span>
+     <span class='ocr_line' id='line_1_4' title="bbox 407 193 1331 237; baseline 0 -13; x_size 39; x_descenders 8; x_ascenders 12"><span class='ocrx_word' id='word_1_13' title='bbox 407 193 661 237; x_wconf 0'>येनकेनचिद्वुणितस्यापि</span> <span class='ocrx_word' id='word_1_14' title='bbox 685 205 739 224; x_wconf 90'>तेनैव</span> <span class='ocrx_word' id='word_1_15' title='bbox 762 202 887 224; x_wconf 84'>भाज्यशेषेण</span> <span class='ocrx_word' id='word_1_16' title='bbox 893 193 1047 231; x_wconf 49'>हियमाणस्य</span> <span class='ocrx_word' id='word_1_17' title='bbox 1069 193 1218 225; x_wconf 75'>निःशेषत्वमेव</span> <span class='ocrx_word' id='word_1_18' title='bbox 1241 205 1307 232; x_wconf 87'>स्यात्</span> <span class='ocrx_word' id='word_1_19' title='bbox 1328 200 1331 224; x_wconf 85'>।</span> 
+     </span>
+     <span class='ocr_line' id='line_1_5' title="bbox 407 239 1330 280; baseline 0 -9; x_size 40; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_20' title='bbox 407 252 534 271; x_wconf 75'>तत्फलस्यैव</span> <span class='ocrx_word' id='word_1_21' title='bbox 552 239 877 280; x_wconf 12'>पूर्वफलान्मतिगुणत्वाद्विशेषः</span> <span class='ocrx_word' id='word_1_22' title='bbox 898 247 901 271; x_wconf 85'>।</span> <span class='ocrx_word' id='word_1_23' title='bbox 918 240 1172 280; x_wconf 73'>भाजकशेषस्यावृत्तिरेव</span> <span class='ocrx_word' id='word_1_24' title='bbox 1189 249 1330 271; x_wconf 84'>भाज्यशेषस्य</span> 
+     </span>
+     <span class='ocr_line' id='line_1_6' title="bbox 407 283 1336 323; baseline 0 -8; x_size 41.373901; x_descenders 9.1279068; x_ascenders 12.676087"><span class='ocrx_word' id='word_1_25' title='bbox 407 285 484 321; x_wconf 69'>हृतांशः</span> <span class='ocrx_word' id='word_1_26' title='bbox 511 291 514 315; x_wconf 89'>।</span> <span class='ocrx_word' id='word_1_27' title='bbox 554 285 665 315; x_wconf 86'>शेषांशस्यैव</span> <span class='ocrx_word' id='word_1_28' title='bbox 688 293 941 323; x_wconf 72'>भाजकशेषादल्पत्वात्</span> <span class='ocrx_word' id='word_1_29' title='bbox 954 284 1236 320; x_wconf 55'>निःशेषहरणसंवादाभावः</span> <span class='ocrx_word' id='word_1_30' title='bbox 1263 291 1266 315; x_wconf 92'>।</span> <span class='ocrx_word' id='word_1_31' title='bbox 1287 283 1336 321; x_wconf 7'>हृतो</span> 
+     </span>
+     <span class='ocr_line' id='line_1_7' title="bbox 406 328 1330 371; baseline 0 -12; x_size 36; x_descenders 5; x_ascenders 12"><span class='ocrx_word' id='word_1_32' title='bbox 406 337 464 359; x_wconf 91'>भागः</span> <span class='ocrx_word' id='word_1_33' title='bbox 484 330 562 362; x_wconf 90'>संवदत</span> <span class='ocrx_word' id='word_1_34' title='bbox 582 338 622 364; x_wconf 86'>एव</span> <span class='ocrx_word' id='word_1_35' title='bbox 644 335 647 359; x_wconf 86'>।</span> <span class='ocrx_word' id='word_1_36' title='bbox 669 340 795 359; x_wconf 86'>ततस्तावतो</span> <span class='ocrx_word' id='word_1_37' title='bbox 816 337 897 359; x_wconf 81'>भागस्य</span> <span class='ocrx_word' id='word_1_38' title='bbox 920 328 1174 371; x_wconf 41'>येनकेनचिद्ुणितस्यापि</span> <span class='ocrx_word' id='word_1_39' title='bbox 1197 340 1330 363; x_wconf 57'>तावद््धागस्य</span> 
+     </span>
+     <span class='ocr_line' id='line_1_8' title="bbox 404 374 1333 415; baseline 0 -9; x_size 36; x_descenders 5; x_ascenders 12"><span class='ocrx_word' id='word_1_40' title='bbox 404 385 499 415; x_wconf 89'>समुदाय</span> <span class='ocrx_word' id='word_1_41' title='bbox 514 385 554 411; x_wconf 91'>एव</span> <span class='ocrx_word' id='word_1_42' title='bbox 569 374 728 415; x_wconf 26'>गुणितो५पीति</span> <span class='ocrx_word' id='word_1_43' title='bbox 745 375 871 415; x_wconf 82'>समुदायिनः</span> <span class='ocrx_word' id='word_1_44' title='bbox 893 377 964 407; x_wconf 81'>प्रत्यैकं</span> <span class='ocrx_word' id='word_1_45' title='bbox 985 377 1055 409; x_wconf 47'>संवादे</span> <span class='ocrx_word' id='word_1_46' title='bbox 1075 375 1232 415; x_wconf 89'>समुदायस्यापि</span> <span class='ocrx_word' id='word_1_47' title='bbox 1255 377 1333 409; x_wconf 91'>संवादः</span> 
+     </span>
+     <span class='ocr_line' id='line_1_9' title="bbox 404 417 1333 458; baseline 0 -9; x_size 38; x_descenders 6; x_ascenders 10"><span class='ocrx_word' id='word_1_48' title='bbox 404 417 487 452; x_wconf 73'>स्यादेव</span> <span class='ocrx_word' id='word_1_49' title='bbox 506 425 509 449; x_wconf 90'>।</span> <span class='ocrx_word' id='word_1_50' title='bbox 526 417 662 449; x_wconf 86'>ततस्तच्छेषे</span> <span class='ocrx_word' id='word_1_51' title='bbox 673 418 795 449; x_wconf 89'>कल्पितया</span> <span class='ocrx_word' id='word_1_52' title='bbox 807 428 868 450; x_wconf 91'>मत्या</span> <span class='ocrx_word' id='word_1_53' title='bbox 883 418 922 455; x_wconf 79'>(पि</span> <span class='ocrx_word' id='word_1_54' title='bbox 936 427 957 455; x_wconf 87'>?)</span> <span class='ocrx_word' id='word_1_55' title='bbox 972 417 1093 458; x_wconf 84'>गुणिते५पि</span> <span class='ocrx_word' id='word_1_56' title='bbox 1104 417 1187 458; x_wconf 46'>कृ्त्खरो</span> <span class='ocrx_word' id='word_1_57' title='bbox 1202 427 1213 449; x_wconf 88'>?</span> <span class='ocrx_word' id='word_1_58' title='bbox 1228 417 1274 455; x_wconf 53'>त्सर)</span> <span class='ocrx_word' id='word_1_59' title='bbox 1291 427 1333 449; x_wconf 85'>भा-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_10' title="bbox 404 461 1336 502; baseline 0 -9; x_size 41; x_descenders 9; x_ascenders 13"><span class='ocrx_word' id='word_1_60' title='bbox 404 461 442 493; x_wconf 78'>ज्ये</span> <span class='ocrx_word' id='word_1_61' title='bbox 453 461 574 502; x_wconf 84'>गुणिते५पि</span> <span class='ocrx_word' id='word_1_62' title='bbox 584 461 616 493; x_wconf 90'>यो</span> <span class='ocrx_word' id='word_1_63' title='bbox 628 462 709 493; x_wconf 90'>विशेषः</span> <span class='ocrx_word' id='word_1_64' title='bbox 723 472 751 493; x_wconf 92'>स</span> <span class='ocrx_word' id='word_1_65' title='bbox 763 462 901 502; x_wconf 80'>मतिगुणनात्</span> <span class='ocrx_word' id='word_1_66' title='bbox 896 474 971 501; x_wconf 24'>प्राक्</span> <span class='ocrx_word' id='word_1_67' title='bbox 985 471 1105 499; x_wconf 74'>हृतभागस्य</span> <span class='ocrx_word' id='word_1_68' title='bbox 1125 474 1212 502; x_wconf 89'>समुदाय</span> <span class='ocrx_word' id='word_1_69' title='bbox 1229 461 1298 498; x_wconf 28'>एवेति</span> <span class='ocrx_word' id='word_1_70' title='bbox 1308 472 1336 493; x_wconf 91'>स</span> 
+     </span>
+     <span class='ocr_line' id='line_1_11' title="bbox 404 495 1336 559; baseline 0.003 -22; x_size 43; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_71' title='bbox 404 505 491 537; x_wconf 17'>सर्वथा?</span> <span class='ocrx_word' id='word_1_72' title='bbox 508 505 593 555; x_wconf 37'>निःशैषं</span> <span class='ocrx_word' id='word_1_73' title='bbox 605 505 646 555; x_wconf 56'>हर्तु</span> <span class='ocrx_word' id='word_1_74' title='bbox 658 516 731 538; x_wconf 80'>शक्यः</span> <span class='ocrx_word' id='word_1_75' title='bbox 755 513 758 537; x_wconf 90'>।</span> <span class='ocrx_word' id='word_1_76' title='bbox 775 495 994 559; x_wconf 0'>शेषादप्यभाष्टशषं</span> <span class='ocrx_word' id='word_1_77' title='bbox 1006 505 1132 538; x_wconf 6'>शोधयित्वा</span> <span class='ocrx_word' id='word_1_78' title='bbox 1145 506 1230 540; x_wconf 0'>किप्वा</span> <span class='ocrx_word' id='word_1_79' title='bbox 1242 516 1273 537; x_wconf 89'>वा</span> <span class='ocrx_word' id='word_1_80' title='bbox 1286 506 1336 540; x_wconf 86'>यदि</span> 
+     </span>
+     <span class='ocr_line' id='line_1_12' title="bbox 404 548 1333 599; baseline 0 -19; x_size 36; x_descenders 5; x_ascenders 12"><span class='ocrx_word' id='word_1_81' title='bbox 404 549 543 585; x_wconf 70'>निःशेषहरणं</span> <span class='ocrx_word' id='word_1_82' title='bbox 578 551 621 580; x_wconf 72'>शक्यं</span> <span class='ocrx_word' id='word_1_83' title='bbox 638 561 695 580; x_wconf 72'>स्यात्</span> <span class='ocrx_word' id='word_1_84' title='bbox 690 548 761 588; x_wconf 70'>तर्हि</span> <span class='ocrx_word' id='word_1_85' title='bbox 771 549 900 599; x_wconf 67'>कृत्स्रस्यापि</span> <span class='ocrx_word' id='word_1_86' title='bbox 919 558 1014 580; x_wconf 88'>भाज्यस्य</span> <span class='ocrx_word' id='word_1_87' title='bbox 1034 561 1077 580; x_wconf 92'>तया</span> <span class='ocrx_word' id='word_1_88' title='bbox 1095 561 1150 581; x_wconf 92'>मत्या</span> <span class='ocrx_word' id='word_1_89' title='bbox 1166 549 1333 589; x_wconf 49'>गुणितस्येष्टक्षे</span> 
+     </span>
+     <span class='ocr_line' id='line_1_13' title="bbox 407 593 1330 633; baseline 0 -9; x_size 40; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_90' title='bbox 407 595 538 633; x_wconf 86'>पसंस्कृतस्य</span> <span class='ocrx_word' id='word_1_91' title='bbox 556 593 696 629; x_wconf 36'>निःशेषहरणं</span> <span class='ocrx_word' id='word_1_92' title='bbox 732 595 775 624; x_wconf 57'>शक्यं</span> <span class='ocrx_word' id='word_1_93' title='bbox 794 605 859 632; x_wconf 73'>स्यात्</span> <span class='ocrx_word' id='word_1_94' title='bbox 877 600 880 624; x_wconf 90'>।</span> <span class='ocrx_word' id='word_1_95' title='bbox 897 593 1330 633; x_wconf 64'>द्वितीयच्फलगुणितभाजकशेषतुल्यस्य</span> 
+     </span>
+     <span class='ocr_line' id='line_1_14' title="bbox 406 635 1333 676; baseline 0 -9; x_size 41; x_descenders 9; x_ascenders 13"><span class='ocrx_word' id='word_1_96' title='bbox 406 637 535 667; x_wconf 72'>भाज्यांशस्य</span> <span class='ocrx_word' id='word_1_97' title='bbox 551 636 637 668; x_wconf 50'>निःशेषं</span> <span class='ocrx_word' id='word_1_98' title='bbox 650 635 752 672; x_wconf 36'>हार्थत्वाच्च</span> <span class='ocrx_word' id='word_1_99' title='bbox 776 643 779 667; x_wconf 92'>।</span> <span class='ocrx_word' id='word_1_100' title='bbox 814 648 925 676; x_wconf 82'>शेषतुल्यस्य</span> <span class='ocrx_word' id='word_1_101' title='bbox 943 636 1110 667; x_wconf 79'>भाज्यांशस्यापि</span> <span class='ocrx_word' id='word_1_102' title='bbox 1128 636 1279 676; x_wconf 81'>मतिगुणितस्य</span> <span class='ocrx_word' id='word_1_103' title='bbox 1295 635 1333 668; x_wconf 91'>शे-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_15' title="bbox 404 679 1333 735; baseline 0 -24; x_size 41; x_descenders 9; x_ascenders 13"><span class='ocrx_word' id='word_1_104' title='bbox 404 680 582 720; x_wconf 90'>षसंस्कृतस्यापि</span> <span class='ocrx_word' id='word_1_105' title='bbox 600 679 685 712; x_wconf 69'>निःशेषं</span> <span class='ocrx_word' id='word_1_106' title='bbox 703 679 743 720; x_wconf 39'>हर्तु</span> <span class='ocrx_word' id='word_1_107' title='bbox 781 692 888 719; x_wconf 78'>शक्यत्वात्</span> <span class='ocrx_word' id='word_1_108' title='bbox 904 681 993 735; x_wconf 28'>तदुभयां</span> <span class='ocrx_word' id='word_1_109' title='bbox 1015 680 1162 711; x_wconf 82'>व्यतिरिक्तस्य</span> <span class='ocrx_word' id='word_1_110' title='bbox 1189 689 1333 711; x_wconf 84'>तत्रासम्भवा-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_16' title="bbox 406 724 1333 765; baseline 0 -9; x_size 41.373901; x_descenders 9.1279068; x_ascenders 12.676087"><span class='ocrx_word' id='word_1_111' title='bbox 406 737 599 765; x_wconf 38'>ब्यूनत्वासम्भवाद्च</span> <span class='ocrx_word' id='word_1_112' title='bbox 623 725 817 765; x_wconf 73'>कृत्स्रभाज्यस्यापि</span> <span class='ocrx_word' id='word_1_113' title='bbox 840 725 1178 765; x_wconf 48'>मतिगुणितस्येष्टशेषसंस्कृतस्य</span> <span class='ocrx_word' id='word_1_114' title='bbox 1199 724 1333 757; x_wconf 85'>शिष्टस्योभ-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_17' title="bbox 404 768 1336 809; baseline 0 -9; x_size 41; x_descenders 9; x_ascenders 11"><span class='ocrx_word' id='word_1_115' title='bbox 404 769 594 801; x_wconf 89'>यांशात्मकस्यापि</span> <span class='ocrx_word' id='word_1_116' title='bbox 607 768 752 805; x_wconf 68'>निःशैषहरणं</span> <span class='ocrx_word' id='word_1_117' title='bbox 764 768 1104 809; x_wconf 28'>स्यादेवेत्युभयथापीष्टगुणकारः</span> <span class='ocrx_word' id='word_1_118' title='bbox 1120 768 1251 803; x_wconf 28'>सि्छत्येव</span> <span class='ocrx_word' id='word_1_119' title='bbox 1272 776 1275 800; x_wconf 88'>।</span> <span class='ocrx_word' id='word_1_120' title='bbox 1293 779 1336 800; x_wconf 78'>तत्र</span> 
+     </span>
+     <span class='ocr_line' id='line_1_18' title="bbox 404 811 1336 860; baseline 0 -17; x_size 38; x_descenders 6; x_ascenders 11"><span class='ocrx_word' id='word_1_121' title='bbox 404 811 521 843; x_wconf 79'>फलस्थाने</span> <span class='ocrx_word' id='word_1_122' title='bbox 534 811 689 846; x_wconf 50'>फलद्धयादधो</span> <span class='ocrx_word' id='word_1_123' title='bbox 702 811 789 843; x_wconf 73'>मृतिरेव</span> <span class='ocrx_word' id='word_1_124' title='bbox 801 822 893 860; x_wconf 67'>स्थाप्या,</span> <span class='ocrx_word' id='word_1_125' title='bbox 908 811 981 846; x_wconf 45'>तदधो</span> <span class='ocrx_word' id='word_1_126' title='bbox 994 812 1096 843; x_wconf 82'>मतिफलं</span> <span class='ocrx_word' id='word_1_127' title='bbox 1098 822 1135 860; x_wconf 88'>च</span> <span class='ocrx_word' id='word_1_128' title='bbox 1154 819 1157 843; x_wconf 82'>।</span> <span class='ocrx_word' id='word_1_129' title='bbox 1175 811 1263 860; x_wconf 36'>यृतो५त्र</span> <span class='ocrx_word' id='word_1_130' title='bbox 1274 822 1336 844; x_wconf 74'>मत्या</span> 
+     </span>
+     <span class='ocr_line' id='line_1_19' title="bbox 407 857 1331 890; baseline 0 -9; x_size 41.373901; x_descenders 9.1279068; x_ascenders 12.676087"><span class='ocrx_word' id='word_1_131' title='bbox 407 862 546 884; x_wconf 44'>फलद्भयघातो</span> <span class='ocrx_word' id='word_1_132' title='bbox 552 860 631 890; x_wconf 83'>गुण्यः</span> <span class='ocrx_word' id='word_1_133' title='bbox 646 862 740 881; x_wconf 86'>तत्फलेन</span> <span class='ocrx_word' id='word_1_134' title='bbox 754 860 781 881; x_wconf 84'>च</span> <span class='ocrx_word' id='word_1_135' title='bbox 792 862 916 890; x_wconf 40'>पूर्वफलमव</span> <span class='ocrx_word' id='word_1_136' title='bbox 938 857 941 881; x_wconf 83'>।</span> <span class='ocrx_word' id='word_1_137' title='bbox 955 860 998 881; x_wconf 82'>तत्र</span> <span class='ocrx_word' id='word_1_138' title='bbox 1008 862 1063 882; x_wconf 76'>मत्या</span> <span class='ocrx_word' id='word_1_139' title='bbox 1080 862 1168 890; x_wconf 80'>गुणितेन</span> <span class='ocrx_word' id='word_1_140' title='bbox 1185 862 1331 884; x_wconf 62'>द्वितीयफलेन</span> 
+     </span>
+     <span class='ocr_line' id='line_1_20' title="bbox 404 893 1336 934; baseline 0 -9; x_size 43; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_141' title='bbox 404 893 519 925; x_wconf 82'>प्रथमफले</span> <span class='ocrx_word' id='word_1_142' title='bbox 531 893 609 934; x_wconf 89'>गुणिते</span> <span class='ocrx_word' id='word_1_143' title='bbox 620 904 666 933; x_wconf 90'>यत्</span> <span class='ocrx_word' id='word_1_144' title='bbox 676 896 729 925; x_wconf 72'>फलं</span> <span class='ocrx_word' id='word_1_145' title='bbox 741 904 808 933; x_wconf 91'>स्यात्</span> <span class='ocrx_word' id='word_1_146' title='bbox 818 893 879 928; x_wconf 86'>तदेव</span> <span class='ocrx_word' id='word_1_147' title='bbox 892 893 1040 928; x_wconf 64'>फलद्धयघाते</span> <span class='ocrx_word' id='word_1_148' title='bbox 1052 904 1113 926; x_wconf 87'>मत्या</span> <span class='ocrx_word' id='word_1_149' title='bbox 1126 893 1247 934; x_wconf 40'>गुणिते५पि</span> <span class='ocrx_word' id='word_1_150' title='bbox 1267 901 1270 925; x_wconf 92'>।</span> <span class='ocrx_word' id='word_1_151' title='bbox 1287 894 1336 932; x_wconf 88'>इति</span> 
+     </span>
+     <span class='ocr_line' id='line_1_21' title="bbox 404 936 1330 977; baseline 0 -9; x_size 37; x_descenders 5; x_ascenders 13"><span class='ocrx_word' id='word_1_152' title='bbox 404 947 465 969; x_wconf 80'>मत्या</span> <span class='ocrx_word' id='word_1_153' title='bbox 478 936 620 968; x_wconf 0'>स्वो’परिस्थं</span> <span class='ocrx_word' id='word_1_154' title='bbox 633 937 763 971; x_wconf 80'>द्वितीयफलं</span> <span class='ocrx_word' id='word_1_155' title='bbox 782 949 832 973; x_wconf 89'>हत्वा</span> <span class='ocrx_word' id='word_1_156' title='bbox 853 949 943 971; x_wconf 87'>तद्धातेन</span> <span class='ocrx_word' id='word_1_157' title='bbox 961 947 1007 977; x_wconf 89'>पुनः</span> <span class='ocrx_word' id='word_1_158' title='bbox 1027 936 1156 968; x_wconf 79'>सर्वोपरिस्थं</span> <span class='ocrx_word' id='word_1_159' title='bbox 1173 937 1330 968; x_wconf 66'>प्रथमफलमपि</span> 
+     </span>
+    </p>
+
+    <p class='ocr_par' id='par_1_4' lang='san_iitb_train' title="bbox 404 980 1336 1282">
+     <span class='ocr_line' id='line_1_22' title="bbox 404 980 1333 1021; baseline 0 -9; x_size 40; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_160' title='bbox 404 991 434 1012; x_wconf 90'>वा</span> <span class='ocrx_word' id='word_1_161' title='bbox 448 982 536 1021; x_wconf 62'>गुण्यतां,</span> <span class='ocrx_word' id='word_1_162' title='bbox 551 981 648 1012; x_wconf 86'>मतिफलेन</span> <span class='ocrx_word' id='word_1_163' title='bbox 651 980 821 1021; x_wconf 86'>पूर्वफलस्यैव</span> <span class='ocrx_word' id='word_1_164' title='bbox 840 993 954 1021; x_wconf 85'>गुण्यत्वात्</span> <span class='ocrx_word' id='word_1_165' title='bbox 970 988 973 1012; x_wconf 91'>।</span> <span class='ocrx_word' id='word_1_166' title='bbox 991 993 1226 1021; x_wconf 65'>तत्प्रथमफलगुणकारे</span> <span class='ocrx_word' id='word_1_167' title='bbox 1240 981 1333 1015; x_wconf 76'>मतिद्धि-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_23' title="bbox 407 1024 1170 1079; baseline 0 -23; x_size 41; x_descenders 9; x_ascenders 13"><span class='ocrx_word' id='word_1_168' title='bbox 407 1025 551 1079; x_wconf 83'>तीयफलघाते</span> <span class='ocrx_word' id='word_1_169' title='bbox 569 1025 666 1056; x_wconf 57'>मतिफलं</span> <span class='ocrx_word' id='word_1_170' title='bbox 679 1025 759 1059; x_wconf 80'>क्षिप्त्वा</span> <span class='ocrx_word' id='word_1_171' title='bbox 774 1024 816 1056; x_wconf 83'>तेन</span> <span class='ocrx_word' id='word_1_172' title='bbox 826 1035 938 1056; x_wconf 86'>प्रथमफले</span> <span class='ocrx_word' id='word_1_173' title='bbox 952 1024 1029 1065; x_wconf 80'>गुणिते</span> <span class='ocrx_word' id='word_1_174' title='bbox 1039 1025 1170 1079; x_wconf 74'>मतिगुणितः</span> 
+     </span>
+     <span class='ocr_line' id='line_1_24' title="bbox 406 1076 1307 1109; baseline 0 -9; x_size 41.373901; x_descenders 9.1279068; x_ascenders 12.676087"><span class='ocrx_word' id='word_1_175' title='bbox 406 1068 579 1118; x_wconf 83'>मतिहतपूर्वफलं</span> <span class='ocrx_word' id='word_1_176' title='bbox 592 1079 619 1100; x_wconf 88'>च</span> <span class='ocrx_word' id='word_1_177' title='bbox 630 1071 701 1109; x_wconf 40'>संय्त</span> <span class='ocrx_word' id='word_1_178' title='bbox 715 1081 780 1108; x_wconf 86'>स्यात्</span> <span class='ocrx_word' id='word_1_179' title='bbox 796 1076 799 1100; x_wconf 75'>।</span> <span class='ocrx_word' id='word_1_180' title='bbox 816 1071 965 1100; x_wconf 80'>तत्फलसंयोग</span> <span class='ocrx_word' id='word_1_181' title='bbox 980 1079 1020 1105; x_wconf 79'>एव</span> <span class='ocrx_word' id='word_1_182' title='bbox 1029 1079 1072 1100; x_wconf 79'>तत्र</span> <span class='ocrx_word' id='word_1_183' title='bbox 1083 1069 1188 1101; x_wconf 89'>जिज्ञास्यो</span> <span class='ocrx_word' id='word_1_184' title='bbox 1206 1081 1307 1109; x_wconf 81'>गुणकारः</span> 
+     </span>
+     <span class='ocr_line' id='line_1_25' title="bbox 404 1119 1250 1152; baseline 0 -9; x_size 41.373901; x_descenders 9.1279068; x_ascenders 12.676087"><span class='ocrx_word' id='word_1_185' title='bbox 404 1114 454 1143; x_wconf 88'>कथं</span> <span class='ocrx_word' id='word_1_186' title='bbox 466 1122 509 1143; x_wconf 82'>तत्र</span> <span class='ocrx_word' id='word_1_187' title='bbox 523 1124 570 1143; x_wconf 90'>तस्य</span> <span class='ocrx_word' id='word_1_188' title='bbox 591 1124 738 1152; x_wconf 83'>गुणकारत्वम्</span> <span class='ocrx_word' id='word_1_189' title='bbox 756 1119 759 1143; x_wconf 91'>।</span> <span class='ocrx_word' id='word_1_190' title='bbox 779 1124 846 1143; x_wconf 91'>उच्यते</span> <span class='ocrx_word' id='word_1_191' title='bbox 872 1119 875 1143; x_wconf 82'>।</span> <span class='ocrx_word' id='word_1_192' title='bbox 892 1122 941 1146; x_wconf 92'>यदा</span> <span class='ocrx_word' id='word_1_193' title='bbox 955 1121 1250 1152; x_wconf 71'>भाज्यहतभाजकशेषतुल्यः</span> 
+     </span>
+     <span class='ocr_line' id='line_1_26' title="bbox 404 1155 1336 1196; baseline -0.001 -8; x_size 42; x_descenders 9; x_ascenders 12"><span class='ocrx_word' id='word_1_194' title='bbox 404 1155 457 1188; x_wconf 89'>शेषः</span> <span class='ocrx_word' id='word_1_195' title='bbox 473 1166 522 1190; x_wconf 85'>तदा</span> <span class='ocrx_word' id='word_1_196' title='bbox 535 1155 657 1187; x_wconf 49'>तत्फलमेव</span> <span class='ocrx_word' id='word_1_197' title='bbox 669 1166 768 1196; x_wconf 80'>गुणकार</span> <span class='ocrx_word' id='word_1_198' title='bbox 780 1156 829 1194; x_wconf 84'>इति</span> <span class='ocrx_word' id='word_1_199' title='bbox 841 1155 921 1196; x_wconf 31'>पूर्वमेव</span> <span class='ocrx_word' id='word_1_200' title='bbox 934 1156 1065 1190; x_wconf 82'>प्रतिपादितः</span> <span class='ocrx_word' id='word_1_201' title='bbox 1089 1163 1092 1187; x_wconf 91'>।</span> <span class='ocrx_word' id='word_1_202' title='bbox 1109 1155 1216 1187; x_wconf 30'>तच्छेषेण</span> <span class='ocrx_word' id='word_1_203' title='bbox 1227 1166 1254 1187; x_wconf 90'>च</span> <span class='ocrx_word' id='word_1_204' title='bbox 1268 1156 1336 1187; x_wconf 47'>भाज्यै</span> 
+     </span>
+     <span class='ocr_line' id='line_1_27' title="bbox 404 1199 1332 1240; baseline 0 -9; x_size 41.373901; x_descenders 9.1279068; x_ascenders 12.676087"><span class='ocrx_word' id='word_1_205' title='bbox 404 1199 444 1237; x_wconf 51'>हते</span> <span class='ocrx_word' id='word_1_206' title='bbox 457 1210 485 1231; x_wconf 91'>स</span> <span class='ocrx_word' id='word_1_207' title='bbox 501 1209 618 1231; x_wconf 77'>भाज्यशेषो</span> <span class='ocrx_word' id='word_1_208' title='bbox 639 1212 717 1239; x_wconf 84'>यावान्</span> <span class='ocrx_word' id='word_1_209' title='bbox 732 1212 804 1240; x_wconf 70'>तत्तुल्ये</span> <span class='ocrx_word' id='word_1_210' title='bbox 827 1212 907 1232; x_wconf 72'>गतशेषे</span> <span class='ocrx_word' id='word_1_211' title='bbox 929 1212 1079 1234; x_wconf 51'>फलब्धयघातः</span> <span class='ocrx_word' id='word_1_212' title='bbox 1099 1212 1165 1231; x_wconf 88'>सरूप</span> <span class='ocrx_word' id='word_1_213' title='bbox 1184 1210 1224 1236; x_wconf 92'>एव</span> <span class='ocrx_word' id='word_1_214' title='bbox 1240 1212 1332 1240; x_wconf 91'>गुणकार</span> 
+     </span>
+     <span class='ocr_line' id='line_1_28' title="bbox 407 1242 1017 1282; baseline 0 -8; x_size 37; x_descenders 5; x_ascenders 13"><span class='ocrx_word' id='word_1_215' title='bbox 407 1255 492 1281; x_wconf 83'>इत्येतच्च</span> <span class='ocrx_word' id='word_1_216' title='bbox 512 1242 625 1282; x_wconf 19'>प्रदर््ितम्</span> <span class='ocrx_word' id='word_1_217' title='bbox 643 1250 646 1274; x_wconf 78'>।</span> <span class='ocrx_word' id='word_1_218' title='bbox 662 1253 705 1274; x_wconf 78'>तत्र</span> <span class='ocrx_word' id='word_1_219' title='bbox 719 1255 904 1274; x_wconf 89'>केवलभाज्यस्यैव</span> <span class='ocrx_word' id='word_1_220' title='bbox 923 1242 1017 1279; x_wconf 83'>हार्यत्वा-</span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_4' title="bbox 404 203 1305 205">
+    <p class='ocr_par' id='par_1_5' lang='san_iitb_train' title="bbox 404 203 1305 205">
+     <span class='ocr_line' id='line_1_29' title="bbox 404 203 1305 205; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_221' title='bbox 404 203 1305 205; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_5' title="bbox 404 249 1336 251">
+    <p class='ocr_par' id='par_1_6' lang='san_iitb_train' title="bbox 404 249 1336 251">
+     <span class='ocr_line' id='line_1_30' title="bbox 404 249 1336 251; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_222' title='bbox 404 249 1336 251; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_6' title="bbox 404 294 1186 296">
+    <p class='ocr_par' id='par_1_7' lang='san_iitb_train' title="bbox 404 294 1186 296">
+     <span class='ocr_line' id='line_1_31' title="bbox 404 294 1186 296; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_223' title='bbox 404 294 1186 296; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_7' title="bbox 481 338 1336 340">
+    <p class='ocr_par' id='par_1_8' lang='san_iitb_train' title="bbox 481 338 1336 340">
+     <span class='ocr_line' id='line_1_32' title="bbox 481 338 1336 340; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_224' title='bbox 481 338 1336 340; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_8' title="bbox 742 385 1327 387">
+    <p class='ocr_par' id='par_1_9' lang='san_iitb_train' title="bbox 742 385 1327 387">
+     <span class='ocr_line' id='line_1_33' title="bbox 742 385 1327 387; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_225' title='bbox 742 385 1327 387; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_9' title="bbox 627 472 1218 474">
+    <p class='ocr_par' id='par_1_10' lang='san_iitb_train' title="bbox 627 472 1218 474">
+     <span class='ocr_line' id='line_1_34' title="bbox 627 472 1218 474; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_226' title='bbox 627 472 1218 474; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_10' title="bbox 441 559 1155 561">
+    <p class='ocr_par' id='par_1_11' lang='san_iitb_train' title="bbox 441 559 1155 561">
+     <span class='ocr_line' id='line_1_35' title="bbox 441 559 1155 561; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_227' title='bbox 441 559 1155 561; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_11' title="bbox 404 603 1336 605">
+    <p class='ocr_par' id='par_1_12' lang='san_iitb_train' title="bbox 404 603 1336 605">
+     <span class='ocr_line' id='line_1_36' title="bbox 404 603 1336 605; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_228' title='bbox 404 603 1336 605; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_12' title="bbox 416 646 1285 648">
+    <p class='ocr_par' id='par_1_13' lang='san_iitb_train' title="bbox 416 646 1285 648">
+     <span class='ocr_line' id='line_1_37' title="bbox 416 646 1285 648; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_229' title='bbox 416 646 1285 648; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_13' title="bbox 647 646 1285 648">
+    <p class='ocr_par' id='par_1_14' lang='san_iitb_train' title="bbox 647 646 1285 648">
+     <span class='ocr_line' id='line_1_38' title="bbox 647 646 1285 648; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_230' title='bbox 647 646 1285 648; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_14' title="bbox 761 690 1274 692">
+    <p class='ocr_par' id='par_1_15' lang='san_iitb_train' title="bbox 761 690 1274 692">
+     <span class='ocr_line' id='line_1_39' title="bbox 761 690 1274 692; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_231' title='bbox 761 690 1274 692; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_15' title="bbox 404 735 1184 737">
+    <p class='ocr_par' id='par_1_16' lang='san_iitb_train' title="bbox 404 735 1184 737">
+     <span class='ocr_line' id='line_1_40' title="bbox 404 735 1184 737; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_232' title='bbox 404 735 1184 737; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_16' title="bbox 404 860 1336 862">
+    <p class='ocr_par' id='par_1_17' lang='san_iitb_train' title="bbox 404 860 1336 862">
+     <span class='ocr_line' id='line_1_41' title="bbox 404 860 1336 862; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_233' title='bbox 404 860 1336 862; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_17' title="bbox 632 947 1336 949">
+    <p class='ocr_par' id='par_1_18' lang='san_iitb_train' title="bbox 632 947 1336 949">
+     <span class='ocr_line' id='line_1_42' title="bbox 632 947 1336 949; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_234' title='bbox 632 947 1336 949; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_18' title="bbox 445 991 1230 993">
+    <p class='ocr_par' id='par_1_19' lang='san_iitb_train' title="bbox 445 991 1230 993">
+     <span class='ocr_line' id='line_1_43' title="bbox 445 991 1230 993; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_235' title='bbox 445 991 1230 993; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_19' title="bbox 404 1035 941 1037">
+    <p class='ocr_par' id='par_1_20' lang='san_iitb_train' title="bbox 404 1035 941 1037">
+     <span class='ocr_line' id='line_1_44' title="bbox 404 1035 941 1037; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_236' title='bbox 404 1035 941 1037; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_20' title="bbox 404 1079 1302 1081">
+    <p class='ocr_par' id='par_1_21' lang='san_iitb_train' title="bbox 404 1079 1302 1081">
+     <span class='ocr_line' id='line_1_45' title="bbox 404 1079 1302 1081; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_237' title='bbox 404 1079 1302 1081; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_21' title="bbox 520 1122 1245 1124">
+    <p class='ocr_par' id='par_1_22' lang='san_iitb_train' title="bbox 520 1122 1245 1124">
+     <span class='ocr_line' id='line_1_46' title="bbox 520 1122 1245 1124; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_238' title='bbox 520 1122 1245 1124; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_22' title="bbox 511 1210 1336 1212">
+    <p class='ocr_par' id='par_1_23' lang='san_iitb_train' title="bbox 511 1210 1336 1212">
+     <span class='ocr_line' id='line_1_47' title="bbox 511 1210 1336 1212; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_239' title='bbox 511 1210 1336 1212; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_23' title="bbox 404 1253 1007 1255">
+    <p class='ocr_par' id='par_1_24' lang='san_iitb_train' title="bbox 404 1253 1007 1255">
+     <span class='ocr_line' id='line_1_48' title="bbox 404 1253 1007 1255; baseline 0 0; x_size 1; x_descenders -0.5; x_ascenders 0.5"><span class='ocrx_word' id='word_1_240' title='bbox 404 1253 1007 1255; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_24' title="bbox 439 1857 748 1988">
+    <p class='ocr_par' id='par_1_25' lang='san_iitb_train' title="bbox 439 1857 736 1988">
+     <span class='ocr_line' id='line_1_49' title="bbox 441 1857 708 1887; baseline 0 -4; x_size 31.303572; x_descenders 5.3035717; x_ascenders 8"><span class='ocrx_word' id='word_1_241' title='bbox 441 1857 505 1887; x_wconf 42'>’एवेति</span> <span class='ocrx_word' id='word_1_242' title='bbox 514 1857 578 1883; x_wconf 85'>सर्वथा</span> <span class='ocrx_word' id='word_1_243' title='bbox 591 1875 603 1877; x_wconf 62'>-</span> <span class='ocrx_word' id='word_1_244' title='bbox 615 1865 643 1883; x_wconf 62'>ख.</span> <span class='ocrx_word' id='word_1_245' title='bbox 655 1865 708 1883; x_wconf 48'>पाठः-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_50' title="bbox 440 1892 656 1919; baseline 0 -1; x_size 31.303572; x_descenders 5.3035717; x_ascenders 8"><span class='ocrx_word' id='word_1_246' title='bbox 440 1892 528 1919; x_wconf 14'>श्शेषमप्य</span> <span class='ocrx_word' id='word_1_247' title='bbox 541 1910 553 1912; x_wconf 71'>-</span> <span class='ocrx_word' id='word_1_248' title='bbox 565 1900 592 1918; x_wconf 20'>क.</span> <span class='ocrx_word' id='word_1_249' title='bbox 604 1900 656 1918; x_wconf 61'>पाठः.</span> 
+     </span>
+     <span class='ocr_line' id='line_1_51' title="bbox 441 1927 748 1960; baseline -0.003 -6; x_size 32.598213; x_descenders 5.5982146; x_ascenders 8"><span class='ocrx_word' id='word_1_250' title='bbox 441 1930 521 1960; x_wconf 59'>शशक्यम्</span> <span class='ocrx_word' id='word_1_251' title='bbox 536 1934 538 1953; x_wconf 89'>।</span> <span class='ocrx_word' id='word_1_252' title='bbox 552 1927 621 1955; x_wconf 78'>द्वितीय</span> <span class='ocrx_word' id='word_1_253' title='bbox 632 1945 644 1947; x_wconf 77'>-</span> <span class='ocrx_word' id='word_1_254' title='bbox 656 1935 683 1953; x_wconf 84'>क.</span> <span class='ocrx_word' id='word_1_255' title='bbox 695 1935 748 1953; x_wconf 56'>पाठः</span> 
+     </span>
+     <span class='ocr_line' id='line_1_52' title="bbox 439 1962 613 1988; baseline 0 0; x_size 31.303572; x_descenders 5.3035717; x_ascenders 8"><span class='ocrx_word' id='word_1_256' title='bbox 439 1962 485 1988; x_wconf 77'>ध्स्यो</span> <span class='ocrx_word' id='word_1_257' title='bbox 497 1980 509 1982; x_wconf 81'>-</span> <span class='ocrx_word' id='word_1_258' title='bbox 521 1970 548 1988; x_wconf 57'>क.</span> <span class='ocrx_word' id='word_1_259' title='bbox 560 1970 613 1988; x_wconf 69'>पाठः-</span> 
+     </span>
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

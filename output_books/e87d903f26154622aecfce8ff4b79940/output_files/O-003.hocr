@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name='ocr-system' content='tesseract 4.0.0-beta.1' />
+  <meta name='ocr-capabilities' content='ocr_page ocr_carea ocr_par ocr_line ocrx_word'/>
+</head>
+<body>
+  <div class='ocr_page' id='page_1' title='image "/home/server/Documents/ocr/sandhi/output_books/ABBv1a/page_images/ABBv1a_0001-003.jpg"; bbox 0 0 1700 2200; ppageno 0'>
+   <div class='ocr_carea' id='block_1_1' title="bbox 619 242 1113 505">
+    <p class='ocr_par' id='par_1_1' lang='san_iitb_train' title="bbox 619 242 1113 505">
+     <span class='ocr_line' id='line_1_1' title="bbox 807 242 934 284; baseline 0 0; x_size 49.420212; x_descenders 7.4202127; x_ascenders 11"><span class='ocrx_word' id='word_1_1' title='bbox 807 253 822 284; x_wconf 86'>।।</span> <span class='ocrx_word' id='word_1_2' title='bbox 848 242 893 284; x_wconf 79'>श्री</span> <span class='ocrx_word' id='word_1_3' title='bbox 919 253 934 284; x_wconf 82'>।।</span> 
+     </span>
+     <span class='ocr_line' id='line_1_2' title="bbox 641 321 1090 393; baseline 0 -9; x_size 53; x_descenders 9; x_ascenders 16"><span class='ocrx_word' id='word_1_4' title='bbox 641 342 901 385; x_wconf 49'>न्यखिलश्रीवर्धनी</span> <span class='ocrx_word' id='word_1_5' title='bbox 917 321 1061 393; x_wconf 58'>भहाराज्ञी</span> <span class='ocrx_word' id='word_1_6' title='bbox 1086 353 1090 384; x_wconf 90'>।</span> 
+     </span>
+     <span class='ocr_line' id='line_1_3' title="bbox 720 395 858 448; baseline 0.007 -1; x_size 61.335106; x_descenders 9.3351068; x_ascenders 13"><span class='ocrx_word' id='word_1_7' title='bbox 720 395 858 448; x_wconf 51'>श्रीसेतुल-</span> 
+     </span>
+     <span class='ocr_line' id='line_1_4' title="bbox 619 451 1113 505; baseline -0.002 -11; x_size 53; x_descenders 12; x_ascenders 10"><span class='ocrx_word' id='word_1_8' title='bbox 619 464 733 498; x_wconf 67'>्रत्यक्षा</span> <span class='ocrx_word' id='word_1_9' title='bbox 749 452 851 493; x_wconf 86'>जयति</span> <span class='ocrx_word' id='word_1_10' title='bbox 867 451 1068 505; x_wconf 25'>वञ्चिभूल्ष्मीः</span> <span class='ocrx_word' id='word_1_11' title='bbox 1098 462 1113 493; x_wconf 84'>।।</span> 
+     </span>
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

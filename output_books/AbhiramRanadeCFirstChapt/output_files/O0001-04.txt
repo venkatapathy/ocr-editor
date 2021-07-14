@@ -1,0 +1,53 @@
+2.1 Execution order
+
+There is another important similarity between programs and text written in a natural language such
+as English. A paragraph is expected to be read from left to right, top to bottom. So is a program.
+By default a computer executes the commands left to right, top to bottom. But just as you have
+directives in magazines or newspaper such as “Please continue from page 13, column 4”, the order
+in which the commands of a program are executed can be changed. We see an example next.
+
+3 Repeating a block of commands
+
+At this point you should be able to write a program to draw any regular polygon, say a decagon.
+You need to know how much to turn at each step. The amount by which you turn equals the exterior
+angle of the polygon. But we know from Euclidean Geometry that the exterior angles of a polygon
+add up to 360 degrees. A decagon has 10 exterior angles, and hence after drawing each side you must
+turn by 360/10 = 36 degree. So to draw a decagon of side length 100, we repeat the forward (100)
+and right (36) commands 10 times. This works, but you may get bored writing down the same
+command several times. Indeed, you dont need to do that. Here is what you would write instead.
+
+#include <simplecpp>
+main_program{
+turtleSim();
+repeat (10) {
+forward (100) ;
+left (36);
+}
+wait (5);
+}
+
+This program, when executed, will draw a decagon. The new statement in this is the repeat
+statement [7] Its general form is
+
+repeat (count) {
+statements
+
+}
+
+In this, count could be any number. The statements could be any sequence of statements which
+would be executed as many times as the expression count, in the given order. The statements are
+said to constitute the body of the repeat statement. Each execution of the body is said to be an
+iteration. Only after the body of the loop is executed as many times as the value of count, do we
+execute the statement following the repeat statement.
+
+So in this case the sequence forward(100); left (36); is executed 10 times, drawing all 10
+edges of the decagon. Only after that do we get to the statement wait (5);
+
+3.1 Drawing any regular polygon
+
+Our next program when executed, asks the user to type in how many sides the polygon should have,
+and then draws the required polygon.
+
+4The repeat statement is not a part of C++ but is provided by Simplecpp. C++ does have statements using
+which we can achieve repetition, but these are more involved and will be introduced in Chapter ??.
+

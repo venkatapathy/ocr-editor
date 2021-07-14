@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name='ocr-system' content='tesseract 4.0.0-beta.1' />
+  <meta name='ocr-capabilities' content='ocr_page ocr_carea ocr_par ocr_line ocrx_word'/>
+</head>
+<body>
+  <div class='ocr_page' id='page_1' title='image "/home/server/Documents/ocr/sandhi/output_books/ABBv1a/page_images/ABBv1a_0001-205.jpg"; bbox 0 0 1700 2200; ppageno 0'>
+   <div class='ocr_carea' id='block_1_1' title="bbox 423 1626 645 1938">
+    <p class='ocr_par' id='par_1_1' lang='san_iitb_train' title="bbox 518 1626 550 1746">
+     <span class='ocr_line' id='line_1_1' title="bbox 520 1626 549 1647; baseline 0 0; x_size 38.75; x_descenders 6.5; x_ascenders 10.75"><span class='ocrx_word' id='word_1_1' title='bbox 520 1626 549 1647; x_wconf 24'>२</span> 
+     </span>
+     <span class='ocr_line' id='line_1_2' title="bbox 518 1673 550 1695; baseline 0 0; x_size 38.75; x_descenders 6.5; x_ascenders 10.75"><span class='ocrx_word' id='word_1_2' title='bbox 518 1673 550 1695; x_wconf 74'>२५</span> 
+     </span>
+     <span class='ocr_line' id='line_1_3' title="bbox 519 1723 549 1746; baseline 0.067 -2; x_size 38.75; x_descenders 6.5; x_ascenders 10.75"><span class='ocrx_word' id='word_1_3' title='bbox 519 1723 549 1746; x_wconf 90'>२९</span> 
+     </span>
+    </p>
+
+    <p class='ocr_par' id='par_1_2' lang='san_iitb_train' title="bbox 423 1770 645 1938">
+     <span class='ocr_line' id='line_1_4' title="bbox 423 1770 645 1797; baseline -0.014 -5; x_size 38.75; x_descenders 6.5; x_ascenders 10.75"><span class='ocrx_word' id='word_1_4' title='bbox 423 1771 462 1797; x_wconf 88'>२९,</span> <span class='ocrx_word' id='word_1_5' title='bbox 479 1771 523 1797; x_wconf 88'>७४,</span> <span class='ocrx_word' id='word_1_6' title='bbox 540 1771 580 1797; x_wconf 19'>३८,</span> <span class='ocrx_word' id='word_1_7' title='bbox 597 1770 645 1792; x_wconf 67'>१००</span> 
+     </span>
+     <span class='ocr_line' id='line_1_5' title="bbox 520 1818 548 1842; baseline -0.071 0; x_size 28.83721; x_descenders 4.8372092; x_ascenders 8"><span class='ocrx_word' id='word_1_8' title='bbox 520 1818 548 1842; x_wconf 91'>३२</span> 
+     </span>
+     <span class='ocr_line' id='line_1_6' title="bbox 519 1867 549 1890; baseline -0.067 0; x_size 38.75; x_descenders 6.5; x_ascenders 10.75"><span class='ocrx_word' id='word_1_9' title='bbox 519 1867 549 1890; x_wconf 92'>३४</span> 
+     </span>
+     <span class='ocr_line' id='line_1_7' title="bbox 520 1914 550 1938; baseline 0 0; x_size 28.83721; x_descenders 4.8372092; x_ascenders 8"><span class='ocrx_word' id='word_1_10' title='bbox 520 1914 550 1938; x_wconf 88'>३६</span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_2' title="bbox 1288 60 1333 82">
+    <p class='ocr_par' id='par_1_3' lang='san_iitb_train' title="bbox 1288 60 1333 82">
+     <span class='ocr_line' id='line_1_8' title="bbox 1288 60 1333 82; baseline 0 0; x_size 29.666666; x_descenders 7.4166665; x_ascenders 7.4166665"><span class='ocrx_word' id='word_1_11' title='bbox 1288 60 1333 82; x_wconf 73'>१८१</span> 
+     </span>
+    </p>
+   </div>
+   <div class='ocr_carea' id='block_1_3' title="bbox 401 145 1551 1956">
+    <p class='ocr_par' id='par_1_4' lang='san_iitb_train' title="bbox 401 145 1551 1956">
+     <span class='ocr_line' id='line_1_9' title="bbox 401 145 1551 1956; baseline 0 0; x_size 905.5; x_descenders -452.75; x_ascenders 452.75"><span class='ocrx_word' id='word_1_12' title='bbox 401 145 1551 1956; x_wconf 95'> </span> 
+     </span>
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

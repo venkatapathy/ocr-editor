@@ -1,0 +1,61 @@
+and express yourself. Likewise when learning C++, you must not only know the various statements
+and their syntax, you must understand how to design programs. Further, when you learn a new
+natural language, you will typically read interesting literature in that language. The analogue while
+learning a programming language is: you must learn how interesting computational problems get
+solved! We will follow this strategy. Hope you will find it enjoyable.
+
+8.1 Graphics
+
+The main activity that computers engage in is of course calculating with numbers. However, there
+are many reasons we began this introduction with picture drawing, and why picture drawing will be
+an important parallel theme that will run through the book.
+
+Programs are not a mere list of calculations you want done; as you will see it is important
+to understand the patterns in the calculation and represent them in your program. Both these
+activities: understanding patterns and representing them in your program, are needed also when
+you draw pictures. In general, both the activities are quite difficult. But in case of pictures, the
+patterns are often very obvious. Thus, you can focus your attention on the task of representing them
+in the program. We will see many examples of this later.
+
+Also note that drawing interesting pictures requires much careful calculation, using geometry and
+trigonometry that you have learned earlier|’| Thus, picture drawing will provide another domain in
+which you can practice your computational skills.
+
+Also remember the adage “A picture is worth a thousand words.”. Indeed, it is very useful if
+you can show the result of your computation through a picture. Also, in a lot of applications it
+is useful if you can provide input to the program by drawing a picture or clicking on the screen,
+rather than by typing in numbers. In general, and especially for computation on mobile phones and
+tablet computers, the areas of data visualization and graphical user interfaces are becoming very
+important, and our picture drawing exercises will give you a taste of these areas.
+
+And finally, drawing pictures is fun.
+
+ 
+
+8.2 A note regarding the exercises
+
+Programming is not a spectator sport. To really understand programming, you must write many,
+many programs yourself. That is when you will discover whether you have truly understood what
+is said in the book. To this end, we have provided many exercises at the end of each chapter, which
+you should assidously solve.
+
+Another important suggestion: while reading many times you may find yourself asking, “What
+if we write this program differently”. While the author will not be present to answer your questions,
+there is an easy way to find out — write it differently and run it on your computer! This is the best
+way to learn.
+
+ 
+
+9 Exercises
+
+In all the problems related to drawing, you are expected to identify the patterns /repetitions in what
+is asked, and use repeat statements to write a concise program as possible. You should also avoid
+excessive movement of the turtle and tracing over what has already been drawn.
+
+1. Modify the program given in the text so that it asks for the side length of the polygon to be
+drawn in addition to asking for the number of sides.
+
+%Do not worry if you have forgotten some of this; we will refresh your memory when needed.
+
+10
+

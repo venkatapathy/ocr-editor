@@ -1,0 +1,56 @@
+10.
+
+11.
+
+12.
+
+Draw a sequence of 10 squares, one to the left of another.
+
+Draw a chessboard, i.e. a square of side length say 80 divided into 64 squares each of sidelength
+10.
+
+If you draw a polygon with a large number of sides, say 100, then it will look essentially like
+a circle. In fact this is how circles are drawn: as a many sided polygon. Use this idea to draw
+the numeral 8 — two circles placed tangentially one above the other.
+
+A pentagram is a five pointed star, drawn without lifting the pen. Specifically, let A,B,C,D,E
+be 5 equidistant points on a circle, then this is the figure A—-C-E-B-D—A. Draw this.
+
+Draw a seven pointed star in the same spirit as above. Note however that there are more than
+one possible stars. An easy way to figure out the turning angle: how many times does the
+turtle turn around itself as it draws?
+
+We wrote “360.0” in our program rather than just “360”. There is a reason for this which we
+will discuss later. But you could have some fun figuring it out. Rewrite the program using just
+“360” and see what happens. A more direct way is to put in statements cout << 360/11;
+cout << 360.0/11; and see what is printed on the screen. This is an important idea: if you
+are curious about “what would happen if I wrote ... instead of ...?” — you should simply try
+it out!
+
+Read in the lengths of the sides of a triangle and draw the triangle. You will need to know
+and use trigonometry for solving this.
+
+When you hold a set of cards in your hand, you usually arrange them fanned out. Say you
+start with cards stacked one on top of the other. Then you rotate the ith card from the top
+by an amount proportional to i (say 10¢ degrees to the left) around the bottom left corner.
+Now, we can see the top card completely, but the other cards are seen only partially. This is
+the figure that you are to draw. (a) Draw it assuming the cards are transparent. (b) Draw it
+assuming the cards are opaque. For (b) some trigonometric calculation will be necessary. In
+both cases, use repeat statements to keep your program small as possible.
+
+Draw a pattern consisting of 7 circles of equal radius: one in the center and 6 around it, each
+outer circle touching the central circle and two others. Try to write a program which minimizes
+turtle movement. Your program statements should be chosen to exploit the symmetry in the
+pattern.
+
+Draw the picture shown in Figure ??. As you can see, the picture has 36 repetitions of a basic
+pattern. Your program should be able to take a number n as input, and draw a pictures having
+n repetitions. Make sure that the lines and the arcs in the pattern connect smoothly.
+
+Write a program which reads in a number and prints its fourth power.
+
+Write a program which does the following 10 times: read in a number and then print its square
+Toot.
+
+11
+

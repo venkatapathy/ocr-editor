@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react,flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,flask
 
+#folders
+input_books
+output_books
+
 #venv
 sandhivenv
 
