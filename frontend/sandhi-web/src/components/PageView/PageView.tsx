@@ -24,22 +24,22 @@ function PageViewer() {
 		parsed.p = "1";
 	}
 
-	const imageurl = "http://10.129.6.78:5000/i/b/1/p/2";
-	/*	const imageurl =
+	//const imageurl = "http://10.129.6.78:5000/i/b/1/p/2";
+		const imageurl =
                         process.env.REACT_APP_SERVER_URL +
                         "/i/b/" +
                         parsed?.b +
                         "/p/" +
                         parsed?.p;
-*/
-	const hocrurl = "http://10.129.6.78:5000/h/b/1/p/2";
-	/*	const imageurl =
+
+	//const hocrurl = "http://10.129.6.78:5000/h/b/1/p/2";
+		const hocrurl =
                         process.env.REACT_APP_SERVER_URL +
                         "/i/b/" +
                         parsed?.b +
                         "/p/" +
                         parsed?.p;
-*/
+
 
 	const [imgMeasureRef, { width, height }] = useMeasure();
 

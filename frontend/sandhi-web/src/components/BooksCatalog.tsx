@@ -1,13 +1,37 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
+import React, { useState, useRef, useEffect } from "react";
+import axios from "axios";
 
 function BooksCatalog() {
 	const [show, setShow] = useState(false);
+	const [showAlert, setShowAlert] = useState(false);
 
+	const [inputValues, setInputValues] = useState({});
+	const [onlineBookList, setOnlineBookList] = useState([]);
+	const [alertMessage, setAlertMessage] = useState({});
+
+	const form = useRef(null);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
+	const refreshBookList = () => {
+		const listBookUrl = process.env.REACT_APP_SERVER_URL + "/books";
+		axios.get(listBookUrl)
+			.then((response) => {
+				setOnlineBookList(response.data);
+			})
+			.catch((er) => {
+				setAlertMessage({msg:er.response.data,variant: "danger"});
+				setShowAlert(true);
+			});
+	};
+
+	useEffect(() => {
+		refreshBookList();
+	},[]);
 	const booksList = [
 		{
 			_id: { $oid: "60e72548f67de168a975542a" },
@@ -35,16 +59,16 @@ function BooksCatalog() {
 		},
 	];
 
-	const trItem = booksList.map((bookItem, index) => (
-		<tr key={bookItem._id.$oid}>
-			<th>{index}</th>
+	const trItem = onlineBookList.map((bookItem, index) => (
+		<tr key={bookItem._id.$uuid}>
+			<th>{index+1}</th>
 			<td>{bookItem.title}</td>
 			<td>{bookItem.author}</td>
 			<td>
 				<a
 					href={
 						"/cli/pageview?b=" +
-						bookItem._id.$oid
+						bookItem._id.$uuid
 					}
 				>
 					View Book
@@ -52,15 +76,132 @@ function BooksCatalog() {
 			</td>
 		</tr>
 	));
+
+	const handleInputChange = (event) => {
+		const target = event.target;
+		const value =
+			target.type === "checkbox"
+				? target.checked
+				: target.value;
+		const name = target.id;
+		let shallow = Object.assign({}, inputValues);
+		shallow[name] = value;
+		setInputValues(shallow);
+	};
+
+	const handleBookSubmit = (e) => {
+		e.preventDefault();
+		const frmData = new FormData(form.current);
+		const addBookUrl = process.env.REACT_APP_SERVER_URL + "/books";
+		const config = {
+			headers: {
+				"content-type": "multipart/form-data",
+			},
+		};
+		axios.post(addBookUrl, frmData, config)
+			.then((response) => {
+				//console.log(response);
+				setAlertMessage({msg:"Successfully saved the book to the SandHI catalog",variant:"success"});
+				setShowAlert(true);
+				refreshBookList();
+			})
+			.catch((er) => {
+				console.log(er);
+				setAlertMessage({msg:er.response?.data,variant:"danger"});
+				setShowAlert(true);
+			});
+	};
+
 	return (
 		<>
-			<Modal show={show} onHide={handleClose}>
-				<Modal.Header closeButton>
-					<Modal.Title>Modal heading</Modal.Title>
+			<Modal
+				show={show}
+				onHide={handleClose}
+				animation={false}
+			>
+				<Modal.Header>
+					<Modal.Title>
+						Add a book to SandHI catalog
+						using this form
+					</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					Woohoo, you're reading this text in a
-					modal!
+					<Form
+						ref={form}
+						onSubmit={handleBookSubmit}
+					>
+						<Form.Group>
+							<Form.Label>
+								Book Title
+							</Form.Label>
+							<Form.Control
+								type="text"
+								placeholder="Enter Book Title"
+								onChange={
+									handleInputChange
+								}
+								id="title"
+								name="title"
+							/>
+						</Form.Group>
+						<Form.Group>
+							<Form.Label>
+								Author of the
+								book
+							</Form.Label>
+							<Form.Control
+								type="text"
+								placeholder="Enter name of the Author"
+								onChange={
+									handleInputChange
+								}
+								id="author"
+								name="author"
+							/>
+						</Form.Group>
+						<Form.Group>
+							<Form.Label>
+								Number of pages
+							</Form.Label>
+							<Form.Control
+								type="text"
+								placeholder="Number of pages"
+								id="noofpages"
+								name="noofpages"
+							/>
+						</Form.Group>
+						<Form.Group>
+							<Form.Label>
+								Pdf File of the
+								book
+							</Form.Label>
+
+							<Form.File
+								id="uploaded_file"
+								name="uploaded_file"
+							/>
+						</Form.Group>
+						<br />
+						<Button
+							variant="primary"
+							type="submit"
+						>
+							Submit
+						</Button>
+						<Alert
+							variant="danger"
+							onClose={() =>
+								setShowAlert(
+									false
+								)
+							}
+							dismissible
+							show={showAlert}
+							variant={alertMessage?.variant}
+						>
+							{alertMessage?.msg}
+						</Alert>
+					</Form>
 				</Modal.Body>
 				<Modal.Footer>
 					<Button
@@ -69,18 +210,12 @@ function BooksCatalog() {
 					>
 						Close
 					</Button>
-					<Button
-						variant="primary"
-						onClick={handleClose}
-					>
-						Save Changes
-					</Button>
 				</Modal.Footer>
 			</Modal>
 			<div className="container">
 				<div className="row">
 					<div className="col">
-						<table class="table table-striped">
+						<table className="table table-striped">
 							<thead>
 								<tr>
 									<th scope="col">
@@ -104,11 +239,16 @@ function BooksCatalog() {
 								{trItem}
 								<tr>
 									<td
-										colspan={
+										colSpan={
 											4
 										}
 									>
-										<Button variant="link" onClick={handleShow}>
+										<Button
+											variant="link"
+											onClick={
+												handleShow
+											}
+										>
 											Add
 											a
 											book

@@ -47,7 +47,7 @@ function ToolBar({ curPageno, dispatch }: Props) {
 				//defaulting to 100% of div
 
 				//pageImage.curWidth = 0;
-				//pageImage.curHeight = 0;
+				//`pageImage.curHeight = 0;
 				dispatch(loadImage(pageImage));
 
 				const page: HocrPage = await doOcr(hocrurl);
