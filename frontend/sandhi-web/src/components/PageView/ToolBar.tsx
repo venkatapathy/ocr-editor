@@ -11,11 +11,12 @@ import doOcr from "../../lib/doOcr";
 
 export interface Props {
 	curPageNo: int;
-
+	fnSetCurZoom;
 	dispatch: Dispatch<AppReducerAction>;
+	
 }
 
-function ToolBar({ curPageno, dispatch }: Props) {
+function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 	const parsed = queryString.parse(window.location.search);
 	const imageurl =
 		process.env.REACT_APP_SERVER_URL +
@@ -30,6 +31,8 @@ function ToolBar({ curPageno, dispatch }: Props) {
 		parsed?.b +
 		"/p/" +
 		curPageno;
+
+		
 
 	const handleChange = (e) => {
 		console.log("handling page change +" + imageurl);
@@ -61,7 +64,7 @@ function ToolBar({ curPageno, dispatch }: Props) {
 
 	return (
 		<div className="container-fluid pv-toolbar border">
-			<div className="row align-items-center shadow">
+			<div className="row align-items-left shadow">
 				<div className="col pl-3">
 					<span className="pe-md-5">
 						<button
@@ -142,11 +145,12 @@ function ToolBar({ curPageno, dispatch }: Props) {
 						type="button"
 						className="btn btn-light toolbar-btn px-2"
 						title="Zoom-in"
+						onClick={()=>fnSetCurZoom(0.25)}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
+							width="24"
+							height="24"
 							fill="currentColor"
 							className="bi bi-zoom-in"
 							viewBox="0 0 16 16"
@@ -169,11 +173,12 @@ function ToolBar({ curPageno, dispatch }: Props) {
 						type="button"
 						className="btn btn-light toolbar-btn px-2"
 						title="Zoom-out"
+						onClick={()=>fnSetCurZoom(-0.25)}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
+							width="24"
+							height="24"
 							fill="currentColor"
 							className="bi bi-zoom-out"
 							viewBox="0 0 16 16"
@@ -189,13 +194,6 @@ function ToolBar({ curPageno, dispatch }: Props) {
 							/>
 						</svg>
 					</button>
-					<span className="zoom">
-						<select>
-							<option value="100">
-								100%
-							</option>
-						</select>
-					</span>
 				</div>
 			</div>
 		</div>

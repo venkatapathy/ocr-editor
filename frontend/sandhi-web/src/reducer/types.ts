@@ -7,7 +7,7 @@ export interface State {
 	model: string;
 	hocrPage: HocrPage;
 	hoverId: string;
-	curZoom: string;
+	curZoom: int;
 	logInfo: string;
 	curPageno: int;
 }

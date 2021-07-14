@@ -1,7 +1,7 @@
 import ToolBar from "./ToolBar";
 import { Stage, Layer, Text } from "react-konva";
 import { useMeasure } from "react-use";
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import ImageView from "./ImageView";
 import { useAppReducer } from "../../reducerContext";
 import queryString from "query-string";
@@ -19,7 +19,11 @@ import HocrView from "./HocrView";
 function PageViewer() {
 	const [state, dispatch] = useAppReducer();
 	const parsed = queryString.parse(window.location.search);
-
+	const [curZoom, setCurZoom]=useState(1);
+	
+	const handleZoom=(zoomDelta:int) =>{
+		setCurZoom(curZoom+zoomDelta);
+	};
 	if (!parsed?.p) {
 		parsed.p = "1";
 	}
@@ -66,6 +70,7 @@ function PageViewer() {
 			<ToolBar
 				curPageno={state.curPageno}
 				dispatch={dispatch}
+				fnSetCurZoom={handleZoom}
 			/>
 			<div className="container-fluid pv-container pt-2 pb-4 px-2">
 				<div className="row wh-90 vh-100 border shadow">
@@ -76,24 +81,24 @@ function PageViewer() {
 						<div className="p-3 border pv-pane">
 							<Stage
 								width={
-									state
+									(state
 										.pageImage
 										?.curWidth !==
 									0
 										? state
 												.pageImage
 												?.curWidth
-										: width
+										: width)*curZoom
 								}
 								height={
-									state
+									(state
 										.pageImage
 										?.curHeight !==
 									0
 										? state
 												.pageImage
 												?.curHeight
-										: height
+										: height)*curZoom
 								}
 							>
 								{!state.pageImage && (
@@ -113,24 +118,24 @@ function PageViewer() {
 											state.pageImage
 										}
 										width={
-											state
+											(state
 												.pageImage
 												?.curWidth !==
 											0
 												? state
 														.pageImage
 														?.curWidth
-												: width
+												: width)*curZoom
 										}
 										height={
-											state
+											(state
 												.pageImage
 												?.curHeight !==
 											0
 												? state
 														.pageImage
 														?.curHeight
-												: height
+												: height)*curZoom
 										}
 									/>
 								</Layer>
@@ -145,24 +150,24 @@ function PageViewer() {
 										state.pageImage
 									}
 									width={
-										state
+										(state
 											.pageImage
 											?.curWidth !==
 										0
 											? state
 													.pageImage
 													?.curWidth
-											: width
+											: width)*curZoom
 									}
 									height={
-										state
+										(state
 											.pageImage
 											?.curHeight !==
 										0
 											? state
 													.pageImage
 													?.curHeight
-											: height
+											: height)*curZoom
 									}
 									hoverId={
 										state.hoverId
