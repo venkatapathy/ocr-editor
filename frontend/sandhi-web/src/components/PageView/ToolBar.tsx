@@ -46,8 +46,8 @@ function ToolBar({ curPageno, dispatch }: Props) {
 
 				//defaulting to 100% of div
 
-				//pageImage.curWidth = 0;
-				//`pageImage.curHeight = 0;
+				pageImage.curWidth = 0;
+				pageImage.curHeight = 0;
 				dispatch(loadImage(pageImage));
 
 				const page: HocrPage = await doOcr(hocrurl);
@@ -99,20 +99,9 @@ function ToolBar({ curPageno, dispatch }: Props) {
 							}
 						}}
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							fill="currentColor"
-							className="bi bi-arrow-down"
-							viewBox="0 0 16 16"
-						>
-							<path
-								fillRule="evenodd"
-								d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-							></path>
-						</svg>
-					</button>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+</svg>			</button>
 
 					<span className="border-start border-2 h-100 rounded-pill"></span>
 
@@ -133,20 +122,9 @@ function ToolBar({ curPageno, dispatch }: Props) {
 							}
 						}}
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							fill="currentColor"
-							className="bi bi-arrow-up"
-							viewBox="0 0 16 16"
-						>
-							<path
-								fillRule="evenodd"
-								d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-							/>
-						</svg>
-					</button>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>				</button>
 					<span className="page-num">
 						<input
 							type="text"

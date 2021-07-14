@@ -17,7 +17,7 @@ class HocrApiHandler(Resource):
             }
 
         resourcepath = book.fullpath.replace(
-            ".pdf", "") + "/output_files/O-" + format(pid, "03d") + ".hocr"
+            ".pdf", "") + "/output_files/O0001-" + format(pid, "03d") + ".hocr"
         if os.path.isfile(resourcepath):
             return send_file(resourcepath, mimetype='text/html')
         else:
@@ -40,7 +40,7 @@ class ImageApiHandler(Resource):
             }
 
         resourcepath = book.fullpath.replace(
-            ".pdf", "") + "/page_images/O-" + format(pid, "03d") + ".jpg"
+            ".pdf", "") + "/page_images/O0001-" + format(pid, "03d") + ".jpg"
         if os.path.isfile(resourcepath):
             return send_file(resourcepath, mimetype='image/jpeg')
         else:
