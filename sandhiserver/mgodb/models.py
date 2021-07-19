@@ -1,4 +1,4 @@
-from .db import db
+from db import db
 
 
 class Book(db.Document):
@@ -7,3 +7,4 @@ class Book(db.Document):
     author = db.StringField(required=True)
     fullpath = db.StringField(required=True)
     noofpages = db.IntField()
+    isIndexed = db.BooleanField(default=False)
