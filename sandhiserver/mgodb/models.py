@@ -1,4 +1,7 @@
-from db import db
+try:
+    from .db import db
+except ImportError:
+    from db import db
 
 
 class Book(db.Document):

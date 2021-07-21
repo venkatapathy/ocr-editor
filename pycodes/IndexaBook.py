@@ -50,7 +50,7 @@ for txtFile in ocrTxtFilesList:
     pagejson = {}
 
     #print("bookuuid: {0}".format(selectedbook.bookuuid))
-    pagejson["bookuuid"] = selectedbook.author
+    pagejson["bookuuid"] = selectedbook.bookuuid.hex
 
     #print("author: {0}".format(selectedbook.author))
     pagejson["author"] = selectedbook.author

@@ -2,6 +2,23 @@ from flask_restful import Api, Resource, reqparse
 from flask import send_file
 from mgodb.models import Book
 import os.path
+from urllib.request import urlopen
+import json
+from urllib.parse import quote
+
+
+class SearchQueryHandler(Resource):
+    def get(self, query):
+        connection = urlopen(
+            'http://localhost:8983/solr/sandhi_core/select?q=pagecontent:' +
+            quote(query))
+        response = json.load(connection)
+        return response
+        return {
+            "status": "success",
+            "message":
+            str(response['response']['numFound']) + "documents found."
+        }
 
 
 class HocrApiHandler(Resource):

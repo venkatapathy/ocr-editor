@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function BooksCatalog() {
 	const [show, setShow] = useState(false);
@@ -24,14 +25,17 @@ function BooksCatalog() {
 				setOnlineBookList(response.data);
 			})
 			.catch((er) => {
-				setAlertMessage({msg:er.response.data,variant: "danger"});
+				setAlertMessage({
+					msg: er.response.data,
+					variant: "danger",
+				});
 				setShowAlert(true);
 			});
 	};
 
 	useEffect(() => {
 		refreshBookList();
-	},[]);
+	}, []);
 	const booksList = [
 		{
 			_id: { $oid: "60e72548f67de168a975542a" },
@@ -61,18 +65,18 @@ function BooksCatalog() {
 
 	const trItem = onlineBookList.map((bookItem, index) => (
 		<tr key={bookItem._id.$uuid}>
-			<th>{index+1}</th>
+			<th>{index + 1}</th>
 			<td>{bookItem.title}</td>
 			<td>{bookItem.author}</td>
 			<td>
-				<a
-					href={
+				<Link
+					to={
 						"/cli/pageview?b=" +
 						bookItem._id.$uuid
 					}
 				>
 					View Book
-				</a>
+				</Link>
 			</td>
 		</tr>
 	));
@@ -101,13 +105,19 @@ function BooksCatalog() {
 		axios.post(addBookUrl, frmData, config)
 			.then((response) => {
 				//console.log(response);
-				setAlertMessage({msg:"Successfully saved the book to the SandHI catalog",variant:"success"});
+				setAlertMessage({
+					msg: "Successfully saved the book to the SandHI catalog",
+					variant: "success",
+				});
 				setShowAlert(true);
 				refreshBookList();
 			})
 			.catch((er) => {
 				console.log(er);
-				setAlertMessage({msg:er.response?.data,variant:"danger"});
+				setAlertMessage({
+					msg: er.response?.data,
+					variant: "danger",
+				});
 				setShowAlert(true);
 			});
 	};
@@ -197,7 +207,9 @@ function BooksCatalog() {
 							}
 							dismissible
 							show={showAlert}
-							variant={alertMessage?.variant}
+							variant={
+								alertMessage?.variant
+							}
 						>
 							{alertMessage?.msg}
 						</Alert>
@@ -236,6 +248,21 @@ function BooksCatalog() {
 								</tr>
 							</thead>
 							<tbody>
+								<tr>
+									<td
+										colSpan={
+											4
+										}
+									>
+										<Link to="/cli/search">
+											{" "}
+											Search
+											the
+											Catalog
+										</Link>
+									</td>
+								</tr>
+
 								{trItem}
 								<tr>
 									<td
