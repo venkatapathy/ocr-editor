@@ -11,13 +11,20 @@ import glob
 import json
 
 connect('sandhi-books')
-'''books = Book.objects()
+books = Book.objects()
 
-for book in books:
-    book.isIndexed = False
-    Book.objects(bookuuid=book.bookuuid).update_one(isIndexed=False)'''
+#for book in books:
+#    book.isIndexed = False
+#    Book.objects(bookuuid=book.bookuuid).update_one(isIndexed=True)
+
+#Book.objects(bookuuid='aa754b9bf95d4429a53e2cad0a346a5c').update_one(
+#    category='general')
 
 books = Book.objects(isIndexed=False)
+
+if (len(books) == 0):
+    print("No new books to Index")
+    sys.exit(0)
 
 for index, book in enumerate(books):
     print("{0}. {1}".format(index + 1, book.title))
@@ -80,3 +87,5 @@ for txtFile in ocrTxtFilesList:
 
     with open(jsonIndexFilePath, "w") as outfile:
         json.dump(pagejson, outfile)
+
+Book.objects(bookuuid=selectedbook.bookuuid.hex).update_one(isIndexed=True)

@@ -10,6 +10,10 @@ import cv2
 import sys
 from pdfreader import SimplePDFViewer
 
+sys.path.append('../sandhiserver/mgodb')
+from models import Book
+from mongoengine import connect
+
 relevant_path = input(
     "Give path to the folder where pdfs. Enter for default option: [~/Documents/ocr/sandhi/input_books]"
 ) or "/home/server/Documents/ocr/sandhi/input_books"
@@ -20,10 +24,13 @@ file_names = [
 ]
 print("Select a file from the given list.\nInput the corresponding number")
 
+connect('sandhi-books')
+
 counttmp = 0
 for f in file_names:
     counttmp += 1
-    print(str(counttmp) + ". " + f)
+    book = Book.objects(bookuuid=f.replace('.pdf', ''))[0]
+    print(str(counttmp) + ". " + book.title)
 
 chosenFileNameWithExt = ""
 try:
@@ -70,6 +77,8 @@ imagesFolder = outputDirectory + "/page_images"
 
 if not os.path.exists(outputDirectory + "/text_files"):
     os.mkdir(outputDirectory + "/text_files")
+
+print("Generating image")
 
 convert_from_path(
     relevant_path + '/' + chosenFileNameWithExt,

@@ -12,7 +12,10 @@ export default function SearchPage() {
 
 	const searchResultsDiv = searchResults?.response?.docs.map(
 		(bookItem, index) => (
-			<div className="card col-12 col-md-8 border-0 pt-4" key={bookItem.id}>
+			<div
+				className="card col-12 col-md-9 border-0 pt-4"
+				key={bookItem.id}
+			>
 				<Link
 					to={
 						"/cli/pageview?b=" +
@@ -21,7 +24,8 @@ export default function SearchPage() {
 						bookItem.pageno
 					}
 					className="card-link stretched-link"
-					target="_blank" rel="noopener noreferrer"
+					target="_blank"
+					rel="noopener noreferrer"
 				>
 					{process.env.REACT_APP_SERVER_URL +
 						"/cli/pageview?b=" +
@@ -32,12 +36,20 @@ export default function SearchPage() {
 				<div className="card-title pt-2 inline-headers">
 					<h5>{bookItem?.title}</h5>
 					<span className="badge bg-light text-dark rounded-pill">
-						Page {bookItem.pageno}
+						{"Page " + bookItem.pageno}
 					</span>
+					<h6 className="card-subtitle mb-2 text-muted">
+						{bookItem.author}
+					</h6>
 				</div>
-				<div className="card-body p-0 m-0 text-muted d-inline-block text-truncate">
-					{bookItem.author}
-				</div>
+				<div
+					className="card-body p-0 m-0 text-muted d-inline-block text-truncate"
+					dangerouslySetInnerHTML={{
+						__html: searchResults[
+							"highlighting"
+						][bookItem.id]?.pagecontent[0],
+					}}
+				></div>
 			</div>
 		)
 	);
@@ -124,7 +136,7 @@ export default function SearchPage() {
 									?.response
 									?.numFound
 							}{" "}
-							results in 1008
+							results in {searchResults?.responseHeader?.QTime+" "}
 							milliseconds
 						</h6>
 					</div>

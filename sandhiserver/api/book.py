@@ -22,6 +22,8 @@ class BooksApi(Resource):
             book = Book()
 
             if request.method == 'POST':
+                #if (request.form.get('category')):
+                #    print(request.form.get('category'))
 
                 uploaded_file = request.files['uploaded_file']
                 if ("pdf" not in uploaded_file.content_type):
@@ -29,6 +31,11 @@ class BooksApi(Resource):
 
                 book.title = request.form.get('title')
                 book.author = request.form.get('author')
+                if (request.form.get('category')):
+                    book.category = request.form.get('category')
+                else:
+                    book.category = 'general'
+
                 if (request.form.get('noofpages')):
                     try:
                         book.nooofpages = int(request.form.get('noofpages'))

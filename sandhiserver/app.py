@@ -5,9 +5,7 @@ from mgodb.db import initialize_db
 from api.routes import initialize_routes
 from config.appconfig import Config
 
-app = Flask(__name__,
-            static_url_path='',
-            static_folder='../frontend/sandhi-web/build')
+app = Flask(__name__, static_url_path='', static_folder='static')
 CORS(app)  #comment this on deployment
 api = Api(app)
 
@@ -23,5 +21,6 @@ initialize_routes(api)
 
 
 @app.route("/cli", strict_slashes=False)
+@app.route("/cli/pageview", strict_slashes=False)
 def serve():
     return send_from_directory(app.static_folder, 'index.html')

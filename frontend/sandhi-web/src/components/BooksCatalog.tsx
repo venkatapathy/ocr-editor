@@ -68,6 +68,7 @@ function BooksCatalog() {
 			<th>{index + 1}</th>
 			<td>{bookItem.title}</td>
 			<td>{bookItem.author}</td>
+			<td>{bookItem.category}</td>
 			<td>
 				<Link
 					to={
@@ -113,7 +114,6 @@ function BooksCatalog() {
 				refreshBookList();
 			})
 			.catch((er) => {
-				console.log(er);
 				setAlertMessage({
 					msg: er.response?.data,
 					variant: "danger",
@@ -168,6 +168,29 @@ function BooksCatalog() {
 								id="author"
 								name="author"
 							/>
+						</Form.Group>
+						<Form.Group>
+							<Form.Label>
+								Category
+							</Form.Label>
+							<Form.Control
+								as="select"
+								id="category"
+								name="category"
+							>
+								<option value="general">
+									General
+								</option>
+								<option value="ganitha">
+									Ganitha
+								</option>
+								<option value="philosophy">
+									Philosophy
+								</option>
+								<option value="article">
+									Article
+								</option>
+							</Form.Control>
 						</Form.Group>
 						<Form.Group>
 							<Form.Label>
@@ -240,10 +263,13 @@ function BooksCatalog() {
 										Author
 									</th>
 									<th scope="col">
+										Category
+									</th>
+									<th scope="col">
 										Link
 										to
 										the
-										Book
+										book
 									</th>
 								</tr>
 							</thead>
@@ -251,7 +277,7 @@ function BooksCatalog() {
 								<tr>
 									<td
 										colSpan={
-											4
+											5
 										}
 									>
 										<Link to="/cli/search">
@@ -267,7 +293,7 @@ function BooksCatalog() {
 								<tr>
 									<td
 										colSpan={
-											4
+											5
 										}
 									>
 										<Button

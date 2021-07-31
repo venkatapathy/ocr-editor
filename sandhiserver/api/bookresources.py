@@ -11,14 +11,12 @@ class SearchQueryHandler(Resource):
     def get(self, query):
         connection = urlopen(
             'http://localhost:8983/solr/sandhi_core/select?q=pagecontent:' +
-            quote(query))
+            quote(query) +
+            "&hl=true&hl.fl=pagecontent&hl.usePhraseHighLighter=false&hl.requireFieldMatch=false&hl.simple.pre=<em%20style%3D\"background-color:yellow\">&hl.simple.post=<%2Fem>"
+        )
+
         response = json.load(connection)
         return response
-        return {
-            "status": "success",
-            "message":
-            str(response['response']['numFound']) + "documents found."
-        }
 
 
 class HocrApiHandler(Resource):

@@ -43,8 +43,3 @@ export interface PageImageInfo {
 	orgHeight: number;
 }
 
-export interface BookInfo{
-	bookId: int;
-	totPages: int;
-	curPageNum: int;
-}

@@ -2,6 +2,14 @@ try:
     from .db import db
 except ImportError:
     from db import db
+from enum import Enum
+
+
+class Category(Enum):
+    GENERAL = 'general'
+    GANITHA = 'ganitha'
+    ARTICLE = 'article'
+    PHILOSOPHY = 'philosophy'
 
 
 class Book(db.Document):
@@ -11,3 +19,4 @@ class Book(db.Document):
     fullpath = db.StringField(required=True)
     noofpages = db.IntField()
     isIndexed = db.BooleanField(default=False)
+    category = db.EnumField(Category, default=Category.GENERAL)
