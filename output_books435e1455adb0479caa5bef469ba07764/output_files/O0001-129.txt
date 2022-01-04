@@ -1,0 +1,161 @@
+ 
+
+96. Define the discharge of flow.
+
+Ans. The volume of fluid flowing per unit time across any
+section of a conduit is known as the discharge or rate of flow.
+It is usually denoted by
+
+97. State the equation of continuity of flow.
+
+Ans. It states, “The quantity of fluid per unit time entering
+at one end of the stream tube and leaving at its other end
+must be the same.”
+
+98. The quantity of water flowing through the pipe of diameter
+8 cm is 0.1 m®s. What is the average velocity of flow?
+Ans. Area of cross-section of the pipe
+A =n/4 8% = 50.2 cm? = 0.00502, m?
+Applying the equation, @ = AV
+Q 0.1
+
+We get V= = 5.00502
+
+99. Write down the equation of continuity for a three-dimen-
+sional in compressible flow.
+Ans. 2 + = + A 0
+
+ox dy ox
+100. What is a stagnation point in a two,dimensionhal flow?
+Ans. The point in the two dimensional flow where no motion
+exists, is known as a stagnation point.
+
+101. If the velocity components of flow are” 7="3xy3 and va’
+—»°, then prove that the flow is continuous?
+
+=19.92 m/s.
+
+Ans. Given: u = 3xy*= x
+[a]
+Vadis
+Y 0x
+Differentiating the velocity components. We get
+ou
+
+—=3y?and 2D ns 3y?
+Ox oy
+Substituting the values in the equation of continuity, we
+get
+ou ov
+50355 =i 2_al=
+x or 3y*—3y°=0
+
+Hence, the flow is continuous proved. Ans’
+
+102. Define a flow net.
+
+Ans. Graphical representation of stream lines and equipo-
+tential lines which are perpendicular to each other, is called
+a flow net.
+
+103. The flow net can be drawn for rotational/ irrotational flow.
+Ans. For irrotational flow.
+
+104. Write down the condition of orthogonalic of stream lines
+and potential lines.
+Ans. The necessary condition for the orthogonality of stream
+lines and potential lines is:
+
+o ov, & v_,
+
+ox ox dy oy
+105. Define the energy.
+Ans. The energy may be defined as the ability to do work.
+
+106. What do you understand by the elevation energy of fluid?
+Ans. The energy in a fluid due to its position or elevation with
+respect to an arbitrary datum plane, is called the elevation
+energy. [tis also known as the gravitational potential energy.
+
+ 
+
+Kk]
+
+107. Define the kinetic energy of a fluid.
+Ans. The ability of a fluid mass to do work due to its velocity
+is called the kinetic energy. It is also known as velocity energy.
+2
+Its magnitude is Be
+28
+
+108. Define the pressure energy of a fluid flow.
+Ans. The work done in pushing a mass of fluid across a sec-
+tion by the fluid pressure, is called the pressure energy. It is
+also known as flow energy. Its magnitude is p/w where w is
+specific weight of the fluid.
+
+109. State the Bernoulli's theorem.
+Ans. It states “In a steady flow of frictionless incompressible
+fluid flow system the total energy per unit weight of the flowing
+fluid remains constant”.
+OR
+
+“In a steady flow system of frictionless incompressible
+fluid, the sum of the pressure, elevation and velocity heads
+remains constant at every section provided no energy is added
+or.taken'out by the external source”.
+
+2
+
+P| Ye P= Head
+
+w. 2g
+1104Name the fortes that are taken into consideration while
+deriving the Bernoulli’'siequation.
+Ans. The gravity and pressure forces.
+
+114. Kinetie eorregtion factor (a) for laminar flow of fluid in
+pipe is 2. (True/False)
+Ans. True.
+
+112. Define the piezomeétric head.
+
+Ans. The term p/w+ = in the Bernoulli's equation is known
+as piezometric head where p/w is the pressure head and z in
+the potential head.
+
+113« Differentiate between hydraulic gradient, piezometric
+line, piezometric head line and pressure grade line.
+
+Ans. The hydraulie gradient, piezometric line piezometric
+head line and pressure grade line are same and it represents
+a line joining the points to which the liquid will rise in verti-
+cal piezometer tubes fitted at different cross-sections of the
+pipe line.
+
+114. Define the energy line.
+
+Ans. The graphical representation of the total head at any
+section of the pipe line above the same datum, is called the
+energy line. It is also known as total head line.
+
+115. Due to sudden reduction in the diameter of a pipeline,
+the energy grade line drops vertically. (True/False)
+Ans. True.
+
+116. Due to sudden contraction in the diameter of a pipe line,
+the vertical spacing between the energy gradient line and
+hydraulic gradient line decreases. (True/False)
+Ans. False.
+
+117. Define the horsepower (HP).
+
+Ans. The horse power (HP) may be defined as the product of
+the density (w), the discharge (@) and the head divided by 75.
+i.e., HP = WQHIT5.
+
+118. The path traversed by a liquid jet issued from a nozzle,is
+parabolic/circular.
+
+Ans. Parabolic path.
+

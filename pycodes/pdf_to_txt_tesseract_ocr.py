@@ -10,13 +10,16 @@ import cv2
 import sys
 from pdfreader import SimplePDFViewer
 
+SANDHI_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books/'
+SANDHI_LIB_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books/'
+
 sys.path.append('../sandhiserver/mgodb')
 from models import Book
 from mongoengine import connect
 
 relevant_path = input(
     "Give path to the folder where pdfs. Enter for default option: [~/Documents/ocr/sandhi/input_books]"
-) or "/home/server/Documents/ocr/sandhi/input_books"
+) or SANDHI_LIB_INPUT_DIR
 included_extensions = ['pdf']
 file_names = [
     fn for fn in os.listdir(relevant_path) if any(
@@ -62,7 +65,7 @@ chosenFileNameWithNoExt = chosenFileNameWithExt.replace(".pdf", "")
 
 outputDirIn = input(
     "Enter the path to the output directory base. Press enter for default option: [~/Documents/ocr/sandhi/output_books]"
-) or "/home/server/Documents/ocr/sandhi/output_books/"
+) or SANDHI_LIB_OUTPUT_DIR
 
 outputDirectory = outputDirIn + chosenFileNameWithNoExt
 
@@ -90,8 +93,8 @@ convert_from_path(
 )
 
 imagesFolder = outputDirectory + "/page_images"
-pytesseract.tesseract_cmd = r'/home/server/Documents/ocr/tesseract-exec/bin'
-tessdata_dir_config = r'--tessdata-dir "/home/server/Documents/ocr/tesseract-exec/share/tessdata"'
+pytesseract.tesseract_cmd = r'/home/ruralivrs/book-ocr/tesseract-exec/bin'
+tessdata_dir_config = r'--tessdata-dir "/home/ruralivrs/book-ocr/tesseract-exec/share/tessdata"'
 languages = pytesseract.get_languages(config=tessdata_dir_config)
 lcount = 0
 tesslanglist = {}
