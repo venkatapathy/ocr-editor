@@ -1,4 +1,4 @@
-# sandhi- A Digital 
+# sandhi- Sanskrit Digital Library tool
 **Requirements:**
 - Python 3
 - Git
