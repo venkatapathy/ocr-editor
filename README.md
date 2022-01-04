@@ -19,7 +19,7 @@
 ` git clone sandhi repo `
 ` cd sandhi `
 
-**(all references below are from sandhi folder)**
+**(all references below are from sandhi folder. Run each points in different terminal for development)**
 
 ### *1. starting the server*
 
@@ -36,7 +36,7 @@ open `config/appconfig.py` in any texteditor and:
 
 `./startapp.sh`
  
-### *2.starting the client*
+### *2. starting the client*
 
 `npm install`
 
@@ -44,7 +44,7 @@ open `config/appconfig.py` in any texteditor and:
 
 `npm start`
 
-### *3.OCRING:*
+### *3. OCRING:*
 `cd pycodes`
 
 `edit pdf_to_tesseract_ocr.py`
