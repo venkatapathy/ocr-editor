@@ -134,12 +134,12 @@ function parsePage(doc: Document):Page {
 	};
 }
 
-export default function doOcr(): Promise<Page> {
+export default function doOcr(hocrurl): Promise<Page> {
 	//first call the server with image POST and get a hocr text in return( or an error?)
 	//
 	
 
-	return fetch(raw)
+	return fetch(hocrurl)
 		.then((r) => r.text())
 		.then((text) => {
 			console.log("Enter2");
