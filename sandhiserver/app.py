@@ -24,3 +24,4 @@ initialize_routes(api)
 @app.route("/cli/pageview", strict_slashes=False)
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
+
