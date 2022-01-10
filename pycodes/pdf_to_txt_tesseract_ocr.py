@@ -90,6 +90,7 @@ convert_from_path(
     fmt='jpg',
     output_file="O",
     use_pdftocairo=True,
+    thread_count=1,
 )
 
 imagesFolder = outputDirectory + "/page_images"
