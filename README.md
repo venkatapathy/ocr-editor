@@ -23,15 +23,15 @@
 
 ### *1. Starting the server*
 
-1. Activate a virtual environment: 
-        Linux: `. sandhivenv/bin/activate`
+1. Activate a virtual environment:<br /> 
+        Linux: `. sandhivenv/bin/activate`<br />
         Windows: 'python3 -m venv /path/to/sandhivenv'
 
 2. Install the requirements:
-        `pip install -r requirements.txt`
+        `pip install -r requirements.txt`<br />
 **NOTE: Windows users may face an issue in this step- saying 'Failure in building**
-**wheel and setup.py install failure issues'. In case you are faced with this, there are two things you can try out:**
-  **a. pip install wheel- to check if there's an inherent issue there.**
+**wheel and setup.py install failure issues'. <br />In case you are faced with this, there are two things you can try out:**<br />
+  **a. pip install wheel- to check if there's an inherent issue there.**<br />
   **b. Manually download the .whl files and then install it. Here is a nice short tutorial to follow: https://www.youtube.com/watch?v=MzV4N4XUvYc.**
 
 3. `cd sandhiserver`
