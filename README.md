@@ -4,6 +4,7 @@
 - Git
 - Nodejs >10 - used for the project 10.24.1 with corresponding npm
 - Mongodb- db version used 3.6.3
+- Tesseract 4
 
 *Please note down:*
 
@@ -16,16 +17,17 @@
 
 *Once all the software is installed.*
 
-` git clone sandhi repo `
-` cd sandhi `
+` git clone ocr-editor repo `
+` cd ocr-editor `
 
 **(all references below are from sandhi folder. Run each points in different terminal for development)**
 
 ### *1. Starting the server*
 
+1. Create a python virtual environment(called as ocrvenv here)
 1. Activate a virtual environment:<br /> 
-        Linux: `. sandhivenv/bin/activate`<br />
-        Windows: 'python3 -m venv /path/to/sandhivenv'
+        Linux: `. ocrvenv/bin/activate`<br />
+        Windows: 'python3 -m venv /path/to/ocrvenv'
 
 2. Install the requirements:
         `pip install -r requirements.txt`<br />
