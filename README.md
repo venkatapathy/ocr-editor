@@ -1,4 +1,4 @@
-# sandhi- Sanskrit Digital Library tool
+# OCR Editor
 **Requirements:**
 - Python 3
 - Git
