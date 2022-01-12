@@ -64,4 +64,19 @@ open `config/appconfig.py` in any texteditor and:
 6. In your browser where the web app is running go to address localhost:5000/cli and add a book in your input directory. Confirm by CDing into your input directory and you’ll notice a randomly named pdf. If yes, then everything is fine.
 7. If you get a weird html error in red while adding the book then mostly you have not added REACTAPP in your PATH. To add in your path run ‘export REACT_APP_SERVER_URL=http://localhost:5000’. Again start the server run this command and then run npm start. 
 8. Now run the file in pycodes in your terminal by executing python3 pytesseract_pdf_to_txt.py.
+9. Error- pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+Possible reason- Tesseract not working. 
+Solution- Install tesseract and note down two paths after installing tesseract: path to tesseract exec file( ends with bin) and path to tessdata (folder having language models). and edit them in 
+*pdf_to_text.py.
+10. If after uploading book at client server localhost:3000/cli, error occurs having few lines. 
+Possibly it is because mongodb not working. It might be in inactive state.
+Solution- Run command "sudo systemctl status mongod" , if its output shows status as inactive, then run this command "sudo systemctl start mongod". 
+11. Error- File "pdf_to_txt_tesseract_ocr.py", line 125, in <module>
+    config=tessdata_dir_config)
+  File "/home/sudarshan/sandhi/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 432, in image_to_pdf_or_hocr
+    return run_and_get_output(*args)
+  File "/home/sudarshan/sandhi/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 289, in run_and_get_output
+    with open(filename, 'rb') as output_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tess_fcf0552u.hocr'
+Solution- Solution- follow this link - https://stackoverflow.com/questions/66633373/pytessaract-image-to-pdf-or-hocr-function-not-working-in-aws-lambda
 
