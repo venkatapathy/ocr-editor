@@ -21,29 +21,40 @@
 
 **(all references below are from sandhi folder. Run each points in different terminal for development)**
 
-### *1. starting the server*
+### *1. Starting the server*
 
-`. sandhivenv/bin/activate`
+1. Activate a virtual environment: 
+        Linux: `. sandhivenv/bin/activate`
+        Windows: 'python3 -m venv /path/to/sandhivenv'
 
-`pip install -r requirements.txt`
+2. Install the requirements:
+        `pip install -r requirements.txt`
+**NOTE: Windows users may face an issue in this step- saying 'Failure in building**
+**wheel and setup.py install failure issues'. In case you are faced with this, there are two things you can try out:**
+  **a. pip install wheel- to check if there's an inherent issue there.**
+  **b. Manually download the .whl files and then install it. Here is a nice short tutorial to follow: https://www.youtube.com/watch?v=MzV4N4XUvYc.**
 
-`cd sandhiserver`
+3. `cd sandhiserver`
 
-open `config/appconfig.py` in any texteditor and:
+4. open `config/appconfig.py` in any texteditor and:
 
 **change the address of MongoDB to one you are connecting to**
 **change the path to input and output directories where the pdf and ocr files will be saved(should be exisiting. Please end the path with "/")**
 
-`./startapp.sh`
+5. `./startapp.sh`
+
  
-### *2. starting the client*
+### *2. Starting the client*
 
-`npm install`
+1. Change the directory to frontend/sandhi-web
 
-`add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
+2. Run `npm install`
 
-`npm start`
+3. `Add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
 
+4. Finally, `npm start`
+
+**At this point, install the tesseract engine from the official documentation, and note its file location. We also require the py-tesseract library, which was already installed in our requirements.txt file.**
 ### *3. OCRING:*
 `cd pycodes`
 
