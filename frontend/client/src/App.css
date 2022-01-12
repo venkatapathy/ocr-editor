@@ -1,0 +1,108 @@
+body {
+	font-family: "Open Sans", "Roboto", sans-serif !important;
+}
+
+.navbar-brand {
+	font-size: 1.75rem;
+}
+
+.navbar-text {
+	font-size: 1.3rem;
+	color: #666666;
+}
+
+.navbar-subbrand {
+	display: inline;
+	font-size: 0.75rem;
+}
+
+.pv-toolbar {
+	height: 42px;
+	background-color: rgba(249, 249, 250, 1);
+}
+
+.pv-container {
+	background-color: rgb(238, 238, 240);
+}
+
+.pv-pane {
+	background-color: #ffffff;
+	height: 100vh;
+	width: 100%;
+	overflow: scroll;
+	overflow-y: scroll;
+}
+
+.toolbar-btn:hover {
+	background-color: #a8a8a8;
+}
+
+.page-num input {
+	min-width: 48px;
+	width: 48px;
+	font-size: 0.75rem;
+}
+
+.zoom select {
+	min-width: 64px;
+	width: 64px;
+	font-size: 0.75rem;
+}
+
+/* .page-num input{
+	min-width: 16px!important;
+} */
+
+.page-num span {
+	background-color: rgba(249, 249, 250, 1);
+	font-size: 0.75rem;
+}
+
+.well-shadow {
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+.fixed-bottom {
+	background-color: #ededed;
+}
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
