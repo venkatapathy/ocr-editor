@@ -92,4 +92,8 @@ Solution- Run command "sudo systemctl status mongod" , if its output shows statu
     with open(filename, 'rb') as output_file:
 FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tess_fcf0552u.hocr'
 Solution- Solution- follow this link - https://stackoverflow.com/questions/66633373/pytessaract-image-to-pdf-or-hocr-function-not-working-in-aws-lambda
+        
+
+## Link to video for code walk through
+https://www.youtube.com/watch?v=foRF1fd4yAo&feature=youtu.be
 
