@@ -16,34 +16,35 @@
 
 *Once all the software is installed.*
 
-` git clone sandhi repo `
-` cd sandhi `
+` git clone OCR Editor repo `
+` cd servesandhivenv `
 
-**(all references below are from sandhi folder. Run each points in different terminal for development)**
+**(all references below are from server folder. Run each points in different terminal for development)**
 
 ### *1. starting the server*
 
 `. sandhivenv/bin/activate`
 
 `pip install -r requirements.txt`
-
-`cd sandhiserver`
-
+**For Windows Users: Download Visual Studio and install all C++ builds. If issue is faced regarding bitarray or any whl files, Manually download the .whl files and then install it. Here is a nice short tutorial to follow: https://www.youtube.com/watch?v=MzV4N4XUvYc.**
+`cd server`
 open `config/appconfig.py` in any texteditor and:
 
-**change the address of MongoDB to one you are connecting to**
+**change the address of MongoDB to the one you are connecting to**
 **change the path to input and output directories where the pdf and ocr files will be saved(should be exisiting. Please end the path with "/")**
-
+**Now using GitBash or any terminal**
 `./startapp.sh`
+**Go to the server URL and add /books, if "[]" is displayed, the server is now working successfully. Else, check the earlier steps**
  
 ### *2. starting the client*
+`cd frontend>client`
 
 `npm install`
 
 `add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
-
+**Your server and client should work on similar URL, like localhost or any other IP address**
 `npm start`
-
+**To your URL, add "/cli" to open the client. The client is now working successfully. Else, check the earlier steps**
 ### *3. OCRING:*
 `cd pycodes`
 
