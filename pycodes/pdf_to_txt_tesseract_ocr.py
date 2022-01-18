@@ -93,7 +93,7 @@ with tempfile.TemporaryDirectory() as path:
     use_pdftocairo=True,
     thread_count=1,
 )
-    for i in range(1,len(pages)+1):
+    for i in range(len(pages)):
         page=pages[i]
         page.save(os.path.join(imagesFolder,'P_{0:03d}.jpg'.format(i)),'JPEG')
 
