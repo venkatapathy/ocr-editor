@@ -95,7 +95,7 @@ with tempfile.TemporaryDirectory() as path:
     thread_count=1,
 )
     for i in range(1,len(pages)+1):
-        page=pages[i]
+        page=pages[i-1]
         page.save(os.path.join(imagesFolder,'P_{0:03d}.jpg'.format(i)),'JPEG')
 
 imagesFolder = outputDirectory + "/page_images"
