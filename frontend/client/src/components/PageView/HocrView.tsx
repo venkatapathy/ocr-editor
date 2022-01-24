@@ -62,9 +62,7 @@ function HocrView({ page, hoverId, dispatch }: Props) {
 	));
 	return (
 		<div>
-		<ReactQuill>
 		<p>{linesEl}</p>
-		</ReactQuill>
 		</div>
 	);
 }

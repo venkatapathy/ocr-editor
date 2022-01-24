@@ -11,8 +11,9 @@ import sys
 from pdfreader import SimplePDFViewer
 import tempfile
 
-SANDHI_LIB_INPUT_DIR = '/home/ruralivrs/ocr-editor/input_books/'
-SANDHI_LIB_OUTPUT_DIR = '/home/ruralivrs/ocr-editor/output_books/'
+OCR_EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books/'
+OCR_EDITOR_LIB_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books/'
+
 
 sys.path.append('../server/mgodb')
 from models import Book
@@ -20,7 +21,7 @@ from mongoengine import connect
 
 relevant_path = input(
     "Give path to the folder where pdfs. Enter for default option: [~/Documents/ocr/sandhi/input_books]"
-) or SANDHI_LIB_INPUT_DIR
+) or OCR_EDITOR_LIB_INPUT_DIR
 included_extensions = ['pdf']
 file_names = [
     fn for fn in os.listdir(relevant_path) if any(
@@ -66,7 +67,7 @@ chosenFileNameWithNoExt = chosenFileNameWithExt.replace(".pdf", "")
 
 outputDirIn = input(
     "Enter the path to the output directory base. Press enter for default option: [~/Documents/ocr/sandhi/output_books]"
-) or SANDHI_LIB_OUTPUT_DIR
+) or OCR_EDITOR_LIB_OUTPUT_DIR
 
 outputDirectory = outputDirIn + chosenFileNameWithNoExt
 
