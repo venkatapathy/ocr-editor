@@ -4,6 +4,7 @@
 - Git
 - Nodejs >10 - used for the project 10.24.1 with corresponding npm
 - Mongodb- db version used 3.6.3
+- Tesseract 4
 
 *Please note down:*
 
@@ -16,33 +17,49 @@
 
 *Once all the software is installed.*
 
-` git clone sandhi repo `
-` cd sandhi `
 
-**(all references below are from sandhi folder. Run each points in different terminal for development)**
+` git clone ocr-editor repo `
+` cd ocr-editor `
 
-### *1. starting the server*
 
-`. sandhivenv/bin/activate`
+**(all references below are from server folder. Run each points in different terminal for development)**
 
-`pip install -r requirements.txt`
+### *1. Starting the server*
 
-`cd sandhiserver`
+1. Create a python virtual environment(called as ocrvenv here)
+1. Activate a virtual environment:<br /> 
+        Linux: `. ocrvenv/bin/activate`<br />
+        Windows: 'python3 -m venv /path/to/ocrvenv'
 
-open `config/appconfig.py` in any texteditor and:
+2. Install the requirements:
+        `pip install -r requirements.txt`<br />
+**NOTE: Windows users may face an issue in this step- saying 'Failure in building**
+**wheel and setup.py install failure issues'. <br />In case you are faced with this, there are two things you can try out:**<br />
+  **a. pip install wheel- to check if there's an inherent issue there.**<br />
+  **b. Manually download the .whl files and then install it. Here is a nice short tutorial to follow: https://www.youtube.com/watch?v=MzV4N4XUvYc.**
 
-**change the address of MongoDB to one you are connecting to**
+3. `cd sandhiserver`
+
+4. open `config/appconfig.py` in any texteditor and:
+
+
+**change the address of MongoDB to the one you are connecting to**
 **change the path to input and output directories where the pdf and ocr files will be saved(should be exisiting. Please end the path with "/")**
 
+**Now using GitBash or any terminal**
 `./startapp.sh`
+**Go to the server URL and add /books, if "[]" is displayed, the server is now working successfully. Else, check the earlier steps**
  
 ### *2. starting the client*
+`cd frontend>client`
 
-`npm install`
+2. Run `npm install`
 
-`add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
+3. `Add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
 
-`npm start`
+4. Finally, `npm start`
+
+**At this point, install the tesseract engine from the official documentation, and note its file location. We also require the py-tesseract library, which was already installed in our requirements.txt file.**
 
 ### *3. OCRING:*
 `cd pycodes`
@@ -64,4 +81,23 @@ open `config/appconfig.py` in any texteditor and:
 6. In your browser where the web app is running go to address localhost:5000/cli and add a book in your input directory. Confirm by CDing into your input directory and you’ll notice a randomly named pdf. If yes, then everything is fine.
 7. If you get a weird html error in red while adding the book then mostly you have not added REACTAPP in your PATH. To add in your path run ‘export REACT_APP_SERVER_URL=http://localhost:5000’. Again start the server run this command and then run npm start. 
 8. Now run the file in pycodes in your terminal by executing python3 pytesseract_pdf_to_txt.py.
+9. Error- pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+Possible reason- Tesseract not working. 
+Solution- Install tesseract and note down two paths after installing tesseract: path to tesseract exec file( ends with bin) and path to tessdata (folder having language models). and edit them in 
+*pdf_to_text.py.
+10. If after uploading book at client server localhost:3000/cli, error occurs having few lines. 
+Possibly it is because mongodb not working. It might be in inactive state.
+Solution- Run command "sudo systemctl status mongod" , if its output shows status as inactive, then run this command "sudo systemctl start mongod". 
+11. Error- File "pdf_to_txt_tesseract_ocr.py", line 125, in <module>
+    config=tessdata_dir_config)
+  File "/home/sudarshan/sandhi/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 432, in image_to_pdf_or_hocr
+    return run_and_get_output(*args)
+  File "/home/sudarshan/sandhi/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 289, in run_and_get_output
+    with open(filename, 'rb') as output_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tess_fcf0552u.hocr'
+Solution- Solution- follow this link - https://stackoverflow.com/questions/66633373/pytessaract-image-to-pdf-or-hocr-function-not-working-in-aws-lambda
+        
+
+## Link to video for code walk through
+https://www.youtube.com/watch?v=foRF1fd4yAo&feature=youtu.be
 
