@@ -17,10 +17,12 @@
 
 *Once all the software is installed.*
 
+
 ` git clone ocr-editor repo `
 ` cd ocr-editor `
 
-**(all references below are from sandhi folder. Run each points in different terminal for development)**
+
+**(all references below are from server folder. Run each points in different terminal for development)**
 
 ### *1. Starting the server*
 
@@ -40,15 +42,16 @@
 
 4. open `config/appconfig.py` in any texteditor and:
 
-**change the address of MongoDB to one you are connecting to**
+
+**change the address of MongoDB to the one you are connecting to**
 **change the path to input and output directories where the pdf and ocr files will be saved(should be exisiting. Please end the path with "/")**
 
-5. `./startapp.sh`
-
+**Now using GitBash or any terminal**
+`./startapp.sh`
+**Go to the server URL and add /books, if "[]" is displayed, the server is now working successfully. Else, check the earlier steps**
  
-### *2. Starting the client*
-
-1. Change the directory to frontend/sandhi-web
+### *2. starting the client*
+`cd frontend>client`
 
 2. Run `npm install`
 
@@ -57,6 +60,7 @@
 4. Finally, `npm start`
 
 **At this point, install the tesseract engine from the official documentation, and note its file location. We also require the py-tesseract library, which was already installed in our requirements.txt file.**
+
 ### *3. OCRING:*
 `cd pycodes`
 

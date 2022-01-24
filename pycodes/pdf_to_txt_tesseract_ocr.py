@@ -9,17 +9,19 @@ from pdf2image import convert_from_path
 import cv2
 import sys
 from pdfreader import SimplePDFViewer
+import tempfile
 
-OCR-EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books/'
-OCR-EDITOR_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books/'
+OCR_EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books/'
+OCR_EDITOR_LIB_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books/'
 
-sys.path.append('../sandhiserver/mgodb')
+
+sys.path.append('../server/mgodb')
 from models import Book
 from mongoengine import connect
 
 relevant_path = input(
     "Give path to the folder where pdfs. Enter for default option: [~/Documents/ocr/sandhi/input_books]"
-) or OCR-EDITOR_LIB_INPUT_DIR
+) or OCR_EDITOR_LIB_INPUT_DIR
 included_extensions = ['pdf']
 file_names = [
     fn for fn in os.listdir(relevant_path) if any(
@@ -27,7 +29,7 @@ file_names = [
 ]
 print("Select a file from the given list.\nInput the corresponding number")
 
-connect('sandhi-books')
+connect('ocr-books')
 
 counttmp = 0
 for f in file_names:
@@ -65,7 +67,7 @@ chosenFileNameWithNoExt = chosenFileNameWithExt.replace(".pdf", "")
 
 outputDirIn = input(
     "Enter the path to the output directory base. Press enter for default option: [~/Documents/ocr/sandhi/output_books]"
-) or OCR-EDITOR_LIB_OUTPUT_DIR
+) or OCR_EDITOR_LIB_OUTPUT_DIR
 
 outputDirectory = outputDirIn + chosenFileNameWithNoExt
 
@@ -83,15 +85,18 @@ if not os.path.exists(outputDirectory + "/text_files"):
 
 print("Generating image")
 
-convert_from_path(
+with tempfile.TemporaryDirectory() as path:
+    pages= convert_from_path(
     relevant_path + '/' + chosenFileNameWithExt,
-    output_folder=imagesFolder,
-    paths_only=True,
+    output_folder=path,
     fmt='jpg',
     output_file="O",
     use_pdftocairo=True,
     thread_count=1,
 )
+    for i in range(1,len(pages)+1):
+        page=pages[i]
+        page.save(os.path.join(imagesFolder,'P_{0:03d}.jpg'.format(i)),'JPEG')
 
 imagesFolder = outputDirectory + "/page_images"
 pytesseract.tesseract_cmd = r'/home/ruralivrs/book-ocr/tesseract-exec/bin'
