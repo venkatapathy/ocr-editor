@@ -11,8 +11,8 @@ import sys
 from pdfreader import SimplePDFViewer
 import tempfile
 
-OCR_EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books/'
-OCR_EDITOR_LIB_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books/'
+OCR_EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/ocr-editor/input_books/'
+OCR_EDITOR_LIB_OUTPUT_DIR = '/home/ruralivrs/ocr-editor/output_books/'
 
 
 sys.path.append('../server/mgodb')
