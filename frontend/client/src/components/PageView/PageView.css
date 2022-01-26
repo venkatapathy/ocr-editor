@@ -1,0 +1,37 @@
+.background{
+    background-color: rgb(27, 27, 83);
+
+}
+
+.head{
+    font-size: 12px;
+    color: white;
+}
+
+
+.button{
+  border: none;
+  color: grey;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  
+}
+
+.format-options-background{
+  /* background-color: rgb(27, 27, 83); */
+  position: relative;
+
+}
+.text-format-option{
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  
+}
