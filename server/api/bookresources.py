@@ -1,6 +1,7 @@
 from flask_restful import Api, Resource, reqparse
 from flask import send_file
-from mgodb.models import Book
+#from mgodb.models import Book
+from models import Book
 import os.path
 from urllib.request import urlopen
 import json
