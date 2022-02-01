@@ -4,6 +4,7 @@ import { Dispatch, useState} from "react";
 import {setHoverId} from "../../reducer/actions";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { renderToString } from 'react-dom/server';
 
 export interface Props {
 	page: Page | null;
@@ -15,6 +16,12 @@ export interface Props {
 
 function HocrView({ page, hoverId, dispatch }: Props) {
 	const [value, setValue] = useState('');
+	
+	const valueAdded = (value) => {
+		console.log(value);
+		setValue(value);
+	};
+
 
 	if (page == null) {
 		return <div></div>;
@@ -62,7 +69,8 @@ function HocrView({ page, hoverId, dispatch }: Props) {
 	));
 	return (
 		<div>
-		<p>{linesEl}</p>
+		<ReactQuill theme="snow" value={renderToString(linesEl)} onChange={valueAdded}/>
+		{/*<p>{linesEl}</p>*/}
 		</div>
 	);
 }

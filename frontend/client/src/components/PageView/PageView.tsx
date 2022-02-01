@@ -95,39 +95,7 @@ function PageViewer() {
 								</Navbar>
 								</div>
 							
-							<div className="text-format">
-							<button className="button icon1">icon</button>
-							<button className="button icon2">icon</button>
-							<button className="button icon3">icon</button>
-							<button className="button icon4">icon</button>
-							<button className="button icon5">icon</button>
-							<button className="button icon6">icon</button>
-							<button className="button icon7">icon</button>
-							<button className="button icon8">icon</button>
-							<button className="button icon9">icon</button>
-							<button className="button icon10">icon</button>
-							<button className="button icon11">icon</button>
-							<button className="button icon12">icon</button>
-							<button className="button icon13">icon</button>
-							<button className="button icon14">icon</button>
-							<button className="button icon15">icon</button>
-							<button className="button icon16">icon</button>
-							<button className="button icon17">icon</button>
-							<button className="button icon18">icon</button>
-							<button className="button icon19">icon</button>
-							<button className="button icon20">icon</button>
-							<button className="button icon21">icon</button>
-							<button className="button icon22">icon</button>
-							<button className="button icon23">icon</button>
-							<button className="button icon24">icon</button>
-							<button className="button icon25">icon</button>
-							<button className="button icon26">icon</button>
-							<button className="button icon27">icon</button>
-							<button className="button icon28">icon</button>
-							<button className="button icon29">icon</button>
-		
-							</div>
-							<div className="format-options-background">
+														<div className="format-options-background">
 								{/*<ButtonGroup aria-label="Basic example">
 								<Button className="button" variant="secondary">Resize Image</Button>
 								<Button className="button" variant="secondary">Mark Regions</Button>
@@ -136,15 +104,12 @@ function PageViewer() {
 								</ButtonGroup>
 							</div> */}
 						
-								<button className="text-format-option icon1">Resize Image</button>
 								
 								<button className="text-format-option icon2">Mark Regions</button>
 							
 						
-								<button className="text-format-option icon3">Comments Accuracy</button>
 							
 								
-								<button className="text-format-option icon3">Compare Character Output</button>
 				
 							
 							</div>
