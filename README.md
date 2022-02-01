@@ -76,7 +76,7 @@
 
 1. If you have the error while running mongodb and the error says mongodb.config is not found then change the name of the file mongod.config to mongodb.config in the etc directory. This usually happens if you install mongodb via **sudo apt-get instal**. L
 2. Now after installing mongodb successful, run mongo on terminal and note down the port number, for instance if the address is **mongodb://127.0.0.1:27017** the port number is 27017. By default this should be the port number on which mongodb is running but its okay if the port number is different. 
-3. Now copy this port number and add to his address to “mongodb://localhost:[Port Number]/OCR-Editor-books”, without the brackets. Now go to server/config/appconfig.py and paste this address after ‘host’.
+3. Now copy this port number and add to his address to “mongodb://localhost:[Port Number]/ocr-editor”, without the brackets. Now go to server/config/appconfig.py and paste this address after ‘host’.
 4. Change the path of input and output directories that you created in appconfig.py file. Don’t forget the / at the end. Note that the path to directories should be complete and not any relative path.
 5. Now open another window/lab in terminal and after activating your venv go to pycodes directory and run pytesseract_txt_ocr file in your text editor and change the default input and output directories in that file. These should be the same as that in the appconfig.py file.
 6. In your browser where the web app is running go to address localhost:5000/cli and add a book in your input directory. Confirm by CDing into your input directory and you’ll notice a randomly named pdf. If yes, then everything is fine.
