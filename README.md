@@ -67,6 +67,7 @@
 `edit pdf_to_tesseract_ocr.py`
 
 **change the path to input and output directories where the pdf and ocr files  as before**
+**Also change tesseract and tessdata directories to where the required language data is present**
 
 `python pdf_to_tesseract_ocr.py` and follow the program flow
 
