@@ -38,7 +38,7 @@
   **a. pip install wheel- to check if there's an inherent issue there.**<br />
   **b. Manually download the .whl files and then install it. Here is a nice short tutorial to follow: https://www.youtube.com/watch?v=MzV4N4XUvYc.**
 
-3. `cd sandhiserver`
+3. `cd server`
 
 4. open `config/appconfig.py` in any texteditor and:
 
@@ -76,7 +76,7 @@
 
 1. If you have the error while running mongodb and the error says mongodb.config is not found then change the name of the file mongod.config to mongodb.config in the etc directory. This usually happens if you install mongodb via **sudo apt-get instal**. L
 2. Now after installing mongodb successful, run mongo on terminal and note down the port number, for instance if the address is **mongodb://127.0.0.1:27017** the port number is 27017. By default this should be the port number on which mongodb is running but its okay if the port number is different. 
-3. Now copy this port number and add to his address to “mongodb://localhost:[Port Number]/sandhi-books”, without the brackets. Now go to sandhiserver/config/appconfig.py and paste this address after ‘host’.
+3. Now copy this port number and add to his address to “mongodb://localhost:[Port Number]/OCR-Editor-books”, without the brackets. Now go to server/config/appconfig.py and paste this address after ‘host’.
 4. Change the path of input and output directories that you created in appconfig.py file. Don’t forget the / at the end. Note that the path to directories should be complete and not any relative path.
 5. Now open another window/lab in terminal and after activating your venv go to pycodes directory and run pytesseract_txt_ocr file in your text editor and change the default input and output directories in that file. These should be the same as that in the appconfig.py file.
 6. In your browser where the web app is running go to address localhost:5000/cli and add a book in your input directory. Confirm by CDing into your input directory and you’ll notice a randomly named pdf. If yes, then everything is fine.
@@ -91,9 +91,9 @@ Possibly it is because mongodb not working. It might be in inactive state.
 Solution- Run command "sudo systemctl status mongod" , if its output shows status as inactive, then run this command "sudo systemctl start mongod". 
 11. Error- File "pdf_to_txt_tesseract_ocr.py", line 125, in <module>
     config=tessdata_dir_config)
-  File "/home/sudarshan/sandhi/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 432, in image_to_pdf_or_hocr
+  File "/home/sudarshan/ocr-editor/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 432, in image_to_pdf_or_hocr
     return run_and_get_output(*args)
-  File "/home/sudarshan/sandhi/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 289, in run_and_get_output
+  File "/home/sudarshan/ocr-editor/sandhivenv/lib/python3.6/site-packages/pytesseract/pytesseract.py", line 289, in run_and_get_output
     with open(filename, 'rb') as output_file:
 FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tess_fcf0552u.hocr'
 Solution- Solution- follow this link - https://stackoverflow.com/questions/66633373/pytessaract-image-to-pdf-or-hocr-function-not-working-in-aws-lambda

@@ -1,2 +1,2 @@
-OCR-EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books'
-OCR-EDITOR_LIB_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books'
+OCR_Editor_LIB_INPUT_DIR = 'C:/Users/varun/source/repos/ocr-editor/New_folder/Input'
+OCR_Editor_LIB_OUTPUT_DIR = 'C:/Users/varun/source/repos/ocr-editor/New_folder/Output'
