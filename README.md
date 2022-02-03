@@ -22,12 +22,13 @@
 ` cd ocr-editor `
 
 
-**(all references below are from server folder. Run each points in different terminal for development)**
+**( Run each point in different a terminal for development )**
+
 
 ### *1. Starting the server*
 
 1. Create a python virtual environment(called as ocrvenv here)
-1. Activate a virtual environment:<br /> 
+   Activate the virtual environment:<br /> 
         Linux: `. ocrvenv/bin/activate`<br />
         Windows: 'python3 -m venv /path/to/ocrvenv'
 
@@ -38,39 +39,39 @@
   **a. pip install wheel- to check if there's an inherent issue there.**<br />
   **b. Manually download the .whl files and then install it. Here is a nice short tutorial to follow: https://www.youtube.com/watch?v=MzV4N4XUvYc.**
 
-3. `cd server`
+3. Change the directory to ther server folder:`cd server`
 
-4. open `config/appconfig.py` in any texteditor and:
-
-
+4. Open `config/appconfig.py` in any texteditor and:
 **change the address of MongoDB to the one you are connecting to**
 **change the path to input and output directories where the pdf and ocr files will be saved(should be exisiting. Please end the path with "/")**
 
-**Now using GitBash or any terminal**
-`./startapp.sh`
-**Go to the server URL and add /books, if "[]" is displayed, the server is now working successfully. Else, check the earlier steps**
+5. Now start the app: **Using GitBash or any terminal**<br />
+       Linux: `./startapp.sh`
+       Windows: `flask run`
+**Go to the server URL (localhost:5000/books), if "[]" is displayed, the server is now working successfully. Else, check the earlier steps**
  
-### *2. starting the client*
-`cd frontend>client`
+ 
+ 
+### *2. Starting the client*
+1. Change the directory:`cd frontend>client`
 
 2. Run `npm install`
 
-3. `Add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
+3. Add `REACT_APP_SERVER_URL=http://localhost:5000` to the system environment variables
 
 4. Finally, `npm start`
 
 **At this point, install the tesseract engine from the official documentation, and note its file location. We also require the py-tesseract library, which was already installed in our requirements.txt file.**
 
 ### *3. OCRING:*
-`cd pycodes`
+1. Change the directory: `cd pycodes`
 
-`edit pdf_to_tesseract_ocr.py`
+2. Edit `pdf_to_tesseract_ocr.py` File
 
-**change the path to input and output directories where the pdf and ocr files  as before**
+**Change the path to input and output directories where the pdf and ocr files  as before**
 **Also change tesseract and tessdata directories to where the required language data is present**
 
-`python pdf_to_tesseract_ocr.py` and follow the program flow
-
+3. Run `python pdf_to_tesseract_ocr.py` and follow the program flow
 
 ### Possible Errors while running the tool:
 
