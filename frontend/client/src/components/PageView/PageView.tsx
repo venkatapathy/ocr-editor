@@ -17,6 +17,7 @@ import {
 } from "../../reducer/actions";
 import doOcr from "../../lib/doOcr";
 import HocrLayer from "./components/HocrLayer";
+import HocrTextLayer from "./components/HocrTextLayer";
 import HocrView from "./HocrView";
 import axios from "axios";
 import "./PageView.css"
@@ -236,18 +237,69 @@ function PageViewer() {
 					</div>
 					<div className="col-md-6 shadow">
 						<div className="p-3 border pv-pane">
-							<HocrView
-								page={
-									state.hocrPage
+							<Stage
+								width={
+									(state
+										.pageImage
+										?.curWidth !==
+									0
+										? state
+												.pageImage
+												?.curWidth
+										: width) *
+									curZoom
 								}
-								hoverId={
-									state.hoverId
+								height={
+									(state
+										.pageImage
+										?.curHeight !==
+									0
+										? state
+												.pageImage
+												?.curHeight
+										: height) *
+									curZoom
 								}
-								dispatch={
-									dispatch
-								}
-							/>
-						</div>
+							>
+																							<HocrTextLayer
+									page={
+										state.hocrPage
+									}
+									dispatch={
+										dispatch
+									}
+									pageImage={
+										state.pageImage
+									}
+									width={
+										(state
+											.pageImage
+											?.curWidth !==
+										0
+											? state
+													.pageImage
+													?.curWidth
+											: width) *
+										curZoom
+									}
+									height={
+										(state
+											.pageImage
+											?.curHeight !==
+										0
+											? state
+													.pageImage
+													?.curHeight
+											: height) *
+										curZoom
+									}
+									hoverId={
+										state.hoverId
+									}
+								/>
+							</Stage>
+
+													</div>
 					</div>
 				</div>
 				<div className="row fixed-bottom">
