@@ -1,0 +1,91 @@
+.background {
+  background-color: rgb(27, 27, 83);
+
+}
+
+.head {
+  font-size: 12px;
+  color: white;
+}
+
+
+.button {
+  border: none;
+  color: grey;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+
+}
+
+.format-options-background {
+  /* background-color: rgb(27, 27, 83); */
+  position: relative;
+
+}
+
+.text-format-option {
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+
+}
+
+
+/* DropDown */
+
+.dropdown-menu {
+  padding: 0;
+  font-size: 12px;
+  background-color: #1b1b53;
+  box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.35);
+  border-radius: 5px;
+  border: 1px solid #111136;
+  transition: all 0.3s ease-in-out
+}
+
+.dropdown-menu a {
+  color: #ffffff8c !important;
+  padding: 0.5rem 1rem
+}
+
+.dropdown-menu a:hover {
+  color: #fff;
+  background: rgba(22, 22, 214,0.25)
+}
+
+.dropdown-divider {
+    border-top-color: #ffffff8c
+}
+
+.custom-dropdown {
+  position: absolute;
+  top: 2rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
+  left: 0;
+  right: 0;
+  width: max-content;
+  background-color: #1b1b53;
+  color: #ffffff8c;
+  box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.35);
+  border-radius: 5px;
+  border: 1px solid #111136;
+  transition: all 0.3s ease-in-out
+}
+
+.custom-dropdown li {
+  padding: 0.5rem 1rem
+}
+
+.custom-dropdown li:hover {
+  color: #fff;
+  background: rgba(22, 22, 214,0.25)
+}

@@ -1,12 +1,14 @@
 import ToolBar from "./ToolBar";
-import { Stage, Layer, Text } from "react-konva";
+import { Stage, Layer, Text, Line } from "react-konva";
 import { useMeasure } from "react-use";
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import ImageView from "./ImageView";
 import { useAppReducer } from "../../reducerContext";
 import { Link } from "react-router-dom";
 import queryString from "query-string";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { loadImageUtil } from "../../utils";
+import {Button,ButtonGroup, Nav, Navbar,NavDropdown, Container} from "react-bootstrap";
 import {
 	loadImage,
 	loadHocr,
@@ -17,6 +19,8 @@ import doOcr from "../../lib/doOcr";
 import HocrLayer from "./components/HocrLayer";
 import HocrView from "./HocrView";
 import axios from "axios";
+import "./PageView.css"
+import DropDown from './components/DropDown'
 
 function PageViewer() {
 	const [state, dispatch] = useAppReducer();
@@ -54,21 +58,47 @@ function PageViewer() {
 		//	}
 	}, []);
 
+	const FileOptions = [{
+		key : 1,
+		value : 'New File',
+	}, {
+		key : 2,
+		value : 'Save File',
+	}
+	]
+
+	const EditOptions = [{
+		key : 1,
+		value : 'Undo',
+	}, {
+		key : 2,
+		value : 'Redo',
+	}
+	]
+
+	const LangOptions = [{
+		key : 1,
+		value : 'English',
+	}, {
+		key : 2,
+		value : 'Hindi',
+	}
+	]
+
 	return (
 		<>
-			<nav className="navbar navbar-expand-md shadow-sm rounded p-0 m-0">
+			<div className="background">
 				<div className="container-fluid py-0">
-					<Link
+					{/* <Link
 						className="navbar-brand"
-						to="/cli"
-					>
-						<span className="px-2">
+						to="/cli"> */}
+						{/* <span className="px-2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="42"
 								height="42"
 								fill="currentColor"
-								class="bi bi-arrow-left-circle"
+								className="bi bi-arrow-left-circle"
 								viewBox="0 0 16 16"
 							>
 								<path
@@ -76,23 +106,58 @@ function PageViewer() {
 									d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
 								/>
 							</svg>
-						</span>
-						Sandhi
-						<span className="navbar-subbrand px-2">
-							Page Viewer
-						</span>
-					</Link>
-					<span className="navbar-text px-3 me-auto">
+						</span> */}
+							<div className="head">
+								<Navbar bg="blue" variant="dark">
+								<Container>
+								<Nav className="head">
+								<NavDropdown title="File" id="nav-dropdown1">
+									<DropDown options={FileOptions} />
+								</NavDropdown>
+								<NavDropdown title="Edit" id="nav-dropdown2">
+									<DropDown options={EditOptions} />
+								</NavDropdown>
+								<NavDropdown title="Language" id="nav-dropdown3">
+									<DropDown options={LangOptions} />
+								</NavDropdown>
+								<Nav.Link href="#reports">Reports</Nav.Link>
+								<Nav.Link href="#version">Version</Nav.Link>
+								<Nav.Link href="#download">Download</Nav.Link>
+								<Nav.Link href="#help">Help</Nav.Link>
+								</Nav>
+								</Container>
+								</Navbar>
+								</div>
+							
+														<div className="format-options-background">
+								{/*<ButtonGroup aria-label="Basic example">
+								<Button className="button" variant="secondary">Resize Image</Button>
+								<Button className="button" variant="secondary">Mark Regions</Button>
+								<Button className="button" variant="secondary">Comments Accuracy</Button>
+								<Button className="button" variant="secondary">Compare Character Output</Button>		
+								</ButtonGroup>
+							</div> */}
+						
+								
+								<button className="text-format-option icon2">Mark Regions</button>
+							
+						
+							
+								
+				
+							
+							</div>
+							
+							
+							</div>
+						
+					{/* </Link> */}
+					{/* <span className="navbar-text px-3 me-auto">
 						{bookDetails?.title}
-					</span>
-				</div>
-			</nav>
+					</span> */}
+				
 
-			<ToolBar
-				curPageno={state.curPageno}
-				dispatch={dispatch}
-				fnSetCurZoom={handleZoom}
-			/>
+			
 			<div className="container-fluid pv-container pt-2 pb-4 px-2">
 				<div className="row wh-90 vh-100 border shadow">
 					<div
@@ -220,11 +285,21 @@ function PageViewer() {
 					</div>
 				</div>
 				<div className="row fixed-bottom">
+				<ToolBar
+				curPageno={state.curPageno}
+				dispatch={dispatch}
+				fnSetCurZoom={handleZoom}
+				/>
 					<div className="col-md-6 offset-md-4 px-3">
+						
 						{state.logInfo}
 					</div>
 				</div>
-			</div>
+			</div> 
+			
+		
+		
+		</div>
 		</>
 	);
 }

@@ -18,7 +18,7 @@ Jinja2==3.0.3
 MarkupSafe==2.0.1
 mongoengine==0.23.1
 msgpack==1.0.2
-numpy==1.22.0
+numpy
 opencv-python==4.5.5.62
 pdf2image==1.16.0
 pdfreader==0.1.10
