@@ -24,6 +24,7 @@
     "react-use": "^17.3.2",
     "sort-array": "^4.1.4",
     "typescript": "^4.5.4",
+    "update": "^0.7.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

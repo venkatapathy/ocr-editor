@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import queryString from "query-string";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { loadImageUtil } from "../../utils";
-import {Button,ButtonGroup, Nav, Navbar, Container} from "react-bootstrap";
+import {Button,ButtonGroup, Nav, Navbar,NavDropdown, Container} from "react-bootstrap";
 import {
 	loadImage,
 	loadHocr,
@@ -20,6 +20,7 @@ import HocrLayer from "./components/HocrLayer";
 import HocrView from "./HocrView";
 import axios from "axios";
 import "./PageView.css"
+import DropDown from './components/DropDown'
 
 function PageViewer() {
 	const [state, dispatch] = useAppReducer();
@@ -57,6 +58,33 @@ function PageViewer() {
 		//	}
 	}, []);
 
+	const FileOptions = [{
+		key : 1,
+		value : 'New File',
+	}, {
+		key : 2,
+		value : 'Save File',
+	}
+	]
+
+	const EditOptions = [{
+		key : 1,
+		value : 'Undo',
+	}, {
+		key : 2,
+		value : 'Redo',
+	}
+	]
+
+	const LangOptions = [{
+		key : 1,
+		value : 'English',
+	}, {
+		key : 2,
+		value : 'Hindi',
+	}
+	]
+
 	return (
 		<>
 			<div className="background">
@@ -83,9 +111,15 @@ function PageViewer() {
 								<Navbar bg="blue" variant="dark">
 								<Container>
 								<Nav className="head">
-								<Nav.Link href="#file">File</Nav.Link>
-								<Nav.Link href="#edit">Edit</Nav.Link>
-								<Nav.Link href="#language">Language</Nav.Link>
+								<NavDropdown title="File" id="nav-dropdown1">
+									<DropDown options={FileOptions} />
+								</NavDropdown>
+								<NavDropdown title="Edit" id="nav-dropdown2">
+									<DropDown options={EditOptions} />
+								</NavDropdown>
+								<NavDropdown title="Language" id="nav-dropdown3">
+									<DropDown options={LangOptions} />
+								</NavDropdown>
 								<Nav.Link href="#reports">Reports</Nav.Link>
 								<Nav.Link href="#version">Version</Nav.Link>
 								<Nav.Link href="#download">Download</Nav.Link>
