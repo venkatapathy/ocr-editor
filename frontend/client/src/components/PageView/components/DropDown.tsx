@@ -2,8 +2,8 @@ import React, { useState, useEffect, useLayoutEffect } from "react";
 import PropTypes from 'prop-types'
 import {NavDropdown} from "react-bootstrap"
 
-function DropDown({options} : any) {
-
+function DropDown({options,callAPI} : any) {
+    
   return (
     <>
     {/* <ul className="custom-dropdown">{options.map((data)=>(
@@ -11,7 +11,7 @@ function DropDown({options} : any) {
     ))}</ul> */}
 
     {options.map((data : any)=>(
-        <NavDropdown.Item>{data.value}</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => callAPI(data.key)} key={data.key}>{data.value}</NavDropdown.Item>
     ))
     }
     <NavDropdown.Divider />
