@@ -18,6 +18,10 @@ function App() {
 		bookid = location.split("?")[1].split("&")[0];
 	}
 
+	const styleCSS = {
+		backgroundColor: '#1b1b53'
+	}
+
 	return (
 		<Router>
 			<Switch>
@@ -26,7 +30,7 @@ function App() {
 				</Route>
 
 				<Route exact path="/cli">
-					<nav className="navbar navbar-dark bg-primary navbar-expand-md shadow-sm rounded p-0 m-0">
+					<nav className="navbar navbar-dark navbar-expand-md shadow-sm p-0 m-0" style={styleCSS}>
 						<div className="container-fluid py-0">
 							<Link
 								className="navbar-brand"

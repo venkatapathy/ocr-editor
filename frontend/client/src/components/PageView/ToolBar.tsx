@@ -8,7 +8,7 @@ import {
 	changeCurPage,
 } from "../../reducer/actions";
 import doOcr from "../../lib/doOcr";
-
+/* import { FaArrowAltCircleLeft } from 'react-icons/fa'; */
 export interface Props {
 	curPageNo: int;
 	fnSetCurZoom;
@@ -59,7 +59,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 	};
 
 	useEffect(() => {
-		handleChange();
+		handleChange()
 	}, [curPageno]);
 
 	return (
@@ -71,7 +71,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 							type="button"
 							className="btn btn-light toolbar-btn"
 							title="Toggle Side-pane Window"
-						>
+						>{/* <FaArrowAltCircleLeft /> */}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="16"
@@ -92,12 +92,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						onClick={(e) => {
 							if (curPageno - 1 > 0) {
 								dispatch(
-									changeCurPage(
-										parseInt(
-											curPageno -
-												1
-										)
-									)
+									changeCurPage(parseInt(curPageno)-1)
 								);
 							}
 						}}
@@ -114,14 +109,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						title="Next Page"
 						onClick={(e) => {
 							if (curPageno + 1 > 0) {
-								dispatch(
-									changeCurPage(
-										parseInt(
-											curPageno +
-												1
-										)
-									)
-								);
+								dispatch(changeCurPage(parseInt(curPageno) + 1));
 							}
 						}}
 					>
@@ -132,7 +120,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						<input
 							type="text"
 							value={curPageno}
-							className="well-shadow"
+							className="pageviewer"
 							onChange={handleChange}
 						/>
 						<span className="border-0">

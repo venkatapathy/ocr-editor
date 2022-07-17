@@ -273,7 +273,7 @@ function BooksCatalog() {
 									</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody style={{color:'#1b1b53'}}>
 								<tr>
 									<td
 										colSpan={
@@ -292,15 +292,11 @@ function BooksCatalog() {
 								{trItem}
 								<tr>
 									<td
-										colSpan={
-											5
-										}
+										colSpan={5}
 									>
 										<Button
 											variant="link"
-											onClick={
-												handleShow
-											}
+											onClick={handleShow}
 										>
 											Add
 											a
