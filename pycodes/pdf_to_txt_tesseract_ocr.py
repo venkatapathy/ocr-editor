@@ -11,8 +11,8 @@ import sys
 from pdfreader import SimplePDFViewer
 import tempfile
 
-OCR_EDITOR_LIB_INPUT_DIR = '/home/ruralivrs/sandhi/input_books/'
-OCR_EDITOR_LIB_OUTPUT_DIR = '/home/ruralivrs/sandhi/output_books/'
+OCR_EDITOR_LIB_INPUT_DIR = '/home/venkat/Projects/workbook/ocr-editor/lib/input_books/'
+OCR_EDITOR_LIB_OUTPUT_DIR = '/home/venkat/Projects/workbook/ocr-editor/lib/output_books/'
 
 
 sys.path.append('../server/mgodb')
@@ -20,7 +20,7 @@ from models import Book
 from mongoengine import connect
 
 relevant_path = input(
-    "Give path to the folder where pdfs. Enter for default option: [~/Documents/ocr/sandhi/input_books]"
+    "Give path to the folder where pdfs. Enter for default option: [/home/venkat/Projects/workbook/ocr-editor/lib/input_books]"
 ) or OCR_EDITOR_LIB_INPUT_DIR
 included_extensions = ['pdf']
 file_names = [
@@ -99,8 +99,7 @@ with tempfile.TemporaryDirectory() as path:
         page.save(os.path.join(imagesFolder,'P_{0:03d}.jpg'.format(i)),'JPEG')
 
 imagesFolder = outputDirectory + "/page_images"
-pytesseract.tesseract_cmd = r'/home/ruralivrs/book-ocr/tesseract-exec/bin'
-tessdata_dir_config = r'--tessdata-dir "/home/ruralivrs/book-ocr/tesseract-exec/share/tessdata"'
+tessdata_dir_config = r'--tessdata-dir "/usr/share/tesseract-ocr/4.00/tessdata"'
 languages = pytesseract.get_languages(config=tessdata_dir_config)
 lcount = 0
 tesslanglist = {}
