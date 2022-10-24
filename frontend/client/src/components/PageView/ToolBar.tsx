@@ -123,9 +123,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 							className="pageviewer"
 							onChange={handleChange}
 						/>
-						<span className="border-0">
-							of 217
-						</span>
+						
 					</span>
 				</div>
 				<div className="col">
