@@ -87,5 +87,19 @@
 
 .custom-dropdown li:hover {
   color: #fff;
-  background: rgba(22, 22, 214,0.25)
+  background: rgba(22, 22, 214, 0.25);
+}
+
+.saveButton {
+  font-size: 16px;
+  border: 0;
+  background-color: #590dfd;
+  padding: 7px 12px;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+  background-color: #590dfd96;
 }

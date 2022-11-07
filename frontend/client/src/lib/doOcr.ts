@@ -148,7 +148,8 @@ export default function doOcr(hocrurl): Promise<Page> {
 				"text/html"
 			);
 
-			return parsePage(doc);
+			// return parsePage(doc);
+			return doc;
 
 		},(error) => {
 			console.log(error);

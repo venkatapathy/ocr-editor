@@ -18,20 +18,21 @@ function BooksCatalog() {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
-	const refreshBookList = () => {
-		const listBookUrl = process.env.REACT_APP_SERVER_URL + "/books";
-		axios.get(listBookUrl)
-			.then((response) => {
-				setOnlineBookList(response.data);
-			})
-			.catch((er) => {
-				setAlertMessage({
-					msg: er.response.data,
-					variant: "danger",
-				});
-				setShowAlert(true);
-			});
-	};
+  const refreshBookList = () => {
+    const listBookUrl = process.env.REACT_APP_SERVER_URL + "/books";
+    axios
+      .get(listBookUrl)
+      .then((response) => {
+        setOnlineBookList(response.data.data);
+      })
+      .catch((er) => {
+        setAlertMessage({
+          msg: er.response.data,
+          variant: "danger",
+        });
+        setShowAlert(true);
+      });
+  };
 
 	useEffect(() => {
 		refreshBookList();
@@ -63,24 +64,17 @@ function BooksCatalog() {
 		},
 	];
 
-	const trItem = onlineBookList.map((bookItem, index) => (
-		<tr key={bookItem._id.$uuid}>
-			<th>{index + 1}</th>
-			<td>{bookItem.title}</td>
-			<td>{bookItem.author}</td>
-			<td>{bookItem.category}</td>
-			<td>
-				<Link
-					to={
-						"/cli/pageview?b=" +
-						bookItem._id.$uuid
-					}
-				>
-					View Book
-				</Link>
-			</td>
-		</tr>
-	));
+  const trItem = onlineBookList.map((bookItem, index) => (
+    <tr key={bookItem.repo_name}>
+      <th>{index + 1}</th>
+      <td>{bookItem.repo_name}</td> {/* changed title to repo_name */}
+      <td>{bookItem.author}</td>
+      <td>{bookItem.category}</td>
+      <td>
+        <Link to={"/cli/pageview?b=" + bookItem.repo_name}>View Book</Link>
+      </td>
+    </tr>
+  ));
 
 	const handleInputChange = (event) => {
 		const target = event.target;
