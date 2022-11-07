@@ -1,0 +1,41 @@
+.loader div {
+  background: rgb(56 87 255 / 18%);
+  /* background: #0d6efd; */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: appear 0.8s ease forwards;
+}
+.loader div {
+  animation: loaderAnimation 0.5s ease alternate infinite;
+}
+#loader-dot-2 {
+  animation-delay: 0.2s;
+}
+#loader-dot-3 {
+  animation-delay: 0.3s;
+}
+#loader-dot-4 {
+  animation-delay: 0.4s;
+}
+@keyframes loaderAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
