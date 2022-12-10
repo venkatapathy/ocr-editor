@@ -174,7 +174,7 @@ function PageViewer() {
 
 
 
-					<div className="container-fluid pv-container pt-2 pb-4 px-2">
+					<div className="container-fluid pv-container pt-2 pb-4">
 						<div className="row wh-90 vh-100 border shadow">
 							<div
 								className="col-md-6 shadow"

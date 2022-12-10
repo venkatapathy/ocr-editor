@@ -17,8 +17,8 @@ body {
 }
 
 .pv-toolbar {
-	height: 42px;
-	background-color: rgba(249, 249, 250, 1);
+	height: 43px;
+	background-color: #ffffff;
 }
 
 .pv-container {
@@ -75,6 +75,15 @@ body {
 
 .fixed-bottom {
 	background-color: #ededed;
+}
+
+.footerBorder {
+	border-top: 3px solid black!important
+}
+
+.footerStyles {
+	/* position: relative;
+	top: 6px; */
 }
 
 /* .App {
