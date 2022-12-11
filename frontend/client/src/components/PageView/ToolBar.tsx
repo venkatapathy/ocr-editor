@@ -62,16 +62,22 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 		handleChange()
 	}, [curPageno]);
 
+	const gray = {
+		color: "#a2a3a5"
+	}
+
 	return (
 		<div className="container-fluid pv-toolbar footerBorder">
 			<div className="row align-items-left footerStyles">
-				<div className="col pl-3">
-					<span className="btn">OCR tool for English</span>
+				<div className="col">
+					<span className="btn" style={gray}>OCR tool</span>
+					<button className="pageviewer">English</button>
 
 
 					<button
 						type="button"
-						className="btn toolbar-btn px-2"
+						className="btn toolbar-btn px-2 middlePartMargin"
+						style={curPageno == 1 ? {color: "#a2a3a5"} : {}}
 						title="Previous Page"
 						onClick={(e) => {
 							if (curPageno - 1 > 0) {
@@ -81,11 +87,9 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 							}
 						}}
 					>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-							<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-						</svg>			</button>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>			</button>
 
-					<span className="border-start border-2 h-100 rounded-pill"></span>
+					<span className="" style={{position: "relative", top: "3px"}}>Page {curPageno}</span>
 
 					<button
 						type="button"
@@ -97,22 +101,9 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 							}
 						}}
 					>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-							<path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-						</svg>				</button>
-					<span className="page-num">
-						<input
-							type="text"
-							value={curPageno}
-							className="pageviewer"
-							onChange={handleChange}
-						/>
-						<span className="border-0">
-							of 217
-						</span>
-					</span>
-				</div>
-				<div className="col">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>				</button>
+					<button className="pageviewer leftPartMargin">Dictionaries</button>
+					<span style={{margin: "0 9px"}}>SLP</span>
 					<button
 						type="button"
 						className="btn toolbar-btn px-2"
@@ -121,8 +112,8 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
+							width="20"
+							height="20"
 							fill="currentColor"
 							className="bi bi-zoom-in"
 							viewBox="0 0 16 16"
@@ -139,7 +130,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						</svg>
 					</button>
 
-					<span className="border-start border-2 h-100 rounded-pill"></span>
+					<span>100%</span>
 
 					<button
 						type="button"
@@ -149,8 +140,8 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
+							width="20"
+							height="20"
 							fill="currentColor"
 							className="bi bi-zoom-out"
 							viewBox="0 0 16 16"

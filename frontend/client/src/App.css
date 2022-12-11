@@ -66,11 +66,11 @@ body {
 
 .pageviewer {
 	margin-inline: 0.3rem;
-	border-radius: 2px;
+	border-radius: 6px;
 	border: 1px solid #333;
 	outline: none;
 	text-align: center;
-	
+	background-color: transparent;
 }
 
 .fixed-bottom {
@@ -78,12 +78,20 @@ body {
 }
 
 .footerBorder {
-	border-top: 3px solid black!important
+	border-top: 4px solid black!important
 }
 
 .footerStyles {
 	/* position: relative;
 	top: 6px; */
+}
+
+.leftPartMargin {
+	margin-left: 19rem;
+}
+
+.middlePartMargin {
+	margin-left: 25rem;
 }
 
 /* .App {
