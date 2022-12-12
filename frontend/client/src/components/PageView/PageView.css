@@ -98,3 +98,7 @@
 .dropdown .nav-link {
   color: #000000 !important;
 }
+
+.zeroPadding {
+  padding-right: 0 !important;
+}
