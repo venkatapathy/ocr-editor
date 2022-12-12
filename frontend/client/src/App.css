@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 body {
 	font-family: "Open Sans", "Roboto", sans-serif !important;
 }
@@ -17,7 +18,7 @@ body {
 }
 
 .pv-toolbar {
-	height: 43px;
+	height: 46px;
 	background-color: #ffffff;
 }
 
@@ -71,6 +72,7 @@ body {
 	outline: none;
 	text-align: center;
 	background-color: transparent;
+	padding: 5px;
 }
 
 .fixed-bottom {
@@ -78,20 +80,25 @@ body {
 }
 
 .footerBorder {
-	border-top: 4px solid black!important
+	border-top: 4px solid black !important
 }
 
 .footerStyles {
-	/* position: relative;
-	top: 6px; */
+	position: relative;
+	top: 2.5px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .leftPartMargin {
-	margin-left: 19rem;
+	margin: 0 5px 0 20rem;
 }
 
 .middlePartMargin {
-	margin-left: 25rem;
+	margin-left: 26.5rem;
+}
+
+.footerTxt {
+	font-size:small;
 }
 
 /* .App {

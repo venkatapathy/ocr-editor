@@ -63,15 +63,16 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 	}, [curPageno]);
 
 	const gray = {
-		color: "#a2a3a5"
+		color: "#a2a3a5",
+		fontFamily: "Montserrat, sans-serif"
 	}
 
 	return (
-		<div className="container-fluid pv-toolbar footerBorder">
-			<div className="row align-items-left footerStyles">
+		<div className="container-fluid pv-toolbar footerBorder footerTxt">
+			<div className="row align-items-left">
 				<div className="col">
-					<span className="btn" style={gray}>OCR tool</span>
-					<button className="pageviewer">English</button>
+					<span className="btn footerTxt" style={gray}>OCR tool</span>
+					<button className="pageviewer footerStyles">English</button>
 
 
 					<button
@@ -89,7 +90,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>			</button>
 
-					<span className="" style={{position: "relative", top: "3px"}}>Page {curPageno}</span>
+					<span className="" style={{position: "relative", top: "3px", fontFamily: "'Montserrat', sans-serif"}}>Page {curPageno}</span>
 
 					<button
 						type="button"
@@ -102,8 +103,8 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						}}
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>				</button>
-					<button className="pageviewer leftPartMargin">Dictionaries</button>
-					<span style={{margin: "0 9px"}}>SLP</span>
+					<button className="pageviewer leftPartMargin footerStyles">Dictionaries</button>
+					<span className="footerStyles" style={{margin: "0 11px 0 8px"}}>SLP</span>
 					<button
 						type="button"
 						className="btn toolbar-btn px-2"
@@ -130,7 +131,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						</svg>
 					</button>
 
-					<span>100%</span>
+					<span className="footerStyles footerTxt">100%</span>
 
 					<button
 						type="button"
