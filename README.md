@@ -57,7 +57,9 @@
 
 2. Run `npm install`
 
-3. Add `REACT_APP_SERVER_URL=http://localhost:5000` to the system environment variables
+3. `Add export NODE_OPTIONS=--openssl-legacy-provider to enivironment variable`
+
+4. `Add REACT_APP_SERVER_URL=http://localhost:5000 to environment variable`
 
 4. Finally, `npm start`
 
