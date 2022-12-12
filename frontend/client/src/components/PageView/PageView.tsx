@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import queryString from "query-string";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { loadImageUtil } from "../../utils";
-import {Button,ButtonGroup, Nav, Navbar, Container} from "react-bootstrap";
+import { Button, ButtonGroup, Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 import {
 	loadImage,
 	loadHocr,
@@ -20,6 +20,7 @@ import HocrLayer from "./components/HocrLayer";
 import HocrView from "./HocrView";
 import axios from "axios";
 import "./PageView.css"
+import DropDown from './components/DropDown'
 
 function PageViewer() {
 	const [state, dispatch] = useAppReducer();
@@ -31,7 +32,7 @@ function PageViewer() {
 		setCurZoom(curZoom + zoomDelta);
 	};
 
-	
+
 	const [imgMeasureRef, { width, height }] = useMeasure();
 
 	useEffect(() => {
@@ -39,10 +40,10 @@ function PageViewer() {
 			parsed.p = "1";
 		}
 		if (parsed?.b) {
-		axios.get(
-			process.env.REACT_APP_SERVER_URL + "/books/" + parsed.b
-		).then((response) => setBookDetails(response.data));
-	}
+			axios.get(
+				process.env.REACT_APP_SERVER_URL + "/books/" + parsed.b
+			).then((response) => setBookDetails(response.data));
+		}
 
 		dispatch(changeCurPage(parseInt(parsed.p)));
 		//uu10.129.6.78:5000/h/b/1/p/2
@@ -57,11 +58,54 @@ function PageViewer() {
 		//	}
 	}, []);
 
-	return (
-		<>
-			<div className="background">
-				<div className="container-fluid py-0">
-					{/* <Link
+	const FileOptions = [{
+		key: 1,
+		value: 'New File',
+	}, {
+		key: 2,
+		value: 'Save File',
+	}
+	]
+
+	const EditOptions = [{
+		key: 3,
+		value: 'Undo',
+	}, {
+		key: 4,
+		value: 'Redo',
+	}
+	]
+
+	const LangOptions = [{
+		key: 5,
+		value: 'English',
+	}, {
+		key: 6,
+		value: 'Hindi',
+	}
+	]
+	/* const baseURL = "http://localhost:3000/user/saveCall"; */
+	const baseURL = "https://addc4874-2a04-4b13-b532-00430ba4e487.mock.pstmn.io/user/putCall";
+
+	const apiCall = (dat: int) => {
+		console.log(dat)
+		axios
+			.put(baseURL, {
+				id: dat,
+				name: "This is an updated post."
+			})
+			.then((response) => {
+				console.log(response.data);
+				alert('Working')
+			});
+	}
+		
+
+		return (
+			<>
+				<div className="background">
+					<div className="container-fluid py-0">
+						{/* <Link
 						className="navbar-brand"
 						to="/cli"> */}
 						{/* <span className="px-2">
@@ -79,106 +123,73 @@ function PageViewer() {
 								/>
 							</svg>
 						</span> */}
-							<div className="head">
-								<Navbar bg="blue" variant="dark">
+						<div className="head">
+							<Navbar bg="blue" variant="dark">
 								<Container>
-								<Nav className="head">
-								<Nav.Link href="#file">File</Nav.Link>
-								<Nav.Link href="#edit">Edit</Nav.Link>
-								<Nav.Link href="#language">Language</Nav.Link>
-								<Nav.Link href="#reports">Reports</Nav.Link>
-								<Nav.Link href="#version">Version</Nav.Link>
-								<Nav.Link href="#download">Download</Nav.Link>
-								<Nav.Link href="#help">Help</Nav.Link>
-								</Nav>
+									<Nav className="head">
+										<NavDropdown title="File" id="nav-dropdown1">
+											<DropDown options={FileOptions} callAPI={apiCall} />
+										</NavDropdown>
+										<NavDropdown title="Edit" id="nav-dropdown2">
+											<DropDown options={EditOptions} callAPI={apiCall} />
+										</NavDropdown>
+										<NavDropdown title="Language" id="nav-dropdown3">
+											<DropDown options={LangOptions} callAPI={apiCall} />
+										</NavDropdown>
+										<Nav.Link href="#reports">Reports</Nav.Link>
+										<Nav.Link href="#version">Version</Nav.Link>
+										<Nav.Link href="#download">Download</Nav.Link>
+										<Nav.Link href="#help">Help</Nav.Link>
+									</Nav>
 								</Container>
-								</Navbar>
-								</div>
-							
-														<div className="format-options-background">
-								{/*<ButtonGroup aria-label="Basic example">
+							</Navbar>
+						</div>
+
+						<div className="format-options-background">
+							{/*<ButtonGroup aria-label="Basic example">
 								<Button className="button" variant="secondary">Resize Image</Button>
 								<Button className="button" variant="secondary">Mark Regions</Button>
 								<Button className="button" variant="secondary">Comments Accuracy</Button>
 								<Button className="button" variant="secondary">Compare Character Output</Button>		
 								</ButtonGroup>
 							</div> */}
-						
-								
-								<button className="text-format-option icon2">Mark Regions</button>
-							
-						
-							
-								
-				
-							
-							</div>
-							
-							
-							</div>
-						
+
+
+							<button className="text-format-option icon2">Mark Regions</button>
+
+
+
+
+
+
+						</div>
+
+
+					</div>
+
 					{/* </Link> */}
 					{/* <span className="navbar-text px-3 me-auto">
 						{bookDetails?.title}
 					</span> */}
-				
 
-			
-			<div className="container-fluid pv-container pt-2 pb-4 px-2">
-				<div className="row wh-90 vh-100 border shadow">
-					<div
-						className="col-md-6 shadow"
-						ref={imgMeasureRef}
-					>
-						<div className="p-3 border pv-pane">
-							<Stage
-								width={
-									(state
-										.pageImage
-										?.curWidth !==
-									0
-										? state
-												.pageImage
-												?.curWidth
-										: width) *
-									curZoom
-								}
-								height={
-									(state
-										.pageImage
-										?.curHeight !==
-									0
-										? state
-												.pageImage
-												?.curHeight
-										: height) *
-									curZoom
-								}
+
+
+					<div className="container-fluid pv-container pt-2 pb-4 px-2">
+						<div className="row wh-90 vh-100 border shadow">
+							<div
+								className="col-md-6 shadow"
+								ref={imgMeasureRef}
 							>
-								{!state.pageImage && (
-									<Layer>
-										<Text
-											text={
-												state
-													.pageImage
-													?.urlObject
-											}
-										/>
-									</Layer>
-								)}
-								<Layer>
-									<ImageView
-										pageImage={
-											state.pageImage
-										}
+								<div className="p-3 border pv-pane">
+									<Stage
 										width={
 											(state
 												.pageImage
 												?.curWidth !==
-											0
+												0
 												? state
-														.pageImage
-														?.curWidth
+													.pageImage
+													?.curWidth
 												: width) *
 											curZoom
 										}
@@ -186,88 +197,127 @@ function PageViewer() {
 											(state
 												.pageImage
 												?.curHeight !==
-											0
+												0
 												? state
-														.pageImage
-														?.curHeight
+													.pageImage
+													?.curHeight
 												: height) *
 											curZoom
 										}
+									>
+										{!state.pageImage && (
+											<Layer>
+												<Text
+													text={
+														state
+															.pageImage
+															?.urlObject
+													}
+												/>
+											</Layer>
+										)}
+										<Layer>
+											<ImageView
+												pageImage={
+													state.pageImage
+												}
+												width={
+													(state
+														.pageImage
+														?.curWidth !==
+														0
+														? state
+															.pageImage
+															?.curWidth
+														: width) *
+													curZoom
+												}
+												height={
+													(state
+														.pageImage
+														?.curHeight !==
+														0
+														? state
+															.pageImage
+															?.curHeight
+														: height) *
+													curZoom
+												}
+											/>
+										</Layer>
+										<HocrLayer
+											page={
+												state.hocrPage
+											}
+											dispatch={
+												dispatch
+											}
+											pageImage={
+												state.pageImage
+											}
+											width={
+												(state
+													.pageImage
+													?.curWidth !==
+													0
+													? state
+														.pageImage
+														?.curWidth
+													: width) *
+												curZoom
+											}
+											height={
+												(state
+													.pageImage
+													?.curHeight !==
+													0
+													? state
+														.pageImage
+														?.curHeight
+													: height) *
+												curZoom
+											}
+											hoverId={
+												state.hoverId
+											}
+										/>
+									</Stage>
+								</div>
+							</div>
+							<div className="col-md-6 shadow">
+								<div className="p-3 border pv-pane">
+									<HocrView
+										page={
+											state.hocrPage
+										}
+										hoverId={
+											state.hoverId
+										}
+										dispatch={
+											dispatch
+										}
 									/>
-								</Layer>
-								<HocrLayer
-									page={
-										state.hocrPage
-									}
-									dispatch={
-										dispatch
-									}
-									pageImage={
-										state.pageImage
-									}
-									width={
-										(state
-											.pageImage
-											?.curWidth !==
-										0
-											? state
-													.pageImage
-													?.curWidth
-											: width) *
-										curZoom
-									}
-									height={
-										(state
-											.pageImage
-											?.curHeight !==
-										0
-											? state
-													.pageImage
-													?.curHeight
-											: height) *
-										curZoom
-									}
-									hoverId={
-										state.hoverId
-									}
-								/>
-							</Stage>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div className="col-md-6 shadow">
-						<div className="p-3 border pv-pane">
-							<HocrView
-								page={
-									state.hocrPage
-								}
-								hoverId={
-									state.hoverId
-								}
-								dispatch={
-									dispatch
-								}
+						<div className="row fixed-bottom">
+							<ToolBar
+								curPageno={state.curPageno}
+								dispatch={dispatch}
+								fnSetCurZoom={handleZoom}
 							/>
+							<div className="col-md-6 offset-md-4 px-3">
+
+								{state.logInfo}
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="row fixed-bottom">
-				<ToolBar
-				curPageno={state.curPageno}
-				dispatch={dispatch}
-				fnSetCurZoom={handleZoom}
-				/>
-					<div className="col-md-6 offset-md-4 px-3">
-						
-						{state.logInfo}
-					</div>
-				</div>
-			</div> 
-			
-		
-		
-		</div>
-		</>
-	);
-}
 
-export default PageViewer;
+
+
+				</div>
+			</>
+		);
+	}
+
+	export default PageViewer;
