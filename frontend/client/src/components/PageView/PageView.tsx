@@ -104,7 +104,7 @@ function PageViewer() {
 		return (
 			<>
 				<div className="background">
-					<div className="container-fluid py-0">
+					<div className="container-fluid py-0 headDiv">
 						{/* <Link
 						className="navbar-brand"
 						to="/cli"> */}
@@ -124,10 +124,10 @@ function PageViewer() {
 							</svg>
 						</span> */}
 						<div className="head">
-							<Navbar bg="blue" variant="dark">
+							<Navbar bg="white" variant="dark">
 								<Container>
 									<Nav className="head">
-										<NavDropdown title="File" id="nav-dropdown1">
+										<NavDropdown title="File" id="nav-dropdown1" className="blackTxt">
 											<DropDown options={FileOptions} callAPI={apiCall} />
 										</NavDropdown>
 										<NavDropdown title="Edit" id="nav-dropdown2">
@@ -136,10 +136,10 @@ function PageViewer() {
 										<NavDropdown title="Language" id="nav-dropdown3">
 											<DropDown options={LangOptions} callAPI={apiCall} />
 										</NavDropdown>
-										<Nav.Link href="#reports">Reports</Nav.Link>
-										<Nav.Link href="#version">Version</Nav.Link>
-										<Nav.Link href="#download">Download</Nav.Link>
-										<Nav.Link href="#help">Help</Nav.Link>
+										<Nav.Link href="#reports"><span className="blackTxt">Reports</span></Nav.Link>
+										<Nav.Link href="#version"><span className="blackTxt">Version</span></Nav.Link>
+										<Nav.Link href="#download"><span className="blackTxt">Download</span></Nav.Link>
+										<Nav.Link href="#help"><span className="blackTxt">Help</span></Nav.Link>
 									</Nav>
 								</Container>
 							</Navbar>

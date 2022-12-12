@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .background {
-  background-color: rgb(27, 27, 83);
-
+  background-color: #fff;
 }
 
 .head {
@@ -8,6 +8,9 @@
   color: white;
 }
 
+.headDiv {
+	font-family: 'Montserrat', sans-serif;
+}
 
 .button {
   border: none;
@@ -20,7 +23,6 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 50%;
-
 }
 
 .format-options-background {
@@ -37,13 +39,12 @@
 
 }
 
-
 /* DropDown */
 
 .dropdown-menu {
   padding: 0;
   font-size: 12px;
-  background-color: #1b1b53;
+  background-color: #fff;
   box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.35);
   border-radius: 5px;
   border: 1px solid #111136;
@@ -51,17 +52,17 @@
 }
 
 .dropdown-menu a {
-  color: #ffffff8c !important;
+  color: black !important;
   padding: 0.5rem 1rem
 }
 
 .dropdown-menu a:hover {
   color: #fff;
-  background: rgba(22, 22, 214,0.25)
+  background: #cdcdcd;
 }
 
 .dropdown-divider {
-    border-top-color: #ffffff8c
+    border-top-color: black
 }
 
 .custom-dropdown {
@@ -88,4 +89,12 @@
 .custom-dropdown li:hover {
   color: #fff;
   background: rgba(22, 22, 214,0.25)
+}
+
+.blackTxt {
+	color: #000000;
+}
+
+.dropdown .nav-link {
+  color: #000000 !important;
 }
