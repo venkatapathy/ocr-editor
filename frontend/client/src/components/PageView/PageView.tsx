@@ -99,16 +99,16 @@ function PageViewer() {
 				alert('Working')
 			});
 	}
-		
 
-		return (
-			<>
-				<div className="background">
-					<div className="container-fluid py-0 headDiv">
-						{/* <Link
+
+	return (
+		<>
+			<div className="background">
+				<div className="container-fluid py-0 headDiv">
+					{/* <Link
 						className="navbar-brand"
 						to="/cli"> */}
-						{/* <span className="px-2">
+					{/* <span className="px-2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="42"
@@ -123,30 +123,34 @@ function PageViewer() {
 								/>
 							</svg>
 						</span> */}
-						<div className="head">
-							<Navbar bg="white" variant="dark">
-								<Container>
-									<Nav className="head">
-										<NavDropdown title="File" id="nav-dropdown1" className="blackTxt">
-											<DropDown options={FileOptions} callAPI={apiCall} />
-										</NavDropdown>
-										<NavDropdown title="Edit" id="nav-dropdown2">
-											<DropDown options={EditOptions} callAPI={apiCall} />
-										</NavDropdown>
-										<NavDropdown title="Language" id="nav-dropdown3">
-											<DropDown options={LangOptions} callAPI={apiCall} />
-										</NavDropdown>
-										<Nav.Link href="#reports"><span className="blackTxt">Reports</span></Nav.Link>
-										<Nav.Link href="#version"><span className="blackTxt">Version</span></Nav.Link>
-										<Nav.Link href="#download"><span className="blackTxt">Download</span></Nav.Link>
-										<Nav.Link href="#help"><span className="blackTxt">Help</span></Nav.Link>
-									</Nav>
-								</Container>
-							</Navbar>
-						</div>
+					<div className="head">
+						<Navbar bg="white" variant="dark">
 
-						<div className="format-options-background">
-							{/*<ButtonGroup aria-label="Basic example">
+							<Link className="navbar-brand" style={{color: "black"}} to="/cli">
+								SandHI
+							</Link>
+							<Container>
+								<Nav className="head">
+									<NavDropdown title="File" id="nav-dropdown1" className="blackTxt">
+										<DropDown options={FileOptions} callAPI={apiCall} />
+									</NavDropdown>
+									<NavDropdown title="Edit" id="nav-dropdown2">
+										<DropDown options={EditOptions} callAPI={apiCall} />
+									</NavDropdown>
+									<NavDropdown title="Language" id="nav-dropdown3">
+										<DropDown options={LangOptions} callAPI={apiCall} />
+									</NavDropdown>
+									<Nav.Link href="#reports"><span className="blackTxt">Reports</span></Nav.Link>
+									<Nav.Link href="#version"><span className="blackTxt">Version</span></Nav.Link>
+									<Nav.Link href="#download"><span className="blackTxt">Download</span></Nav.Link>
+									<Nav.Link href="#help"><span className="blackTxt">Help</span></Nav.Link>
+								</Nav>
+							</Container>
+						</Navbar>
+					</div>
+
+					<div className="format-options-background">
+						{/*<ButtonGroup aria-label="Basic example">
 								<Button className="button" variant="secondary">Resize Image</Button>
 								<Button className="button" variant="secondary">Mark Regions</Button>
 								<Button className="button" variant="secondary">Comments Accuracy</Button>
@@ -155,103 +159,69 @@ function PageViewer() {
 							</div> */}
 
 
-							<button className="text-format-option icon2">Mark Regions</button>
+						{/* <button className="text-format-option icon2">Mark Regions</button> */}
 
 
 
 
-
-
-						</div>
 
 
 					</div>
 
-					{/* </Link> */}
-					{/* <span className="navbar-text px-3 me-auto">
+
+				</div>
+
+				{/* </Link> */}
+				{/* <span className="navbar-text px-3 me-auto">
 						{bookDetails?.title}
 					</span> */}
 
 
 
-					<div className="container-fluid pv-container pt-2 pb-4">
-						<div className="row wh-90 vh-100 border shadow">
-							<div
-								className="col-md-6 zeroPadding"
-								ref={imgMeasureRef}
-							>
-								<div className="p-3 border pv-pane">
-									<Stage
-										width={
-											(state
+				<div className="container-fluid pv-container pt-2 pb-4">
+					<div className="row wh-90 vh-100 border shadow">
+						<div
+							className="col-md-6 zeroPadding"
+							ref={imgMeasureRef}
+						>
+							<div className="p-3 border pv-pane">
+								<Stage
+									width={
+										(state
+											.pageImage
+											?.curWidth !==
+											0
+											? state
 												.pageImage
-												?.curWidth !==
-												0
-												? state
-													.pageImage
-													?.curWidth
-												: width) *
-											curZoom
-										}
-										height={
-											(state
+												?.curWidth
+											: width) *
+										curZoom
+									}
+									height={
+										(state
+											.pageImage
+											?.curHeight !==
+											0
+											? state
 												.pageImage
-												?.curHeight !==
-												0
-												? state
-													.pageImage
-													?.curHeight
-												: height) *
-											curZoom
-										}
-									>
-										{!state.pageImage && (
-											<Layer>
-												<Text
-													text={
-														state
-															.pageImage
-															?.urlObject
-													}
-												/>
-											</Layer>
-										)}
+												?.curHeight
+											: height) *
+										curZoom
+									}
+								>
+									{!state.pageImage && (
 										<Layer>
-											<ImageView
-												pageImage={
-													state.pageImage
-												}
-												width={
-													(state
+											<Text
+												text={
+													state
 														.pageImage
-														?.curWidth !==
-														0
-														? state
-															.pageImage
-															?.curWidth
-														: width) *
-													curZoom
-												}
-												height={
-													(state
-														.pageImage
-														?.curHeight !==
-														0
-														? state
-															.pageImage
-															?.curHeight
-														: height) *
-													curZoom
+														?.urlObject
 												}
 											/>
 										</Layer>
-										<HocrLayer
-											page={
-												state.hocrPage
-											}
-											dispatch={
-												dispatch
-											}
+									)}
+									<Layer>
+										<ImageView
 											pageImage={
 												state.pageImage
 											}
@@ -277,47 +247,81 @@ function PageViewer() {
 													: height) *
 												curZoom
 											}
-											hoverId={
-												state.hoverId
-											}
 										/>
-									</Stage>
-								</div>
-							</div>
-							<div className="col-md-6">
-								<div className="p-3 border pv-pane">
-									<HocrView
+									</Layer>
+									<HocrLayer
 										page={
 											state.hocrPage
-										}
-										hoverId={
-											state.hoverId
 										}
 										dispatch={
 											dispatch
 										}
+										pageImage={
+											state.pageImage
+										}
+										width={
+											(state
+												.pageImage
+												?.curWidth !==
+												0
+												? state
+													.pageImage
+													?.curWidth
+												: width) *
+											curZoom
+										}
+										height={
+											(state
+												.pageImage
+												?.curHeight !==
+												0
+												? state
+													.pageImage
+													?.curHeight
+												: height) *
+											curZoom
+										}
+										hoverId={
+											state.hoverId
+										}
 									/>
-								</div>
+								</Stage>
 							</div>
 						</div>
-						<div className="row fixed-bottom">
-							<ToolBar
-								curPageno={state.curPageno}
-								dispatch={dispatch}
-								fnSetCurZoom={handleZoom}
-							/>
-							<div className="col-md-6 offset-md-4 px-3">
-
-								{state.logInfo}
+						<div className="col-md-6">
+							<div className="p-3 border pv-pane">
+								<HocrView
+									page={
+										state.hocrPage
+									}
+									hoverId={
+										state.hoverId
+									}
+									dispatch={
+										dispatch
+									}
+								/>
 							</div>
 						</div>
 					</div>
+					<div className="row fixed-bottom">
+						<ToolBar
+							curPageno={state.curPageno}
+							dispatch={dispatch}
+							fnSetCurZoom={handleZoom}
+						/>
+						<div className="col-md-6 offset-md-4 px-3">
 
-
-
+							{state.logInfo}
+						</div>
+					</div>
 				</div>
-			</>
-		);
-	}
 
-	export default PageViewer;
+
+
+			</div>
+		</>
+	);
+}
+
+export default PageViewer;

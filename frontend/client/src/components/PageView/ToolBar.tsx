@@ -1,4 +1,4 @@
-import React, { Dispatch, useEffect } from "react";
+import React, { Dispatch, useEffect, useState } from "react";
 import queryString from "query-string";
 import { loadImageUtil } from "../../utils";
 import {
@@ -17,6 +17,7 @@ export interface Props {
 }
 
 function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
+	const [zoom, setZoom] = useState(100);
 	const parsed = queryString.parse(window.location.search);
 	const imageurl =
 		process.env.REACT_APP_SERVER_URL +
@@ -62,54 +63,59 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 		handleChange()
 	}, [curPageno]);
 
-	const gray = {
-		color: "#a2a3a5",
-		fontFamily: "Montserrat, sans-serif"
-	}
-
 	return (
 		<div className="container-fluid pv-toolbar footerBorder footerTxt">
 			<div className="row align-items-left">
-				<div className="col">
-					<span className="btn footerTxt" style={gray}>OCR tool</span>
-					<button className="pageviewer footerStyles">English</button>
+				<div className="col-4">
+					<span className="btn footerTxt gray">OCR tool</span>
+					<button className="pageviewer footerStyles">
+						<select name="lang" id="language" style={{backgroundColor: "transparent", border: "none"}}>
+							<option style={{}} value="English">English</option>
+							<option value="Devnagari">Devnagari</option>
+						</select>
+					</button>
+				</div>
+				<div className="col-4 centerContent">
+					<div>
+						<button
+							type="button"
+							className="btn toolbar-btn px-2"
+							style={curPageno == 1 ? { color: "#a2a3a5" } : {}}
+							title="Previous Page"
+							onClick={(e) => {
+								if (curPageno - 1 > 0) {
+									dispatch(
+										changeCurPage(parseInt(curPageno) - 1)
+									);
+								}
+							}}
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg>			</button>
 
+						<span className="pageNum">Page {curPageno}</span>
 
-					<button
-						type="button"
-						className="btn toolbar-btn px-2 middlePartMargin"
-						style={curPageno == 1 ? {color: "#a2a3a5"} : {}}
-						title="Previous Page"
-						onClick={(e) => {
-							if (curPageno - 1 > 0) {
-								dispatch(
-									changeCurPage(parseInt(curPageno) - 1)
-								);
-							}
-						}}
-					>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>			</button>
+						<button
+							type="button"
+							className="btn toolbar-btn px-2"
+							title="Next Page"
+							onClick={(e) => {
+								if (curPageno + 1 > 0) {
+									dispatch(changeCurPage(parseInt(curPageno) + 1));
+								}
+							}}
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" /></svg>				</button>
 
-					<span className="" style={{position: "relative", top: "3px", fontFamily: "'Montserrat', sans-serif"}}>Page {curPageno}</span>
-
-					<button
-						type="button"
-						className="btn toolbar-btn px-2"
-						title="Next Page"
-						onClick={(e) => {
-							if (curPageno + 1 > 0) {
-								dispatch(changeCurPage(parseInt(curPageno) + 1));
-							}
-						}}
-					>
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 384 512"><path d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>				</button>
-					<button className="pageviewer leftPartMargin footerStyles">Dictionaries</button>
-					<span className="footerStyles" style={{margin: "0 11px 0 8px"}}>SLP</span>
+					</div></div><div className="col-4 flexEnd"><button className="pageviewer footerStyles dictionary">Dictionaries</button>
+					<span className="footerStyles slp">SLP</span>
 					<button
 						type="button"
 						className="btn toolbar-btn px-2"
 						title="Zoom-in"
-						onClick={() => fnSetCurZoom(0.25)}
+						onClick={() => {
+							fnSetCurZoom(0.25)
+							setZoom(zoom + 25)
+						}}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -131,13 +137,19 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 						</svg>
 					</button>
 
-					<span className="footerStyles footerTxt">100%</span>
+					<span className="footerStyles footerTxt" style={{ marginTop: "7.5px" }}>{zoom}%</span>
 
 					<button
 						type="button"
 						className="btn toolbar-btn px-2"
+						style={zoom <= 25 ? { color: "#a2a3a5" } : {}}
 						title="Zoom-out"
-						onClick={() => fnSetCurZoom(-0.25)}
+						onClick={() => {
+							if (zoom > 25) {
+								fnSetCurZoom(-0.25)
+								setZoom(zoom - 25)
+							}
+						}}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -158,8 +170,7 @@ function ToolBar({ curPageno, dispatch, fnSetCurZoom }: Props) {
 							/>
 						</svg>
 					</button>
-				</div>
-			</div>
+				</div></div>
 		</div>
 	);
 }
