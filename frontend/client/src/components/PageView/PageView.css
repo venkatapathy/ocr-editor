@@ -102,3 +102,14 @@
 .zeroPadding {
   padding-right: 0 !important;
 }
+
+.navbar-brand {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+@media(max-width: 757px){
+  a .blackTxt {
+    display: none;
+  }
+}

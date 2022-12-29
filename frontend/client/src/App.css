@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 body {
 	font-family: "Open Sans", "Roboto", sans-serif !important;
 }
@@ -32,10 +33,15 @@ body {
 	width: 100%;
 	overflow: scroll;
 	overflow-y: scroll;
+	scrollbar-width: none;
 }
 
 .toolbar-btn:hover {
 	background-color: #a8a8a8;
+}
+
+.toolbar-btn:focus {
+	box-shadow: none !important;
 }
 
 .page-num input {
@@ -89,16 +95,50 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.leftPartMargin {
-	margin: 0 5px 0 20rem;
-}
-
-.middlePartMargin {
-	margin-left: 26.5rem;
-}
-
 .footerTxt {
-	font-size:small;
+	font-size: small;
+}
+
+.gray {
+	color: #a2a3a5;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 5px;
+}
+
+.centerContent {
+	display: flex;
+	justify-content: center;
+}
+
+.pageNum {
+	position: relative;
+	top: 3px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.flexEnd {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.dictionary {
+	height: 32px;
+	margin-top: 2px;
+}
+
+.slp {
+	margin: 7.5px 11px 0 8px;
+}
+
+@media(max-width: 757px){
+	.dictionary, .slp, .gray {
+		display: none;
+	}
+
+	.col-4 {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 /* .App {
